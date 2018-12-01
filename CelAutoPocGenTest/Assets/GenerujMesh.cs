@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenerujSiatke : MonoBehaviour {
+public class GenerujMesh : MonoBehaviour {
 
     List<Vector3> wierzholki;
     List<int> trojkaty;
@@ -50,15 +50,15 @@ public class GenerujSiatke : MonoBehaviour {
             //1 black
             //Не важен порядок, главное чтобы точки были по часовой стрелке
             case 1:
-                Polaczenie(kwadrat.DL, kwadrat.SL, kwadrat.SD);
+                Polaczenie(kwadrat.SL, kwadrat.SD, kwadrat.DL);
                 break;
 
             case 2:
-                Polaczenie(kwadrat.SP, kwadrat.DP, kwadrat.SD);
+                Polaczenie(kwadrat.DP, kwadrat.SD, kwadrat.SP);
                 break;
 
             case 4:
-                Polaczenie(kwadrat.SG, kwadrat.GP, kwadrat.SP);
+                Polaczenie(kwadrat.GP, kwadrat.SP, kwadrat.SG);
                 break;
 
             case 8:
@@ -170,31 +170,31 @@ public class GenerujSiatke : MonoBehaviour {
 
 	void OnDrawGizmos() {
 
-		if (siatkaKwadratow != null) {
-			for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
-				for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
+		//if (siatkaKwadratow != null) {
+		//	for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
+		//		for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
+		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
+		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
+		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
+		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
 
-					Gizmos.color = Color.grey;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
+		//			Gizmos.color = Color.grey;
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
+		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
 			
-				}
-			}
-		}
+		//		}
+		//	}
+		//}
 	}
 
 	public class SiatkaKwadratow {

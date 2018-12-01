@@ -38,8 +38,8 @@ public class GenerujMape : MonoBehaviour {
 			Wygladzenie ();
 		}
 
-		GenerujSiatke generujSiatke = GetComponent<GenerujSiatke> ();
-		generujSiatke.UtworzSiatke (plytka, 1);
+		GenerujMesh generujMesh = GetComponent<GenerujMesh> ();
+		generujMesh.UtworzSiatke (plytka, 1);
 	
 	}
 
@@ -74,7 +74,7 @@ public class GenerujMape : MonoBehaviour {
         for (int x = 0; x < szerokosc; x++) {
 			for (int y = 0; y < wysokosc; y++)
 			{
-			    plytka[x, y] = plytka2[x, y]; //чисто на погчампе записываешь сосятоние клетки параллельно 
+			    plytka[x, y] = plytka2[x, y]; //чисто на погчампе записываешь состояние клетки параллельно 
 				int przyleglaPlytka = LiczbaScian (x, y);
 				if (przyleglaPlytka > 4)
 					plytka2 [x, y] = 1;
