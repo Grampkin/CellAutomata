@@ -92,12 +92,14 @@ public class GenerujMape : MonoBehaviour {
         for (int ssX = scX - 1; ssX <= scX + 1; ssX++) {
 			for (int ssY = scY - 1; ssY <= scY + 1; ssY++)
 			{
-			 
-                if (ssX >= 0 && ssX < szerokosc && ssY >= 0 && ssY < wysokosc) {
+			    //если соседняя клетка находится в пределах карты то берется её состояние (1 либо 0)
+                if (ssX >= 0 && ssX < szerokosc && ssY >= 0 && ssY < wysokosc) {    
 					if (ssX != scX || ssY != scY) {
 						licznik += plytka [ssX, ssY];
                     }
-				} else {
+				}
+                //если соседняя клетка находится вне карты то за её состояние принимается единица 
+                else {
 					 licznik++;
 				}
 
