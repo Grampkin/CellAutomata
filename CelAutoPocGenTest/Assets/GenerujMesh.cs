@@ -33,7 +33,18 @@ public class GenerujMesh : MonoBehaviour {
         mesh.vertices = wierzholki.ToArray();
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
+
         
+
+        Vector2[] uvs = new Vector2[wierzholki.Count];
+        for (int i = 0; i < wierzholki.Count; i++)
+        {
+            float percentX = Mathf.InverseLerp(-plytka.GetLength(0) / 2 * rozmiar, plytka.GetLength(0) / 2 * rozmiar, wierzholki[i].x);
+            float percentY = Mathf.InverseLerp(-plytka.GetLength(1) / 2 * rozmiar, plytka.GetLength(1) / 2 * rozmiar, wierzholki[i].z);
+            uvs[i] = new Vector2(percentX, percentY);
+        }
+        mesh.uv = uvs;
+
 
 
     }

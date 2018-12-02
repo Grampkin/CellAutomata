@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class GenerujMape : MonoBehaviour {
+public class GenerujMape : MonoBehaviour
+{
 
-	public int szerokosc, wysokosc, stopienWygl;
+    public int szerokosc, wysokosc, stopienWygl;
+
+    [Range(0, 10)]
+    public int rozmiarGranicy;
 
 	public string seed;
 	public bool seedCheck;
+    
 
 
 	int [,] plytka;
@@ -32,14 +37,37 @@ public class GenerujMape : MonoBehaviour {
 		plytka = new int[szerokosc, wysokosc];
 	    plytka2 = new int[szerokosc, wysokosc];
 
-        WypelnijMape();
+	    
+
+	    
+
+
+
+	    WypelnijMape();
 
 		for (int i = 0; i < stopienWygl; i++) {
 			Wygladzenie ();
 		}
 
-		GenerujMesh generujMesh = GetComponent<GenerujMesh> ();
-		generujMesh.UtworzSiatke (plytka, 1);
+	    int[,] mapaOgraniczona = new int[szerokosc + rozmiarGranicy * 2, wysokosc + rozmiarGranicy * 2];
+
+	    for (int x = 0; x < mapaOgraniczona.GetLength(0); x++)
+	    {
+	        for (int y = 0; y < mapaOgraniczona.GetLength(1); y++)
+	        {
+	            if (x >= rozmiarGranicy && x < szerokosc + rozmiarGranicy && y >= rozmiarGranicy && y < wysokosc + rozmiarGranicy)
+	            {
+	                mapaOgraniczona[x, y] = plytka[x - rozmiarGranicy, y - rozmiarGranicy];
+	            }
+	            else
+	            {
+	                mapaOgraniczona[x, y] = 1;
+	            }
+	        }
+	    }
+
+        GenerujMesh generujMesh = GetComponent<GenerujMesh> ();
+		generujMesh.UtworzSiatke (mapaOgraniczona, 1);
 	
 	}
 
