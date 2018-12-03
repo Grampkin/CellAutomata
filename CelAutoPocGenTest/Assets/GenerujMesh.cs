@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Networking.NetworkSystem;
 
 public class GenerujMesh : MonoBehaviour {
 
-    List<Vector3> wierzholki;
+    List<Vector3> wierzсholki;
     List<int> trojkaty;
 
-    
+
+    Dictionary<int, List<Trojkat>> trojkatDictionary = new Dictionary<int, List<Trojkat>>();
+
+    List<List<int>> granicy = new List<List<int>>();
+    HashSet<int> wierzcholkiSprawdzone = new HashSet<int>();
 
 	public SiatkaKwadratow siatkaKwadratow;
     public void UtworzSiatke(int[,] plytka, float rozmiar)
@@ -15,7 +21,7 @@ public class GenerujMesh : MonoBehaviour {
 
         siatkaKwadratow = new SiatkaKwadratow(plytka, rozmiar);
 
-        wierzholki = new List<Vector3>();
+        wierzсholki = new List<Vector3>();
         trojkaty = new List<int>();
 
         for (int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++)
@@ -30,17 +36,17 @@ public class GenerujMesh : MonoBehaviour {
         Mesh mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
-        mesh.vertices = wierzholki.ToArray();
+        mesh.vertices = wierzсholki.ToArray();
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
 
         
 
-        Vector2[] uvs = new Vector2[wierzholki.Count];
-        for (int i = 0; i < wierzholki.Count; i++)
+        Vector2[] uvs = new Vector2[wierzсholki.Count];
+        for (int i = 0; i < wierzсholki.Count; i++)
         {
-            float percentX = Mathf.InverseLerp(-plytka.GetLength(0) / 2 * rozmiar, plytka.GetLength(0) / 2 * rozmiar, wierzholki[i].x);
-            float percentY = Mathf.InverseLerp(-plytka.GetLength(1) / 2 * rozmiar, plytka.GetLength(1) / 2 * rozmiar, wierzholki[i].z);
+            float percentX = Mathf.InverseLerp(-plytka.GetLength(0) / 2 * rozmiar, plytka.GetLength(0) / 2 * rozmiar, wierzсholki[i].x);
+            float percentY = Mathf.InverseLerp(-plytka.GetLength(1) / 2 * rozmiar, plytka.GetLength(1) / 2 * rozmiar, wierzсholki[i].z);
             uvs[i] = new Vector2(percentX, percentY);
         }
         mesh.uv = uvs;
@@ -138,13 +144,13 @@ public class GenerujMesh : MonoBehaviour {
         Dopasuj(punkty);
 
         if (punkty.Length >= 3)
-            utwTrojkat(punkty[0],punkty[1],punkty[2]);
+            UtwTrojkat(punkty[0],punkty[1],punkty[2]);
 	    if (punkty.Length >= 4)
-	        utwTrojkat(punkty[0], punkty[2], punkty[3]);
+	        UtwTrojkat(punkty[0], punkty[2], punkty[3]);
         if (punkty.Length >= 5)
-	        utwTrojkat(punkty[0], punkty[3], punkty[4]);
+	        UtwTrojkat(punkty[0], punkty[3], punkty[4]);
 	    if (punkty.Length >= 6)
-	        utwTrojkat(punkty[0], punkty[4], punkty[5]);
+	        UtwTrojkat(punkty[0], punkty[4], punkty[5]);
 
     }
 
@@ -156,20 +162,165 @@ public class GenerujMesh : MonoBehaviour {
         {
             if (punkty[i].wierzcholek == -1)
             {
-                punkty[i].wierzcholek = wierzholki.Count;
-                wierzholki.Add(punkty[i].poz);
+                punkty[i].wierzcholek = wierzсholki.Count;
+                wierzсholki.Add(punkty[i].poz);
             }
         }
     }
 
-    void utwTrojkat(Wezel a, Wezel b, Wezel c)
+    void UtwTrojkat(Wezel a, Wezel b, Wezel c)
     {
         trojkaty.Add(a.wierzcholek);
         trojkaty.Add(b.wierzcholek);
         trojkaty.Add(c.wierzcholek);
+
+        Trojkat trojkat = new Trojkat(a.wierzcholek, b.wierzcholek, c.wierzcholek);
+        DodajDoSlownika(trojkat.wierzcholekA, trojkat);
+        DodajDoSlownika(trojkat.wierzcholekB, trojkat);
+        DodajDoSlownika(trojkat.wierzcholekC, trojkat);
+
     }
 
-    	public class Wezel {
+    public struct Trojkat
+    {
+        public int wierzcholekA;
+        public int wierzcholekB;
+        public int wierzcholekC;
+
+        public int[] wierzcholki;
+
+        public Trojkat(int a, int b, int c)
+        {
+            wierzcholekA = a;
+            wierzcholekB = b;
+            wierzcholekC = c;
+
+            wierzcholki = new int[3];
+            wierzcholki[0] = a;
+            wierzcholki[1] = b;
+            wierzcholki[2] = c;
+
+        }
+
+        public int this[int i]
+        {
+            get { return wierzcholki[i]; }
+        }
+
+        public bool Wspolne(int wierzcholek)
+        {
+            return wierzcholek == wierzcholekA || wierzcholek == wierzcholekB || wierzcholek == wierzcholekC;
+        }
+
+    }
+
+    public void DodajDoSlownika(int wierzcholekKey, Trojkat trojkat)
+    {
+        if (trojkatDictionary.ContainsKey(wierzcholekKey)) //если в словаре есть данная вершина-ключ, то добавляет к этому ключу еще один треугольник
+        {
+            trojkatDictionary[wierzcholekKey].Add(trojkat);
+        }
+        else //если данной вершины-ключа нет то добавляет вершину-ключ в словарь и добавляет к нему треугольник 
+        {
+            List<Trojkat> trojkatyList = new List<Trojkat>();
+            trojkatyList.Add(trojkat); 
+            trojkatDictionary.Add(wierzcholekKey, trojkatyList);
+        }
+    }
+
+
+
+
+    public bool CzyJestGranica(int a, int b)//сколько общих треугольников у вершин А и B 
+    {
+        List<Trojkat> trojkatZWierzcholkiemA = trojkatDictionary[a];
+        int liczbaWspolnychTrojkatow = 0;
+
+        for (int i = 0; i < trojkatZWierzcholkiemA.Count; i++)
+        {
+            if (trojkatZWierzcholkiemA[i].Wspolne(b))
+            {
+                liczbaWspolnychTrojkatow++;
+                if (liczbaWspolnychTrojkatow > 1)
+                {
+                    break;
+                }
+            }
+                
+        }
+
+        return liczbaWspolnychTrojkatow == 1;// если у вершин один общий треугольник, функция возвращает true, в противном случае возвращает false
+
+    }
+
+    public int PolaczonyGranicznyWierzcholek(int wierzcholek)
+    {
+        List<Trojkat> trojkatZWierzcholkiem = trojkatDictionary[wierzcholek];
+
+        for (int i = 0; i < trojkatZWierzcholkiem.Count; i++)
+        {
+            Trojkat trojkat = trojkatZWierzcholkiem[i];
+
+            for (int j = 0; j < 3; j++)
+            {
+                int b = trojkat[j];
+
+                if (b != wierzcholek)
+                {
+                    if (CzyJestGranica(wierzcholek, b))
+                    {
+                        return b;
+                    }
+                }
+                
+            }
+        }
+
+        return -1;
+    }
+
+    public void RysujGranice(int wierzcholek, int granica)
+    {
+        granicy[granica].Add(wierzcholek);
+        wierzcholkiSprawdzone.Add(wierzcholek);
+
+        int wierzcholekNastepny = PolaczonyGranicznyWierzcholek(wierzcholek);
+
+        if (wierzcholekNastepny != -1)
+        {
+            RysujGranice(wierzcholekNastepny, granica);
+        }
+
+    }
+
+    public void ObliczGranicyMesha()
+    {
+        for (int wierzcholek = 0; wierzcholek < wierzсholki.Count; wierzcholek++)
+        {
+            if (!wierzcholkiSprawdzone.Contains(wierzcholek))
+            {
+                int nowyWierzcholekGraniczny = PolaczonyGranicznyWierzcholek(wierzcholek);
+                if (nowyWierzcholekGraniczny != -1)
+                {
+                    wierzcholkiSprawdzone.Add(wierzcholek);
+
+                    List<int> nowaGranica = new List<int>();
+                    nowaGranica.Add(wierzcholek);
+                    granicy.Add(nowaGranica);
+
+                    RysujGranice(nowyWierzcholekGraniczny, granicy.Count - 1);
+                    granicy[granicy.Count-1].Add(wierzcholek);
+                }
+            }
+        }
+    }
+
+
+
+
+
+    public class Wezel
+    {
 	
 		public Vector3 poz;
 		public int wierzcholek = -1;
