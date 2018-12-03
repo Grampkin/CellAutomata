@@ -16,9 +16,15 @@ public class GenerujMesh : MonoBehaviour {
     HashSet<int> wierzcholkiSprawdzone = new HashSet<int>();
 
 	public SiatkaKwadratow siatkaKwadratow;
+
+    public MeshFilter sciany;
+
     public void UtworzSiatke(int[,] plytka, float rozmiar)
     {
 
+        granicy.Clear();
+        wierzcholkiSprawdzone.Clear();
+        trojkatDictionary.Clear();
         siatkaKwadratow = new SiatkaKwadratow(plytka, rozmiar);
 
         wierzсholki = new List<Vector3>();
@@ -40,6 +46,8 @@ public class GenerujMesh : MonoBehaviour {
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
 
+        UtwSiatkeScian();
+
         
 
         Vector2[] uvs = new Vector2[wierzсholki.Count];
@@ -55,10 +63,51 @@ public class GenerujMesh : MonoBehaviour {
 
     }
 
-   
+    public void UtwSiatkeScian()
+    {
+        ObliczGranicyMesha();
+
+        List<Vector3> wierzcholkiScian = new List<Vector3>();
+        List<int> trojkatyScian = new List<int>();
+
+        Mesh scianaMesh = new Mesh();
+        float wysokoscSciany = 5;
+
+        foreach (List<int> granica in granicy)
+        {
+            for (int i = 0; i < granica.Count-1; i++)
+            {
+                int wierzcholekPierwszy = wierzcholkiScian.Count;
+                wierzcholkiScian.Add(wierzсholki[granica[i]]); //wierzcholek GL
+                wierzcholkiScian.Add(wierzсholki[granica[i+1]]); //wierzcholek GP
+                wierzcholkiScian.Add(wierzсholki[granica[i]] - Vector3.up * wysokoscSciany); //wierzcholek DL
+                wierzcholkiScian.Add(wierzсholki[granica[i+1]] - Vector3.up * wysokoscSciany); //wierzcholek DP
+
+                trojkatyScian.Add(wierzcholekPierwszy);
+                trojkatyScian.Add(wierzcholekPierwszy + 2);
+                trojkatyScian.Add(wierzcholekPierwszy + 3);
+                
+                trojkatyScian.Add(wierzcholekPierwszy + 3);
+                trojkatyScian.Add(wierzcholekPierwszy + 1);
+                trojkatyScian.Add(wierzcholekPierwszy);
+                
 
 
-	void Trojkatowanie(Kwadrat kwadrat) {
+            }
+        }
+
+        scianaMesh.vertices = wierzcholkiScian.ToArray();
+        scianaMesh.triangles = trojkatyScian.ToArray();
+        sciany.mesh = scianaMesh;
+
+
+
+    }
+
+
+
+
+    void Trojkatowanie(Kwadrat kwadrat) {
         switch (kwadrat.ksztalt)
         {
             case 0:
@@ -130,6 +179,11 @@ public class GenerujMesh : MonoBehaviour {
 
             case 15:
                 Polaczenie(kwadrat.GL, kwadrat.GP, kwadrat.DP, kwadrat.DL);
+                wierzcholkiSprawdzone.Add(kwadrat.GL.wierzcholek);
+                wierzcholkiSprawdzone.Add(kwadrat.GP.wierzcholek);
+                wierzcholkiSprawdzone.Add(kwadrat.DP.wierzcholek);
+                wierzcholkiSprawdzone.Add(kwadrat.DL.wierzcholek);
+
                 break;
 
 
@@ -265,7 +319,7 @@ public class GenerujMesh : MonoBehaviour {
             {
                 int b = trojkat[j];
 
-                if (b != wierzcholek)
+                if (b != wierzcholek && !wierzcholkiSprawdzone.Contains(b))
                 {
                     if (CzyJestGranica(wierzcholek, b))
                     {
