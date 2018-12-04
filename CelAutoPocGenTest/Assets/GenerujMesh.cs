@@ -99,6 +99,7 @@ public class GenerujMesh : MonoBehaviour {
         scianaMesh.vertices = wierzcholkiScian.ToArray();
         scianaMesh.triangles = trojkatyScian.ToArray();
         sciany.mesh = scianaMesh;
+        sciany.mesh.RecalculateNormals();
 
 
 
@@ -287,7 +288,7 @@ public class GenerujMesh : MonoBehaviour {
 
     public bool CzyJestGranica(int a, int b)//сколько общих треугольников у вершин А и B 
     {
-        List<Trojkat> trojkatZWierzcholkiemA = trojkatDictionary[a];
+        List<Trojkat> trojkatZWierzcholkiemA = trojkatDictionary[a];//хаписываем в список все треугольники с вершиной А
         int liczbaWspolnychTrojkatow = 0;
 
         for (int i = 0; i < trojkatZWierzcholkiemA.Count; i++)
@@ -407,7 +408,7 @@ public class GenerujMesh : MonoBehaviour {
 		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
 		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
 		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
-			
+		
 		//		}
 		//	}
 		//}
@@ -430,10 +431,10 @@ public class GenerujMesh : MonoBehaviour {
 			for (int x = 0; x < licznikWezlowX; x++) {
 				for (int y = 0; y < licznikWezlowY; y++) {
 					Vector3 poz = new Vector3(-szerokosc/2 + x * rozmiar + rozmiar/2, 0, -wysokosc/2 + y * rozmiar + rozmiar/2);
-					wezlyKontroli[x,y] = new WezelKontroli(poz,plytka[x,y] == 1, rozmiar);
+					wezlyKontroli[x,y] = new WezelKontroli(poz, plytka[x,y]==1, rozmiar);
 				}
 			}
-
+            
 			kwadraty = new Kwadrat[licznikWezlowX - 1,licznikWezlowY -1];
 
 			for (int x = 0; x < licznikWezlowX - 1; x++) {
