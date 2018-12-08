@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using Object = System.Object;
 
 public class GenerujMape : MonoBehaviour
 {
@@ -107,6 +108,12 @@ public class GenerujMape : MonoBehaviour
             }
         }
 
+        pokojePoFiltrowaniu.Sort();
+
+        pokojePoFiltrowaniu[0].pokojGlowny = true;
+        pokojePoFiltrowaniu[0].polaczenieZPokojemGlownym = true;
+
+
         PolaczNajblizszePokoje(pokojePoFiltrowaniu);
     }
 
@@ -199,8 +206,34 @@ public class GenerujMape : MonoBehaviour
 		}
 	}
 
-    void PolaczNajblizszePokoje(List<Pokoj> pokoje)
+    void PolaczNajblizszePokoje(List<Pokoj> pokoje, bool polaczanyPonownie = false)
     {
+
+        List<Pokoj> listaPokojow1 = new List<Pokoj>();
+        List<Pokoj> listaPokojow2 = new List<Pokoj>();
+
+        if (polaczanyPonownie)
+        {
+            foreach (Pokoj pokoj in pokoje)
+            {
+                if (pokoj.polaczenieZPokojemGlownym)
+                {
+                    listaPokojow2.Add(pokoj);
+                }
+                else
+                {
+                    listaPokojow1.Add(pokoj);
+                }
+            }
+
+           
+        }
+        else
+        {
+            listaPokojow1 = pokoje;
+            listaPokojow2 = pokoje;
+        }
+
         int odlegloscMin = 0;
 
         Wspolrzedne najblizszaPlytka1 = new Wspolrzedne();
@@ -211,24 +244,28 @@ public class GenerujMape : MonoBehaviour
 
         bool polaczenieMozliwe = false;
 
+        
 
 
-        foreach (Pokoj pokoj1 in pokoje)
+        foreach (Pokoj pokoj1 in listaPokojow1)
         {
-            polaczenieMozliwe = false;
-
-            foreach (Pokoj pokoj2 in pokoje)
+            if (!polaczanyPonownie)
             {
-                if (pokoj1 == pokoj2)
+                polaczenieMozliwe = false;
+                if (pokoj1.pokojePolaczone.Count > 0)
+                {
+                    continue;
+                }
+            }
+
+            foreach (Pokoj pokoj2 in listaPokojow2)
+            {
+                if (pokoj1 == pokoj2 || pokoj1.czyPolaczone(pokoj2))
                 {
                     continue;
                 }
 
-                if (pokoj1.czyPolaczone(pokoj2))
-                {
-                    polaczenieMozliwe = false;
-                    break;
-                }
+                
 
                 for (int granicznaPlytka1 = 0; granicznaPlytka1 < pokoj1.plytkiGraniczne.Count; granicznaPlytka1++)
                 {
@@ -259,11 +296,24 @@ public class GenerujMape : MonoBehaviour
                     }
                 }
             }
+
+            if (polaczenieMozliwe && !polaczanyPonownie)
+            {
+                UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaPlytka1, najblizszaPlytka2);
+
+            }
+
         }
-        if (polaczenieMozliwe)
+
+        if (polaczenieMozliwe && polaczanyPonownie)
         {
             UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaPlytka1, najblizszaPlytka2);
+            PolaczNajblizszePokoje(pokoje, true);
+        }
 
+        if (!polaczanyPonownie)
+        {
+            PolaczNajblizszePokoje(pokoje, true);
         }
     }
 
@@ -293,13 +343,17 @@ public class GenerujMape : MonoBehaviour
         }
     }
 
-    public class Pokoj
+    public class Pokoj : IComparable<Pokoj>
     {
         public List<Wspolrzedne> wspolrzednePlytki;
         public List<Wspolrzedne> plytkiGraniczne;
         public List<Pokoj> pokojePolaczone;
         public int rozmiarPokoju;
 
+        public bool polaczenieZPokojemGlownym;
+        public bool pokojGlowny;
+
+        
         public Pokoj() { }
 
 
@@ -330,8 +384,32 @@ public class GenerujMape : MonoBehaviour
             }
         }
 
+        public void PolaczenieZPokojemGlownym()
+        {
+            if (!polaczenieZPokojemGlownym)
+            {
+                polaczenieZPokojemGlownym = true;
+                foreach (Pokoj pokojPolaczony in pokojePolaczone)
+                {
+                    pokojPolaczony.PolaczenieZPokojemGlownym();
+                }
+            }
+        }
+
         public static void PolaczPokoje(Pokoj pokoj1, Pokoj pokoj2)
         {
+            if (pokoj1.polaczenieZPokojemGlownym)
+            {
+                pokoj2.PolaczenieZPokojemGlownym();
+            }
+            else if (pokoj2.polaczenieZPokojemGlownym)
+            {
+                pokoj1.PolaczenieZPokojemGlownym();
+            }
+
+            {
+                
+            }
             pokoj1.pokojePolaczone.Add(pokoj2);
             pokoj2.pokojePolaczone.Add(pokoj1);
         }
@@ -339,6 +417,11 @@ public class GenerujMape : MonoBehaviour
         public bool czyPolaczone(Pokoj pokojDowolny)
         {
             return pokojePolaczone.Contains(pokojDowolny);
+        }
+
+        public int CompareTo(Pokoj dowolnyPokoj)
+        {
+            return dowolnyPokoj.rozmiarPokoju.CompareTo(rozmiarPokoju);
         }
     }
 
