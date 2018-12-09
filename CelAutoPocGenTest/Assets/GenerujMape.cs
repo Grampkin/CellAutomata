@@ -211,6 +211,8 @@ public class GenerujMape : MonoBehaviour
 
         List<Pokoj> listaPokojow1 = new List<Pokoj>();
         List<Pokoj> listaPokojow2 = new List<Pokoj>();
+        
+        //комнаты которые соединены прямо или косвенно с главной комнатой добавляем в список 2, а те которые не подключены добавляем в список 1
 
         if (polaczanyPonownie)
         {
@@ -247,7 +249,7 @@ public class GenerujMape : MonoBehaviour
         
 
 
-        foreach (Pokoj pokoj1 in listaPokojow1)
+        foreach (Pokoj pokoj1 in listaPokojow1) 
         {
             if (!polaczanyPonownie)
             {
@@ -257,6 +259,8 @@ public class GenerujMape : MonoBehaviour
                     continue;
                 }
             }
+
+            //итерация 2: если комната из списка не соединенных с главной, ищем для нее соединение с другими комнатами. 
 
             foreach (Pokoj pokoj2 in listaPokojow2)
             {
@@ -305,15 +309,19 @@ public class GenerujMape : MonoBehaviour
 
         }
 
-        if (polaczenieMozliwe && polaczanyPonownie)
+  
+
+        if (polaczenieMozliwe && polaczanyPonownie) 
         {
             UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaPlytka1, najblizszaPlytka2);
             PolaczNajblizszePokoje(pokoje, true);
         }
 
-        if (!polaczanyPonownie)
+
+
+        if (!polaczanyPonownie) // после того нашли соседей для каждой из комнат, запускаем функцию заново чтобы соединить все комнаты с главной. 
         {
-            PolaczNajblizszePokoje(pokoje, true);
+            PolaczNajblizszePokoje(pokoje, true); 
         }
     }
 
