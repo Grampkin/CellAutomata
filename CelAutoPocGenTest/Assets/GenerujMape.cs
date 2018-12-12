@@ -369,7 +369,7 @@ public class GenerujMape : MonoBehaviour
         int dx = koniec.plytkaX - poczatek.plytkaX;
         int dy = koniec.plytkaY - poczatek.plytkaY;
 
-        bool obliczeniePionowe = false;
+        bool wspolczynnikUjemny = false;
         int znak = Math.Sign(dx);
         int wspolczynnik = Math.Sign(dy);
 
@@ -378,7 +378,7 @@ public class GenerujMape : MonoBehaviour
 
         if (pozioma < pionowa)
         {
-            obliczeniePionowe = true;
+            wspolczynnikUjemny = true;
             pozioma = Mathf.Abs(dy);
             pionowa = Mathf.Abs(dx);
 
@@ -391,7 +391,7 @@ public class GenerujMape : MonoBehaviour
         {
             prosta.Add(new Wspolrzedne(x, y));
 
-            if (obliczeniePionowe)
+            if (wspolczynnikUjemny)
             {
                 y += znak;
             }
@@ -403,7 +403,7 @@ public class GenerujMape : MonoBehaviour
             skok += pionowa;
             if (skok >= pozioma)
             {
-                if (obliczeniePionowe)
+                if (wspolczynnikUjemny)
                 {
                     x += wspolczynnik;
                 }
