@@ -306,7 +306,7 @@ MonoBehaviour:
   rozmiarGranicy: 3
   seed: 3.429137
   seedCheck: 1
-  udzialNapelnienia: 55
+  udzialNapelnienia: 50
 --- !u!4 &1620989013
 Transform:
   m_ObjectHideFlags: 0

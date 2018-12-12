@@ -329,10 +329,96 @@ public class GenerujMape : MonoBehaviour
     {
         Pokoj.PolaczPokoje(pokoj1, pokoj2);
             
-        Debug.DrawLine(WspolrzedneToVector3(plytka1),WspolrzedneToVector3(plytka2), Color.cyan, 10);
+        //Debug.DrawLine(WspolrzedneToVector3(plytka1),WspolrzedneToVector3(plytka2), Color.cyan, 10);
+
+        List<Wspolrzedne> prosta = RysujProsta(plytka1, plytka2);
+        foreach (Wspolrzedne centr in prosta)
+        {
+            Okreg(1, centr);
+        }
     }
 
-    
+    void Okreg(int r, Wspolrzedne o)
+    {
+        for (int x = -r; x <= r; x++)
+        {
+            for (int y = -r; y <= r; y++)
+            {
+                if (x * x + y * y <= r * r)
+                {
+                    int natychmiastowaX = o.plytkaX + x;
+                    int natychmiastowaY = o.plytkaY + y;
+                    if (natychmiastowaX >= 0 && natychmiastowaX < szerokosc &&
+                        natychmiastowaY >= 0 && natychmiastowaY < wysokosc)
+                    {
+                        poziom[natychmiastowaX, natychmiastowaY] = 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+    List<Wspolrzedne> RysujProsta(Wspolrzedne poczatek, Wspolrzedne koniec)
+    {
+        List<Wspolrzedne> prosta = new List<Wspolrzedne>();
+
+        int x = poczatek.plytkaX;
+        int y = poczatek.plytkaY;
+
+        int dx = koniec.plytkaX - poczatek.plytkaX;
+        int dy = koniec.plytkaY - poczatek.plytkaY;
+
+        bool obliczeniePionowe = false;
+        int znak = Math.Sign(dx);
+        int wspolczynnik = Math.Sign(dy);
+
+        int pozioma = Mathf.Abs(dx);
+        int pionowa = Mathf.Abs(dy);
+
+        if (pozioma < pionowa)
+        {
+            obliczeniePionowe = true;
+            pozioma = Mathf.Abs(dy);
+            pionowa = Mathf.Abs(dx);
+
+            znak = Math.Sign(dy);
+            wspolczynnik = Math.Sign(dx);
+        }
+
+        int skok = pozioma / 2;
+        for (int i = 0; i < pozioma; i++)
+        {
+            prosta.Add(new Wspolrzedne(x, y));
+
+            if (obliczeniePionowe)
+            {
+                y += znak;
+            }
+            else
+            {
+                x += znak;
+            }
+
+            skok += pionowa;
+            if (skok >= pozioma)
+            {
+                if (obliczeniePionowe)
+                {
+                    x += wspolczynnik;
+                }
+                else
+                {
+                    y += wspolczynnik;
+                }
+                skok -= pozioma;
+            }
+        }
+
+        return prosta;
+    }
+
+
 
     Vector3 WspolrzedneToVector3(Wspolrzedne plytka)
     {
