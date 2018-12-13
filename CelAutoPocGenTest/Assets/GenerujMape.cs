@@ -90,7 +90,7 @@ public class GenerujMape : MonoBehaviour
         }
 
         List<List<Wspolrzedne>> strefyPuste = Strefa(0);
-        int pustyMinimalny = 40;
+        int pustyMinimalny = 50;
 
         foreach (List<Wspolrzedne> strefaPusta in strefyPuste)
         {
@@ -334,7 +334,7 @@ public class GenerujMape : MonoBehaviour
         List<Wspolrzedne> prosta = RysujProsta(plytka1, plytka2);
         foreach (Wspolrzedne centr in prosta)
         {
-            Okreg(1, centr);
+            Okreg(2, centr);
         }
     }
 
@@ -369,7 +369,7 @@ public class GenerujMape : MonoBehaviour
         int dx = koniec.plytkaX - poczatek.plytkaX;
         int dy = koniec.plytkaY - poczatek.plytkaY;
 
-        bool wspolczynnikUjemny = false;
+        bool liniaPionowa = false;
         int znak = Math.Sign(dx);
         int wspolczynnik = Math.Sign(dy);
 
@@ -378,7 +378,7 @@ public class GenerujMape : MonoBehaviour
 
         if (pozioma < pionowa)
         {
-            wspolczynnikUjemny = true;
+            liniaPionowa = true;
             pozioma = Mathf.Abs(dy);
             pionowa = Mathf.Abs(dx);
 
@@ -386,12 +386,12 @@ public class GenerujMape : MonoBehaviour
             wspolczynnik = Math.Sign(dx);
         }
 
-        int skok = pozioma / 2;
+        int skok = pozioma / 2; //точка в которой Y увеличивается (либо Х уменьшается) 
         for (int i = 0; i < pozioma; i++)
         {
             prosta.Add(new Wspolrzedne(x, y));
 
-            if (wspolczynnikUjemny)
+            if (liniaPionowa)
             {
                 y += znak;
             }
@@ -403,7 +403,7 @@ public class GenerujMape : MonoBehaviour
             skok += pionowa;
             if (skok >= pozioma)
             {
-                if (wspolczynnikUjemny)
+                if (liniaPionowa)
                 {
                     x += wspolczynnik;
                 }
@@ -420,10 +420,7 @@ public class GenerujMape : MonoBehaviour
 
 
 
-    Vector3 WspolrzedneToVector3(Wspolrzedne plytka)
-    {
-        return new Vector3(-szerokosc/2 + .5f + plytka.plytkaX, 2, -wysokosc/2 + .5f + plytka.plytkaY);
-    }
+
 
     public struct Wspolrzedne
     {
