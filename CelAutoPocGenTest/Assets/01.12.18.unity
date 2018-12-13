@@ -301,12 +301,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   szerokosc: 100
-  wysokosc: 50
+  wysokosc: 100
   stopienWygl: 12
   rozmiarGranicy: 3
   seed: 3.429137
   seedCheck: 1
-  udzialNapelnienia: 50
+  udzialNapelnienia: 55
 --- !u!4 &1620989013
 Transform:
   m_ObjectHideFlags: 0
