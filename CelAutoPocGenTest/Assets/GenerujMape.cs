@@ -523,13 +523,15 @@ public class GenerujMape : MonoBehaviour
         for (int x = 0; x < szerokosc; x++) {
 			for (int y = 0; y < wysokosc; y++)
 			{
-			    poziom[x, y] = poziom2[x, y]; //чисто на погчампе записываешь состояние клетки параллельно 
-				int przyleglaPlytka = LiczbaScian (x, y);
+                poziom[x, y] = poziom2[x, y];  //чисто на погчампе записываешь состояние клетки параллельно 
+                int przyleglaPlytka = LiczbaScian (x, y);
 				if (przyleglaPlytka > 4)
 					poziom2 [x, y] = 1;
 				else if (przyleglaPlytka < 4)
 					poziom2 [x, y] = 0;
-			}
+
+			   
+            }
 		}
 		
 	}
