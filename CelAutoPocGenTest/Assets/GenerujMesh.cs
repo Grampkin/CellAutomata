@@ -6,6 +6,8 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class GenerujMesh : MonoBehaviour {
 
+    public bool tryb2D;
+
     List<Vector3> wierzсholki;
     List<int> trojkaty;
 
@@ -18,6 +20,7 @@ public class GenerujMesh : MonoBehaviour {
 	public SiatkaKwadratow siatkaKwadratow;
 
     public MeshFilter sciany;
+    public MeshFilter poziom;
 
     public void UtworzSiatke(int[,] plytka, float rozmiar)
     {
@@ -40,15 +43,21 @@ public class GenerujMesh : MonoBehaviour {
         }
 
         Mesh mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
+        poziom.mesh = mesh; 
 
         mesh.vertices = wierzсholki.ToArray();
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
 
-        UtwSiatkeScian();
+        if (tryb2D)
+        {
+            GenerujColizje2D();
+        }
+        else
+        {
+            UtwMeshScian();
+        }
 
-        
 
         Vector2[] uvs = new Vector2[wierzсholki.Count];
         for (int i = 0; i < wierzсholki.Count; i++)
@@ -63,7 +72,9 @@ public class GenerujMesh : MonoBehaviour {
 
     }
 
-    public void UtwSiatkeScian()
+
+
+    public void UtwMeshScian()
     {
         ObliczGranicyMesha();
 
@@ -101,11 +112,38 @@ public class GenerujMesh : MonoBehaviour {
         sciany.mesh = scianaMesh;
         sciany.mesh.RecalculateNormals();
 
+        MeshCollider colizjaScian = sciany.gameObject.GetComponent<MeshCollider>();
+        colizjaScian.sharedMesh = scianaMesh;
+
 
 
     }
 
+    void GenerujColizje2D()
+    {
 
+        EdgeCollider2D[] collider2Ds = gameObject.GetComponents<EdgeCollider2D>();
+
+        for (int i = 0; i < collider2Ds.Length; i++)
+        {
+            Destroy(collider2Ds[i]);
+        }
+
+        ObliczGranicyMesha();
+        foreach (List<int> granica in granicy)
+        {
+            EdgeCollider2D collider2D = gameObject.AddComponent<EdgeCollider2D>();
+            Vector2[] punktyGranic = new Vector2[granica.Count];
+
+            for (int i = 0; i < granica.Count; i++)
+            {
+                punktyGranic[i] = new Vector2(wierzсholki[granica[i]].x, wierzсholki[granica[i]].z);
+            }
+
+            collider2D.points = punktyGranic;
+
+        }
+    }
 
 
     void Trojkatowanie(Kwadrat kwadrat) {

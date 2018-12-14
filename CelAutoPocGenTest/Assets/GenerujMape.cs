@@ -73,7 +73,7 @@ public class GenerujMape : MonoBehaviour
     void UsunDrobneElementy()
     {
         List<List<Wspolrzedne>> strefyScian = Strefa(1);
-        int rozmiarMinimalny = 40;
+        int rozmiarMinimalny = 50;
         List<Pokoj> pokojePoFiltrowaniu = new List<Pokoj>();
 
 
@@ -90,7 +90,7 @@ public class GenerujMape : MonoBehaviour
         }
 
         List<List<Wspolrzedne>> strefyPuste = Strefa(0);
-        int pustyMinimalny = 50;
+        int pustyMinimalny = 80;
 
         foreach (List<Wspolrzedne> strefaPusta in strefyPuste)
         {
@@ -564,25 +564,7 @@ public class GenerujMape : MonoBehaviour
 
 
 
-	//void OnDrawGizmos() {
-		
-	    
-	//    /*
-	//	if (poziom != null) {
-	//		for (int x = 0; x < szerokosc; x++) {
-	//			for (int y = 0; y < wysokosc; y++) {
-	//				if (poziom [x, y] == 1)
-	//					Gizmos.color = Color.black;
-	//				else
-	//					Gizmos.color = Color.white;
-	//				Vector3 poz = new Vector3 (-szerokosc/2 + x + .5f, 0.0f, -wysokosc/2 + y + .5f);
-	//				Gizmos.DrawCube (poz, new Vector3(1,0,1));
 
-	//			}
-	//		}
-	//	}
-	//	*/
-	//}
 
 
 }
