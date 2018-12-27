@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using Object = System.Object;
 
@@ -25,7 +26,7 @@ public class GenerujMape : MonoBehaviour
 	public int udzialNapelnienia;
 
 	void Start() {
-        transform.position = new Vector3(0f,0f,0f);
+        //transform.position = new Vector3(0f,0f,0f);
 		Generuj ();
 	}
 
@@ -40,9 +41,11 @@ public class GenerujMape : MonoBehaviour
 	    poziom2 = new int[szerokosc, wysokosc];
 
 	    WypelnijMape();
-
+	    
 		for (int i = 0; i < stopienWygl; i++) {
-			Wygladzenie ();
+
+			    Wygladzenie (i,8);  
+
 		}
 
 	    UsunDrobneElementy();
@@ -90,8 +93,7 @@ public class GenerujMape : MonoBehaviour
         }
 
         List<List<Wspolrzedne>> strefyPuste = Strefa(0);
-        int pustyMinimalny = 80;
-
+        int pustyMinimalny = 120;
         foreach (List<Wspolrzedne> strefaPusta in strefyPuste)
         {
             if (strefaPusta.Count < pustyMinimalny)
@@ -112,7 +114,19 @@ public class GenerujMape : MonoBehaviour
 
         pokojePoFiltrowaniu[0].pokojGlowny = true;
         pokojePoFiltrowaniu[0].polaczenieZPokojemGlownym = true;
+        int last = pokojePoFiltrowaniu.Count-1;
+        //int minPokoj = pokojePoFiltrowaniu[last].rozmiarPokoju;
 
+
+        //foreach (Pokoj p in pokojePoFiltrowaniu)
+        //{
+        //    print(p.rozmiarPokoju);
+            
+        //}
+        //print("min = " + minPokoj);
+
+        print(pokojePoFiltrowaniu.Count);
+        
 
         PolaczNajblizszePokoje(pokojePoFiltrowaniu);
     }
@@ -334,7 +348,7 @@ public class GenerujMape : MonoBehaviour
         List<Wspolrzedne> prosta = RysujProsta(plytka1, plytka2);
         foreach (Wspolrzedne centr in prosta)
         {
-            Okreg(2, centr);
+            Okreg(1, centr);
         }
     }
 
@@ -475,6 +489,7 @@ public class GenerujMape : MonoBehaviour
             }
         }
 
+
         public void PolaczenieZPokojemGlownym()
         {
             if (!polaczenieZPokojemGlownym)
@@ -517,26 +532,36 @@ public class GenerujMape : MonoBehaviour
     }
 
 
-    void Wygladzenie () {
+    void Wygladzenie (int licznik, int iteracjaGraniczna)
+    {
 
-
+        
+        
         for (int x = 0; x < szerokosc; x++) {
 			for (int y = 0; y < wysokosc; y++)
 			{
                 poziom[x, y] = poziom2[x, y];  //чисто на погчампе записываешь состояние клетки параллельно 
                 int przyleglaPlytka = LiczbaScian (x, y);
-				if (przyleglaPlytka > 4)
-					poziom2 [x, y] = 1;
-				else if (przyleglaPlytka < 4)
-					poziom2 [x, y] = 0;
+			    if (przyleglaPlytka > 4 && licznik < iteracjaGraniczna)
+			        poziom2[x, y] = 1;
+			    else if (przyleglaPlytka < 4 && licznik < iteracjaGraniczna)
+			        poziom2[x, y] = 0;
+			    else if (przyleglaPlytka > 5 && licznik >= iteracjaGraniczna)
+			        poziom2[x, y] = 1;
+			    else if (przyleglaPlytka < 5 && licznik >= iteracjaGraniczna)
+			        poziom2[x, y] = 0;
 
-			   
+
+
+
             }
 		}
 		
 	}
 
-	int LiczbaScian(int scX, int scY) {
+   
+
+    int LiczbaScian(int scX, int scY) {
 		int licznik = 0;
 	    
 
