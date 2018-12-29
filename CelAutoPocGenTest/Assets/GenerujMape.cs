@@ -9,15 +9,17 @@ using Object = System.Object;
 public class GenerujMape : MonoBehaviour
 {
 
-    public int szerokosc, wysokosc, stopienWygl;
+    public int szerokosc, wysokosc, stopienWygl, liczba;
 
     [Range(0, 10)]
     public int rozmiarGranicy;
 
 	public string seed;
 	public bool seedCheck;
-    
 
+    protected int liczbaPok;
+    protected int flaga;
+    protected int [,] mapaZgenerowana;
 
 	int [,] poziom;
     private int[,] poziom2;
@@ -25,21 +27,32 @@ public class GenerujMape : MonoBehaviour
 	[Range(0,100)]
 	public int udzialNapelnienia;
 
-	void Start() {
-        //transform.position = new Vector3(0f,0f,0f);
-		Generuj ();
+
+	void Start()
+	{
+	    mapaZgenerowana = Generuj();
 	}
+
 
 	void Update() {
-		if (Input.GetMouseButton (0))
-			Generuj ();
+	    if (Input.GetMouseButton(0))
+	    {
+	        
+	            mapaZgenerowana = Generuj();
+	            Wyswietl(mapaZgenerowana);
+            
+	        
+        }
+			
 	}
 
-	void Generuj () {
+  
+
+	int[,] Generuj () {
 	
 		poziom = new int[szerokosc, wysokosc];
 	    poziom2 = new int[szerokosc, wysokosc];
-
+	    
 	    WypelnijMape();
 	    
 		for (int i = 0; i < stopienWygl; i++) {
@@ -48,6 +61,7 @@ public class GenerujMape : MonoBehaviour
 
 		}
 
+	    
 	    UsunDrobneElementy();
 
 
@@ -68,10 +82,21 @@ public class GenerujMape : MonoBehaviour
 	        }
 	    }
 
-        GenerujMesh generujMesh = GetComponent<GenerujMesh> ();
-		generujMesh.UtworzSiatke (mapaOgraniczona, 1);
-	
+	    return mapaOgraniczona;
+
 	}
+
+    void Wyswietl(int[,] mapaOgraniczona)
+    {
+        flaga = 10;
+
+        if (liczbaPok == liczba)
+        {
+            GenerujMesh generujMesh = GetComponent<GenerujMesh>();
+            generujMesh.UtworzSiatke(mapaOgraniczona, 1);
+            flaga = 0;
+        }
+    }
 
     void UsunDrobneElementy()
     {
@@ -114,7 +139,7 @@ public class GenerujMape : MonoBehaviour
 
         pokojePoFiltrowaniu[0].pokojGlowny = true;
         pokojePoFiltrowaniu[0].polaczenieZPokojemGlownym = true;
-        int last = pokojePoFiltrowaniu.Count-1;
+        //int last = pokojePoFiltrowaniu.Count-1;
         //int minPokoj = pokojePoFiltrowaniu[last].rozmiarPokoju;
 
 
@@ -126,10 +151,13 @@ public class GenerujMape : MonoBehaviour
         //print("min = " + minPokoj);
 
         print(pokojePoFiltrowaniu.Count);
-        
+
+        liczbaPok = pokojePoFiltrowaniu.Count;
 
         PolaczNajblizszePokoje(pokojePoFiltrowaniu);
     }
+
+    
 
     List<List<Wspolrzedne>> Strefa(int rodzaj)
     {
