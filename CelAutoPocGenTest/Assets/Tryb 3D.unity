@@ -523,8 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667c4bb1e6853b458c35f28077e59ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  szerokosc: 100
-  wysokosc: 65
+  szerokosc: 140
+  wysokosc: 102
   stopienWygl: 56
   liczba: 4
   rozmiarGranicy: 1

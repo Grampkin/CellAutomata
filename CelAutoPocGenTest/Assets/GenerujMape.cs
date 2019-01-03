@@ -30,22 +30,32 @@ public class GenerujMape : MonoBehaviour
 
 	void Start()
 	{
-	    mapaZgenerowana = Generuj();
-	}
-
-
-	void Update() {
 	    if (Input.GetMouseButton(0))
 	    {
-	        
-	            mapaZgenerowana = Generuj();
-	            Wyswietl(mapaZgenerowana);
-            
-	        
-        }
-			
+	        mapaZgenerowana = Generuj();
+	        Wyswietl(mapaZgenerowana);
+	    }
 	}
 
+    
+
+	void Update() {
+	    
+	        if (liczbaPok != liczba || (Input.GetMouseButton(0)))
+	        {
+	            mapaZgenerowana = Generuj();
+
+	        }
+	        else 
+	        {
+	            Wyswietl(mapaZgenerowana);
+	            
+	        }
+	    
+
+	}
+
+    
   
 
 	int[,] Generuj () {
@@ -88,14 +98,12 @@ public class GenerujMape : MonoBehaviour
 
     void Wyswietl(int[,] mapaOgraniczona)
     {
-        flaga = 10;
+        
 
-        if (liczbaPok == liczba)
-        {
+        
             GenerujMesh generujMesh = GetComponent<GenerujMesh>();
             generujMesh.UtworzSiatke(mapaOgraniczona, 1);
-            flaga = 0;
-        }
+            
     }
 
     void UsunDrobneElementy()
@@ -131,11 +139,13 @@ public class GenerujMape : MonoBehaviour
             }
             else
             {
-                pokojePoFiltrowaniu.Add(new Pokoj(strefaPusta, poziom));
+                
+                    pokojePoFiltrowaniu.Add(new Pokoj(strefaPusta, poziom));
             }
         }
 
-        pokojePoFiltrowaniu.Sort();
+        
+            pokojePoFiltrowaniu.Sort();
 
         pokojePoFiltrowaniu[0].pokojGlowny = true;
         pokojePoFiltrowaniu[0].polaczenieZPokojemGlownym = true;
@@ -150,7 +160,7 @@ public class GenerujMape : MonoBehaviour
         //}
         //print("min = " + minPokoj);
 
-        print(pokojePoFiltrowaniu.Count);
+        //print(pokojePoFiltrowaniu.Count);
 
         liczbaPok = pokojePoFiltrowaniu.Count;
 
@@ -228,7 +238,7 @@ public class GenerujMape : MonoBehaviour
 
 	void WypelnijMape() {
 		if (seedCheck == true) {
-			seed = Time.time.ToString();
+			seed = System.DateTime.Now.Ticks.ToString(); ;
 		}
 
 		System.Random generatorLiczby = new System.Random (seed.GetHashCode ());
