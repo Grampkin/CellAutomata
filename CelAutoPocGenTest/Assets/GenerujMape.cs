@@ -44,8 +44,9 @@ public class GenerujMape : MonoBehaviour
 	        if (liczbaPok != liczba || (Input.GetMouseButton(0)))
 	        {
 	            mapaZgenerowana = Generuj();
+	           
 
-	        }
+            }
 	        else 
 	        {
 	            Wyswietl(mapaZgenerowana);
@@ -55,10 +56,8 @@ public class GenerujMape : MonoBehaviour
 
 	}
 
-    
-  
 
-	int[,] Generuj () {
+int[,] Generuj () {
 	
 		poziom = new int[szerokosc, wysokosc];
 	    poziom2 = new int[szerokosc, wysokosc];
@@ -160,7 +159,7 @@ public class GenerujMape : MonoBehaviour
         //}
         //print("min = " + minPokoj);
 
-        //print(pokojePoFiltrowaniu.Count);
+        print(pokojePoFiltrowaniu.Count);
 
         liczbaPok = pokojePoFiltrowaniu.Count;
 
@@ -626,6 +625,24 @@ public class GenerujMape : MonoBehaviour
 	}
 
 
+
+
+
+    //void OnDrawGizmos()
+    //{
+    //    if (poziom != null)
+    //    {
+    //        for (int x = 0; x < szerokosc; x++)
+    //        {
+    //            for (int y = 0; y < wysokosc; y++)
+    //            {
+    //                Gizmos.color = (poziom[x, y] == 1) ? Color.black : Color.white;
+    //                Vector3 center = new Vector3(-szerokosc / 2 + x + .5f, 0, -wysokosc / 2 + y + .5f);
+    //                Gizmos.DrawCube(center, new Vector3(1f,0f,1f));
+    //            }
+    //        }
+    //    }
+    //}
 
 
 
