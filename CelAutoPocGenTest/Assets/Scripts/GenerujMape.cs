@@ -21,7 +21,7 @@ public class GenerujMape : MonoBehaviour
     protected int flaga;
     protected int [,] mapaZgenerowana;
 
-	int [,] poziom;
+	public int [,] poziom;
     private int[,] poziom2;
 
 	[Range(0,100)]
@@ -99,7 +99,7 @@ int[,] Generuj () {
     {
         
 
-        
+            
             GenerujMesh generujMesh = GetComponent<GenerujMesh>();
             generujMesh.UtworzSiatke(mapaOgraniczona, 1);
             
