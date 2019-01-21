@@ -4,16 +4,19 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 [RequireComponent(typeof(Sterowanie))]
+[RequireComponent(typeof(KijSterownik))]
 public class Gracz : MonoBehaviour
 {
     public float predkosc = 5;
 
     Camera myCamera;
     Sterowanie sterownik;
+    KijSterownik spellCaster;
 
     void Start ()
     {
         sterownik = GetComponent<Sterowanie>();
+        spellCaster = GetComponent<KijSterownik>();
         myCamera = Camera.main;
     }
 	
@@ -33,6 +36,11 @@ public class Gracz : MonoBehaviour
 	        Vector3 point = promien.GetPoint(odleglosc);
 	        sterownik.Patrz(point);
 	    }
+
+        if (Input.GetMouseButton(0))
+        {
+            spellCaster.Cast();
+        }
 	}
 
     

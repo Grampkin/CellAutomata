@@ -30,7 +30,7 @@ public class GenerujMape : MonoBehaviour
 
 	void Start()
 	{
-	    if (Input.GetMouseButton(0))
+	    if (Input.GetKeyDown(KeyCode.R))
 	    {
 	        mapaZgenerowana = Generuj();
 	        Wyswietl(mapaZgenerowana);
@@ -41,7 +41,7 @@ public class GenerujMape : MonoBehaviour
 
 	void Update() {
 	    
-	        if (liczbaPok != liczba || (Input.GetMouseButton(0)))
+	        if (liczbaPok != liczba || (Input.GetKeyDown(KeyCode.R)))
 	        {
 	            mapaZgenerowana = Generuj();
 	           
