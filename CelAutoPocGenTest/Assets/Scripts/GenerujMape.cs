@@ -385,7 +385,7 @@ int[,] Generuj () {
         List<Wspolrzedne> prosta = RysujProsta(plytka1, plytka2);
         foreach (Wspolrzedne centr in prosta)
         {
-            Okreg(1, centr);
+            Okreg(2, centr);
         }
     }
 
@@ -507,6 +507,8 @@ int[,] Generuj () {
             pokojePolaczone = new List<Pokoj>();
             plytkiGraniczne = new List<Wspolrzedne>();
 
+
+            //считае размер комнаты
             foreach (Wspolrzedne plytka in wspolrzednePlytki)
             {
                 for (int x = plytka.plytkaX - 1; x <= plytka.plytkaX + 1; x++)
