@@ -22,13 +22,13 @@ public class GenerujMesh : MonoBehaviour {
     public MeshFilter sciany;
     public MeshFilter poziom;
 
-    public void UtworzSiatke(int[,] plytka, float rozmiar)
+    public void UtworzSiatke(int[,] mapa, float rozmiar)
     {
 
         granicy.Clear();
         wierzcholkiSprawdzone.Clear();
         trojkatDictionary.Clear();
-        siatkaKwadratow = new SiatkaKwadratow(plytka, rozmiar);
+        siatkaKwadratow = new SiatkaKwadratow(mapa, rozmiar);
 
         wierzсholki = new List<Vector3>();
         trojkaty = new List<int>();
@@ -55,15 +55,15 @@ public class GenerujMesh : MonoBehaviour {
         }
         else
         {
-            UtwMeshScian();
+            UtwMeshScian(mapa.GetLength(0), mapa.GetLength(1), rozmiar);
         }
 
 
         Vector2[] uvs = new Vector2[wierzсholki.Count];
         for (int i = 0; i < wierzсholki.Count; i++)
         {
-            float percentX = Mathf.InverseLerp(-plytka.GetLength(0) / 2 * rozmiar, plytka.GetLength(0) / 2 * rozmiar, wierzсholki[i].x);
-            float percentY = Mathf.InverseLerp(-plytka.GetLength(1) / 2 * rozmiar, plytka.GetLength(1) / 2 * rozmiar, wierzсholki[i].z);
+            float percentX = Mathf.InverseLerp(-mapa.GetLength(0) / 2 * rozmiar, mapa.GetLength(0) / 2 * rozmiar, wierzсholki[i].x);
+            float percentY = Mathf.InverseLerp(-mapa.GetLength(1) / 2 * rozmiar, mapa.GetLength(1) / 2 * rozmiar, wierzсholki[i].z);
             uvs[i] = new Vector2(percentX, percentY);
         }
         mesh.uv = uvs;
@@ -74,7 +74,7 @@ public class GenerujMesh : MonoBehaviour {
 
 
 
-    public void UtwMeshScian()
+    public void UtwMeshScian(int szerokosc, int wysokosc,float rozmiar)
     {
         ObliczGranicyMesha();
 
@@ -114,6 +114,15 @@ public class GenerujMesh : MonoBehaviour {
 
         MeshCollider colizjaScian = sciany.gameObject.GetComponent<MeshCollider>();
         colizjaScian.sharedMesh = scianaMesh;
+
+        Vector2[] uvs = new Vector2[wierzcholkiScian.Count];
+        for (int i = 0; i < wierzcholkiScian.Count; i++)
+        {
+            float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
+            float interpolatedY = Mathf.InverseLerp(-wysokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].y);
+            uvs[i] = new Vector2(interpolatedX, interpolatedY);
+        }
+        sciany.mesh.uv = uvs;
 
 
 

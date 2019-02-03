@@ -23,7 +23,7 @@ public class Gracz : MonoBehaviour
 
 	void Update ()
 	{
-	    Vector3 poruszanie = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
+	    Vector3 poruszanie = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 	    Vector3 predkoscPorusznia = poruszanie.normalized * predkosc;
 	    sterownik.Poruszaj(predkoscPorusznia);
 

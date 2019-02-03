@@ -71,7 +71,7 @@ int[,] Generuj () {
 		}
 
 	    
-	    UsunDrobneElementy();
+	    //UsunDrobneElementy();
 
 
         int[,] mapaOgraniczona = new int[szerokosc + rozmiarGranicy * 2, wysokosc + rozmiarGranicy * 2];
@@ -630,21 +630,21 @@ int[,] Generuj () {
 
 
 
-    //void OnDrawGizmos()
-    //{
-    //    if (poziom != null)
-    //    {
-    //        for (int x = 0; x < szerokosc; x++)
-    //        {
-    //            for (int y = 0; y < wysokosc; y++)
-    //            {
-    //                Gizmos.color = (poziom[x, y] == 1) ? Color.black : Color.white;
-    //                Vector3 center = new Vector3(-szerokosc / 2 + x + .5f, 0, -wysokosc / 2 + y + .5f);
-    //                Gizmos.DrawCube(center, new Vector3(1f,0f,1f));
-    //            }
-    //        }
-    //    }
-    //}
+    void OnDrawGizmos()
+    {
+        if (poziom != null)
+        {
+            for (int x = 0; x < szerokosc; x++)
+            {
+                for (int y = 0; y < wysokosc; y++)
+                {
+                    Gizmos.color = (poziom[x, y] == 1) ? Color.black : Color.white;
+                    Vector3 center = new Vector3(-szerokosc / 2 + x + .5f, 0, -wysokosc / 2 + y + .5f);
+                    Gizmos.DrawCube(center, new Vector3(1f,0f,1f));
+                }
+            }
+        }
+    }
 
 
 
