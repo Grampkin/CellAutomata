@@ -9,13 +9,13 @@ using Object = System.Object;
 public class GenerujMape : MonoBehaviour
 {
 
-    public int szerokosc, wysokosc, stopienWygl, liczba;
+    public int szerokosc, wysokosc, liczbaIteracji, liczbaPokoji;
 
     [Range(0, 10)]
     public int rozmiarGranicy;
 
 	public string seed;
-	public bool seedCheck;
+	public bool seedChange;
 
     protected int liczbaPok;
     protected int flaga;
@@ -41,7 +41,7 @@ public class GenerujMape : MonoBehaviour
 
 	void Update() {
 	    
-	        if (liczbaPok != liczba || (Input.GetKeyDown(KeyCode.R)))
+	        if (liczbaPok != liczbaPokoji || (Input.GetKeyDown(KeyCode.R)))
 	        {
 	            mapaZgenerowana = Generuj();
 	           
@@ -64,14 +64,14 @@ int[,] Generuj () {
 	    
 	    WypelnijMape();
 	    
-		for (int i = 0; i < stopienWygl; i++) {
+		for (int i = 0; i < liczbaIteracji; i++) {
 
-			    Wygladzenie (i,8);  
+			    CyklZycia (i,8);  
 
 		}
 
 	    
-	    //UsunDrobneElementy();
+	    ModyfikujMape();
 
 
         int[,] mapaOgraniczona = new int[szerokosc + rozmiarGranicy * 2, wysokosc + rozmiarGranicy * 2];
@@ -105,34 +105,34 @@ int[,] Generuj () {
             
     }
 
-    void UsunDrobneElementy()
+    void ModyfikujMape()
     {
-        List<List<Wspolrzedne>> strefyScian = Strefa(1);
-        int rozmiarMinimalny = 50;
+        List<List<Wspolrzedne>> strefyScian = Strefy(1);
+        int scianaNajmniejsza = 50;
         List<Pokoj> pokojePoFiltrowaniu = new List<Pokoj>();
 
 
 
         foreach (List<Wspolrzedne> strefaScian in strefyScian)
         {
-            if (strefaScian.Count < rozmiarMinimalny)
+            if (strefaScian.Count < scianaNajmniejsza)
             {
-                foreach (Wspolrzedne wybranaPlytka in strefaScian)
+                foreach (Wspolrzedne wybranaKomorka in strefaScian)
                 {
-                    poziom[wybranaPlytka.plytkaX, wybranaPlytka.plytkaY] = 0;
+                    poziom[wybranaKomorka.komorkaX, wybranaKomorka.komorkaY] = 0;
                 }
             }
         }
 
-        List<List<Wspolrzedne>> strefyPuste = Strefa(0);
-        int pustyMinimalny = 120;
+        List<List<Wspolrzedne>> strefyPuste = Strefy(0);
+        int pokojNajmniejszy = 120;
         foreach (List<Wspolrzedne> strefaPusta in strefyPuste)
         {
-            if (strefaPusta.Count < pustyMinimalny)
+            if (strefaPusta.Count < pokojNajmniejszy)
             {
-                foreach (Wspolrzedne wybranaPlytka in strefaPusta)
+                foreach (Wspolrzedne wybranaKomorka in strefaPusta)
                 {
-                    poziom[wybranaPlytka.plytkaX, wybranaPlytka.plytkaY] = 1;
+                    poziom[wybranaKomorka.komorkaX, wybranaKomorka.komorkaY] = 1;
                 }
 
             }
@@ -168,23 +168,23 @@ int[,] Generuj () {
 
     
 
-    List<List<Wspolrzedne>> Strefa(int rodzaj)
+    List<List<Wspolrzedne>> Strefy(int rodzaj)
     {
         List<List<Wspolrzedne>> strefy = new List<List<Wspolrzedne>>();
-        int[,] flagi = new int[szerokosc, wysokosc];
+        int[,] komorkiSprawdzone = new int[szerokosc, wysokosc];
 
         for (int x = 0; x < szerokosc; x++)
         {
             for (int y = 0; y < wysokosc; y++)
             {
-                if (flagi[x, y] == 0 && poziom[x,y] == rodzaj)
+                if (komorkiSprawdzone[x, y] == 0 && poziom[x,y] == rodzaj)
                 {
-                    List<Wspolrzedne> strefaNowa = PlytkaStrefy(x, y);
+                    List<Wspolrzedne> strefaNowa = KomorkiStrefy(x, y);
                     strefy.Add(strefaNowa);
 
-                    foreach (Wspolrzedne wybranaPlytka in strefaNowa)
+                    foreach (Wspolrzedne wybranaKomorka in strefaNowa)
                     {
-                        flagi[wybranaPlytka.plytkaX, wybranaPlytka.plytkaY] = 1;
+                        komorkiSprawdzone[wybranaKomorka.komorkaX, wybranaKomorka.komorkaY] = 1;
                     }
                 }
             }
@@ -193,31 +193,31 @@ int[,] Generuj () {
         return strefy; 
     }
 
-    List<Wspolrzedne> PlytkaStrefy(int poczX, int poczY)
+    List<Wspolrzedne> KomorkiStrefy(int poczX, int poczY)
     {
         List<Wspolrzedne> wspolrzedne = new List<Wspolrzedne>();
-        int[,] flagi = new int[szerokosc, wysokosc];
+        int[,] komorkiSprawdzone = new int[szerokosc, wysokosc];
         int rodzaj = poziom[poczX, poczY];
 
         Queue<Wspolrzedne> queue = new Queue<Wspolrzedne>();
         queue.Enqueue(new Wspolrzedne(poczX, poczY));
-        flagi[poczX, poczY] = 1;
+        komorkiSprawdzone[poczX, poczY] = 1;
 
         while (queue.Count > 0)
         {
-            Wspolrzedne wybranaPlytka = queue.Dequeue();
-            wspolrzedne.Add(wybranaPlytka);
+            Wspolrzedne wybranaKomorka = queue.Dequeue();
+            wspolrzedne.Add(wybranaKomorka);
 
-            for (int x = wybranaPlytka.plytkaX - 1; x <= wybranaPlytka.plytkaX + 1; x++)
+            for (int x = wybranaKomorka.komorkaX - 1; x <= wybranaKomorka.komorkaX + 1; x++)
             {
-                for (int y = wybranaPlytka.plytkaY - 1; y <= wybranaPlytka.plytkaY + 1; y++)
+                for (int y = wybranaKomorka.komorkaY - 1; y <= wybranaKomorka.komorkaY + 1; y++)
                 {
                     if ((x >= 0 && x < szerokosc && y >= 0 && y < wysokosc) &&
-                        (x == wybranaPlytka.plytkaX || y == wybranaPlytka.plytkaY))
+                        (x == wybranaKomorka.komorkaX || y == wybranaKomorka.komorkaY))
                     {
-                        if (flagi[x, y] == 0 && poziom[x, y] == rodzaj)
+                        if (komorkiSprawdzone[x, y] == 0 && poziom[x, y] == rodzaj)
                         {
-                            flagi[x, y] = 1;
+                            komorkiSprawdzone[x, y] = 1;
                             queue.Enqueue(new Wspolrzedne(x, y));
                         }
                     }
@@ -236,7 +236,7 @@ int[,] Generuj () {
      */
 
 	void WypelnijMape() {
-		if (seedCheck == true) {
+		if (seedChange == true) {
 			seed = System.DateTime.Now.Ticks.ToString(); ;
 		}
 
@@ -245,8 +245,8 @@ int[,] Generuj () {
 		for (int x = 0; x < szerokosc; x++) {
 			for (int y = 0; y < wysokosc; y++) {
 				if (x == 0 || x == szerokosc-1 || y == 0 || y == wysokosc - 1)
-					poziom [x, y] = poziom2[x, y] = 1;
-				else {
+				 	poziom [x, y] = poziom2[x, y] = 1;
+			    else {
 					if (generatorLiczby.Next (0, 100) < udzialNapelnienia)
 						poziom [x, y] = poziom2[x, y] = 1;
 					else
@@ -289,8 +289,8 @@ int[,] Generuj () {
 
         int odlegloscMin = 0;
 
-        Wspolrzedne najblizszaPlytka1 = new Wspolrzedne();
-        Wspolrzedne najblizszaPlytka2 = new Wspolrzedne();
+        Wspolrzedne najblizszaKomorka1 = new Wspolrzedne();
+        Wspolrzedne najblizszaKomorka2 = new Wspolrzedne();
 
         Pokoj najblizszyPokoj1 = new Pokoj();
         Pokoj najblizszyPokoj2 = new Pokoj();
@@ -322,25 +322,25 @@ int[,] Generuj () {
 
                 
 
-                for (int granicznaPlytka1 = 0; granicznaPlytka1 < pokoj1.plytkiGraniczne.Count; granicznaPlytka1++)
+                for (int granicznaKomorka1 = 0; granicznaKomorka1 < pokoj1.komorkiGraniczne.Count; granicznaKomorka1++)
                 {
-                    for (int granicznaPlytka2 = 0; granicznaPlytka2 < pokoj2.plytkiGraniczne.Count; granicznaPlytka2++)
+                    for (int granicznaKomorka2 = 0; granicznaKomorka2 < pokoj2.komorkiGraniczne.Count; granicznaKomorka2++)
                     {
 
-                        Wspolrzedne plytka1 = pokoj1.plytkiGraniczne[granicznaPlytka1];
-                        Wspolrzedne plytka2 = pokoj2.plytkiGraniczne[granicznaPlytka2];
+                        Wspolrzedne komorka1 = pokoj1.komorkiGraniczne[granicznaKomorka1];
+                        Wspolrzedne komorka2 = pokoj2.komorkiGraniczne[granicznaKomorka2];
 
                         int odleglosc =
-                            (int) (((plytka1.plytkaX - plytka2.plytkaX) * (plytka1.plytkaX - plytka2.plytkaX)) +
-                                   ((plytka1.plytkaY - plytka2.plytkaY) * (plytka1.plytkaY - plytka2.plytkaY)));
+                            (int) (((komorka1.komorkaX - komorka2.komorkaX) * (komorka1.komorkaX - komorka2.komorkaX)) +
+                                   ((komorka1.komorkaY - komorka2.komorkaY) * (komorka1.komorkaY - komorka2.komorkaY)));
 
                         if (odleglosc < odlegloscMin || !polaczenieMozliwe)
                         {
                             odlegloscMin = odleglosc;
                             polaczenieMozliwe = true;
 
-                            najblizszaPlytka1 = plytka1;
-                            najblizszaPlytka2 = plytka2;
+                            najblizszaKomorka1 = komorka1;
+                            najblizszaKomorka2 = komorka2;
 
                             najblizszyPokoj1 = pokoj1;
                             najblizszyPokoj2 = pokoj2;
@@ -354,7 +354,7 @@ int[,] Generuj () {
 
             if (polaczenieMozliwe && !polaczanyPonownie)
             {
-                UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaPlytka1, najblizszaPlytka2);
+                UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaKomorka1, najblizszaKomorka2);
 
             }
 
@@ -364,7 +364,7 @@ int[,] Generuj () {
 
         if (polaczenieMozliwe && polaczanyPonownie) 
         {
-            UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaPlytka1, najblizszaPlytka2);
+            UtworzKorytaz(najblizszyPokoj1, najblizszyPokoj2, najblizszaKomorka1, najblizszaKomorka2);
             PolaczNajblizszePokoje(pokoje, true);
         }
 
@@ -376,20 +376,18 @@ int[,] Generuj () {
         }
     }
 
-    void UtworzKorytaz(Pokoj pokoj1, Pokoj pokoj2, Wspolrzedne plytka1, Wspolrzedne plytka2)
+    void UtworzKorytaz(Pokoj pokoj1, Pokoj pokoj2, Wspolrzedne komorka1, Wspolrzedne komorka2)
     {
         Pokoj.PolaczPokoje(pokoj1, pokoj2);
-            
-        //Debug.DrawLine(WspolrzedneToVector3(plytka1),WspolrzedneToVector3(plytka2), Color.cyan, 10);
 
-        List<Wspolrzedne> prosta = RysujProsta(plytka1, plytka2);
+        List<Wspolrzedne> prosta = RysujProsta(komorka1, komorka2);
         foreach (Wspolrzedne centr in prosta)
         {
-            Okreg(2, centr);
+            KrokKorytarza(2, centr);
         }
     }
 
-    void Okreg(int r, Wspolrzedne o)
+    void KrokKorytarza(int r, Wspolrzedne o)
     {
         for (int x = -r; x <= r; x++)
         {
@@ -397,8 +395,8 @@ int[,] Generuj () {
             {
                 if (x * x + y * y <= r * r)
                 {
-                    int natychmiastowaX = o.plytkaX + x;
-                    int natychmiastowaY = o.plytkaY + y;
+                    int natychmiastowaX = o.komorkaX + x;
+                    int natychmiastowaY = o.komorkaY + y;
                     if (natychmiastowaX >= 0 && natychmiastowaX < szerokosc &&
                         natychmiastowaY >= 0 && natychmiastowaY < wysokosc)
                     {
@@ -408,17 +406,18 @@ int[,] Generuj () {
                 }
             }
         }
+
     }
 
     List<Wspolrzedne> RysujProsta(Wspolrzedne poczatek, Wspolrzedne koniec)
     {
         List<Wspolrzedne> prosta = new List<Wspolrzedne>();
 
-        int x = poczatek.plytkaX;
-        int y = poczatek.plytkaY;
+        int x = poczatek.komorkaX;
+        int y = poczatek.komorkaY;
 
-        int dx = koniec.plytkaX - poczatek.plytkaX;
-        int dy = koniec.plytkaY - poczatek.plytkaY;
+        int dx = koniec.komorkaX - poczatek.komorkaX;
+        int dy = koniec.komorkaY - poczatek.komorkaY;
 
         bool liniaPionowa = false;
         int znak = Math.Sign(dx);
@@ -475,20 +474,20 @@ int[,] Generuj () {
 
     public struct Wspolrzedne
     {
-        public int plytkaX;
-        public int plytkaY;
+        public int komorkaX;
+        public int komorkaY;
 
         public Wspolrzedne(int x, int y)
         {
-            plytkaX = x;
-            plytkaY = y; 
+            komorkaX = x;
+            komorkaY = y; 
         }
     }
 
     public class Pokoj : IComparable<Pokoj>
     {
-        public List<Wspolrzedne> wspolrzednePlytki;
-        public List<Wspolrzedne> plytkiGraniczne;
+        public List<Wspolrzedne> wspolrzedneKomorki;
+        public List<Wspolrzedne> komorkiGraniczne;
         public List<Pokoj> pokojePolaczone;
         public int rozmiarPokoju;
 
@@ -499,27 +498,27 @@ int[,] Generuj () {
         public Pokoj() { }
 
 
-        public Pokoj(List<Wspolrzedne> plytkiPokoju, int[,] poziom)
+        public Pokoj(List<Wspolrzedne> komorkiPokoju, int[,] poziom)
         {
-            wspolrzednePlytki = plytkiPokoju;
-            rozmiarPokoju = wspolrzednePlytki.Count;
+            wspolrzedneKomorki = komorkiPokoju;
+            rozmiarPokoju = wspolrzedneKomorki.Count;
 
             pokojePolaczone = new List<Pokoj>();
-            plytkiGraniczne = new List<Wspolrzedne>();
+            komorkiGraniczne = new List<Wspolrzedne>();
 
 
             //считае размер комнаты
-            foreach (Wspolrzedne plytka in wspolrzednePlytki)
+            foreach (Wspolrzedne komorka in wspolrzedneKomorki)
             {
-                for (int x = plytka.plytkaX - 1; x <= plytka.plytkaX + 1; x++)
+                for (int x = komorka.komorkaX - 1; x <= komorka.komorkaX + 1; x++)
                 {
-                    for (int y = plytka.plytkaY - 1; y <= plytka.plytkaY + 1; y++)
+                    for (int y = komorka.komorkaY - 1; y <= komorka.komorkaY + 1; y++)
                     {
-                        if (x == plytka.plytkaX || y == plytka.plytkaY)
+                        if (x == komorka.komorkaX || y == komorka.komorkaY)
                         {
                             if (poziom[x,y] == 1)
                             {
-                                plytkiGraniczne.Add(plytka);
+                                komorkiGraniczne.Add(komorka);
                             }
                         }
                     }
@@ -571,28 +570,22 @@ int[,] Generuj () {
     }
 
 
-    void Wygladzenie (int licznik, int iteracjaGraniczna)
+    void CyklZycia (int licznik, int iteracjaGraniczna)
     {
 
-        
-        
         for (int x = 0; x < szerokosc; x++) {
 			for (int y = 0; y < wysokosc; y++)
 			{
                 poziom[x, y] = poziom2[x, y];  //чисто на погчампе записываешь состояние клетки параллельно 
-                int przyleglaPlytka = LiczbaScian (x, y);
-			    if (przyleglaPlytka > 4 && licznik < iteracjaGraniczna)
+                int przyleglaKomorka = LiczbaScian (x, y);
+			    if (przyleglaKomorka > 4 && licznik < iteracjaGraniczna)
 			        poziom2[x, y] = 1;
-			    else if (przyleglaPlytka < 4 && licznik < iteracjaGraniczna)
+			    else if (przyleglaKomorka < 4 && licznik < iteracjaGraniczna)
 			        poziom2[x, y] = 0;
-			    else if (przyleglaPlytka > 5 && licznik >= iteracjaGraniczna)
+			    else if (przyleglaKomorka > 5 && licznik >= iteracjaGraniczna)
 			        poziom2[x, y] = 1;
-			    else if (przyleglaPlytka < 5 && licznik >= iteracjaGraniczna)
+			    else if (przyleglaKomorka < 5 && licznik >= iteracjaGraniczna)
 			        poziom2[x, y] = 0;
-
-
-
-
             }
 		}
 		

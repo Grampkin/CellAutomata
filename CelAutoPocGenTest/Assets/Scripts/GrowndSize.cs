@@ -6,13 +6,16 @@ using UnityEngine;
 public class GrowndSize : MonoBehaviour
 {
 
-    GenerujMape mapa;
+    public GameObject generator;
+    public GameObject ground;
     
     // Start is called before the first frame update
     void Start()
     {
-        mapa = GetComponent<GenerujMape>();
-        transform.localScale = new Vector3((float)mapa.poziom.GetValue(0)/10, 1f, (float)mapa.poziom.GetValue(1)/10);
+        var genMap = generator.GetComponent<GenerujMape>();
+        ground.transform.localScale = new Vector3((float)genMap.szerokosc / 10, 1f, genMap.wysokosc / 10);
+        GameObject.Instantiate(ground, new Vector3(0, -5, 0), new Quaternion(0, 0, 0, 0));
+       
     }
 
     

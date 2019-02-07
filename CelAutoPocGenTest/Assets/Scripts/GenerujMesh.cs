@@ -119,7 +119,7 @@ public class GenerujMesh : MonoBehaviour {
         for (int i = 0; i < wierzcholkiScian.Count; i++)
         {
             float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
-            float interpolatedY = Mathf.InverseLerp(-wysokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].y);
+            float interpolatedY = Mathf.InverseLerp(-wysokosc / 2 * rozmiar, wysokosc / 2 * rozmiar, wierzcholkiScian[i].y);
             uvs[i] = new Vector2(interpolatedX, interpolatedY);
         }
         sciany.mesh.uv = uvs;
@@ -432,34 +432,34 @@ public class GenerujMesh : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmos() {
+	//void OnDrawGizmos() {
 
-		//if (siatkaKwadratow != null) {
-		//	for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
-		//		for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
+	//	if (siatkaKwadratow != null) {
+	//		for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
+	//			for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
 
-		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
 
-		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
 
-		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
 
-		//			Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
 
-		//			Gizmos.color = Color.grey;
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
-		//			Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.color = Color.grey;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
 		
-		//		}
-		//	}
-		//}
-	}
+	//			}
+	//		}
+	//	}
+	//}
 
 	public class SiatkaKwadratow {
 
