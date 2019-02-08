@@ -605,8 +605,8 @@ MonoBehaviour:
   liczbaIteracji: 56
   liczbaPokoji: 25
   rozmiarGranicy: 1
-  seed: 636851567432999848
-  seedChange: 1
+  seed: 636851819142657543
+  seedChange: 0
   udzialNapelnienia: 58
 --- !u!4 &1620989013
 Transform:

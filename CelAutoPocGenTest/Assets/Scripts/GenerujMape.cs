@@ -278,13 +278,11 @@ int[,] Generuj () {
                     listaPokojow1.Add(pokoj);
                 }
             }
-
-           
+ 
         }
         else
         {
-            listaPokojow1 = pokoje;
-            listaPokojow2 = pokoje;
+            listaPokojow1 = listaPokojow2 = pokoje;
         }
 
         int odlegloscMin = 0;
@@ -296,9 +294,6 @@ int[,] Generuj () {
         Pokoj najblizszyPokoj2 = new Pokoj();
 
         bool polaczenieMozliwe = false;
-
-        
-
 
         foreach (Pokoj pokoj1 in listaPokojow1) 
         {
@@ -319,8 +314,6 @@ int[,] Generuj () {
                 {
                     continue;
                 }
-
-                
 
                 for (int granicznaKomorka1 = 0; granicznaKomorka1 < pokoj1.komorkiGraniczne.Count; granicznaKomorka1++)
                 {
@@ -346,8 +339,6 @@ int[,] Generuj () {
                             najblizszyPokoj2 = pokoj2;
 
                         }
-
-
                     }
                 }
             }
@@ -359,8 +350,6 @@ int[,] Generuj () {
             }
 
         }
-
-  
 
         if (polaczenieMozliwe && polaczanyPonownie) 
         {
@@ -487,10 +476,10 @@ int[,] Generuj () {
     public class Pokoj : IComparable<Pokoj>
     {
         public List<Wspolrzedne> wspolrzedneKomorki;
-        public List<Wspolrzedne> komorkiGraniczne;
-        public List<Pokoj> pokojePolaczone;
         public int rozmiarPokoju;
+        public List<Pokoj> pokojePolaczone;
 
+        public List<Wspolrzedne> komorkiGraniczne;
         public bool polaczenieZPokojemGlownym;
         public bool pokojGlowny;
 
@@ -507,7 +496,7 @@ int[,] Generuj () {
             komorkiGraniczne = new List<Wspolrzedne>();
 
 
-            //считае размер комнаты
+            //считает размер комнаты
             foreach (Wspolrzedne komorka in wspolrzedneKomorki)
             {
                 for (int x = komorka.komorkaX - 1; x <= komorka.komorkaX + 1; x++)
@@ -551,16 +540,15 @@ int[,] Generuj () {
                 pokoj1.PolaczenieZPokojemGlownym();
             }
 
-            {
-                
-            }
             pokoj1.pokojePolaczone.Add(pokoj2);
             pokoj2.pokojePolaczone.Add(pokoj1);
         }
 
         public bool czyPolaczone(Pokoj pokojDowolny)
         {
-            return pokojePolaczone.Contains(pokojDowolny);
+            if (pokojePolaczone.Contains(pokojDowolny))
+                return true;
+            else return false;
         }
 
         public int CompareTo(Pokoj dowolnyPokoj)
