@@ -101,7 +101,7 @@ int[,] Generuj () {
 
             
             GenerujMesh generujMesh = GetComponent<GenerujMesh>();
-            generujMesh.UtworzSiatke(mapaOgraniczona, 1);
+            generujMesh.UtworzMesze(mapaOgraniczona, 1);
             
     }
 
@@ -376,6 +376,8 @@ int[,] Generuj () {
         }
     }
 
+
+
     void KrokKorytarza(int r, Wspolrzedne o)
     {
         for (int x = -r; x <= r; x++)
@@ -426,6 +428,7 @@ int[,] Generuj () {
         }
 
         int skok = pozioma / 2; //точка в которой Y увеличивается (либо Х уменьшается) 
+
         for (int i = 0; i < pozioma; i++)
         {
             prosta.Add(new Wspolrzedne(x, y));
@@ -611,21 +614,21 @@ int[,] Generuj () {
 
 
 
-    void OnDrawGizmos()
-    {
-        if (poziom != null)
-        {
-            for (int x = 0; x < szerokosc; x++)
-            {
-                for (int y = 0; y < wysokosc; y++)
-                {
-                    Gizmos.color = (poziom[x, y] == 1) ? Color.black : Color.white;
-                    Vector3 center = new Vector3(-szerokosc / 2 + x + .5f, 0, -wysokosc / 2 + y + .5f);
-                    Gizmos.DrawCube(center, new Vector3(1f,0f,1f));
-                }
-            }
-        }
-    }
+    //void OnDrawGizmos()
+    //{
+    //    if (poziom != null)
+    //    {
+    //        for (int x = 0; x < szerokosc; x++)
+    //        {
+    //            for (int y = 0; y < wysokosc; y++)
+    //            {
+    //                Gizmos.color = (poziom[x, y] == 1) ? Color.black : Color.white;
+    //                Vector3 center = new Vector3(-szerokosc / 2 + x + .5f, 0, -wysokosc / 2 + y + .5f);
+    //                Gizmos.DrawCube(center, new Vector3(1f,0f,1f));
+    //            }
+    //        }
+    //    }
+    //}
 
 
 

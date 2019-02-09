@@ -22,7 +22,7 @@ public class GenerujMesh : MonoBehaviour {
     public MeshFilter sciany;
     public MeshFilter poziom;
 
-    public void UtworzSiatke(int[,] mapa, float rozmiar)
+    public void UtworzMesze(int[,] mapa, float rozmiar)
     {
 
         granicy.Clear();
@@ -432,43 +432,43 @@ public class GenerujMesh : MonoBehaviour {
 		}
 	}
 
-	//void OnDrawGizmos() {
+	void OnDrawGizmos() {
 
-	//	if (siatkaKwadratow != null) {
-	//		for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
-	//			for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
+		if (siatkaKwadratow != null) {
+			for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
+				for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
 
-	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
+					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
 
-	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
+					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
 
-	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
+					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
 
-	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
+					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
 
-	//				Gizmos.color = Color.grey;
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
-	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
-		
-	//			}
-	//		}
-	//	}
-	//}
+					Gizmos.color = Color.grey;
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
+					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
+	
+				}
+			}
+		}
+	}
 
 	public class SiatkaKwadratow {
 
 		public Kwadrat[,] kwadraty;
 
-		public SiatkaKwadratow(int[,] plytka, float rozmiar) {
+		public SiatkaKwadratow(int[,] poziom, float rozmiar) {
 			
-			int licznikWezlowX = plytka.GetLength(0);
-			int licznikWezlowY = plytka.GetLength(1);
+			int licznikWezlowX = poziom.GetLength(0);
+			int licznikWezlowY = poziom.GetLength(1);
 
 			float szerokosc = licznikWezlowX * rozmiar;
 			float wysokosc = licznikWezlowY * rozmiar;
@@ -478,7 +478,7 @@ public class GenerujMesh : MonoBehaviour {
 			for (int x = 0; x < licznikWezlowX; x++) {
 				for (int y = 0; y < licznikWezlowY; y++) {
 					Vector3 poz = new Vector3(-szerokosc/2 + x * rozmiar + rozmiar/2, 0, -wysokosc/2 + y * rozmiar + rozmiar/2);
-					wezlyKontroli[x,y] = new WezelKontroli(poz, plytka[x,y]==1, rozmiar);
+					wezlyKontroli[x,y] = new WezelKontroli(poz, poziom[x,y]==1, rozmiar);
 				}
 			}
             
