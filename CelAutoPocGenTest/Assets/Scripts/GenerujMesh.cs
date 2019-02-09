@@ -84,15 +84,15 @@ public class GenerujMesh : MonoBehaviour {
         Mesh scianaMesh = new Mesh();
         float wysokoscSciany = 5;
 
-        foreach (List<int> granica in granicy)
+        foreach (List<int> liniaGraniczna in granicy)
         {
-            for (int i = 0; i < granica.Count-1; i++)
+            for (int i = 0; i < liniaGraniczna.Count-1; i++)
             {
                 int wierzcholekPierwszy = wierzcholkiScian.Count;
-                wierzcholkiScian.Add(wierzсholki[granica[i]]); //wierzcholek GL
-                wierzcholkiScian.Add(wierzсholki[granica[i+1]]); //wierzcholek GP
-                wierzcholkiScian.Add(wierzсholki[granica[i]] - Vector3.up * wysokoscSciany); //wierzcholek DL
-                wierzcholkiScian.Add(wierzсholki[granica[i+1]] - Vector3.up * wysokoscSciany); //wierzcholek DP
+                wierzcholkiScian.Add(wierzсholki[liniaGraniczna[i]]); //wierzcholek GL
+                wierzcholkiScian.Add(wierzсholki[liniaGraniczna[i+1]]); //wierzcholek GP
+                wierzcholkiScian.Add(wierzсholki[liniaGraniczna[i]] - Vector3.up * wysokoscSciany); //wierzcholek DL
+                wierzcholkiScian.Add(wierzсholki[liniaGraniczna[i+1]] - Vector3.up * wysokoscSciany); //wierzcholek DP
 
                 trojkatyScian.Add(wierzcholekPierwszy);
                 trojkatyScian.Add(wierzcholekPierwszy + 2);
@@ -335,7 +335,7 @@ public class GenerujMesh : MonoBehaviour {
 
     public bool CzyJestGranica(int a, int b)//сколько общих треугольников у вершин А и B 
     {
-        List<Trojkat> trojkatZWierzcholkiemA = trojkatDictionary[a];//хаписываем в список все треугольники с вершиной А
+        List<Trojkat> trojkatZWierzcholkiemA = trojkatDictionary[a];//записываем в список все треугольники с вершиной А
         int liczbaWspolnychTrojkatow = 0;
 
         for (int i = 0; i < trojkatZWierzcholkiemA.Count; i++)
@@ -365,13 +365,13 @@ public class GenerujMesh : MonoBehaviour {
 
             for (int j = 0; j < 3; j++)
             {
-                int b = trojkat[j];
+                int mozliwyPolaczanyWierzcholek = trojkat[j];
 
-                if (b != wierzcholek && !wierzcholkiSprawdzone.Contains(b))
+                if (mozliwyPolaczanyWierzcholek != wierzcholek && !wierzcholkiSprawdzone.Contains(mozliwyPolaczanyWierzcholek))
                 {
-                    if (CzyJestGranica(wierzcholek, b))
+                    if (CzyJestGranica(wierzcholek, mozliwyPolaczanyWierzcholek))
                     {
-                        return b;
+                        return mozliwyPolaczanyWierzcholek;
                     }
                 }
                 
@@ -381,16 +381,16 @@ public class GenerujMesh : MonoBehaviour {
         return -1;
     }
 
-    public void RysujGranice(int wierzcholek, int granica)
+    public void RysujGranice(int wierzcholek, int liniaGraniczna)
     {
-        granicy[granica].Add(wierzcholek);
+        granicy[liniaGraniczna].Add(wierzcholek);
         wierzcholkiSprawdzone.Add(wierzcholek);
 
         int wierzcholekNastepny = PolaczonyGranicznyWierzcholek(wierzcholek);
 
         if (wierzcholekNastepny != -1)
         {
-            RysujGranice(wierzcholekNastepny, granica);
+            RysujGranice(wierzcholekNastepny, liniaGraniczna);
         }
 
     }
@@ -432,34 +432,34 @@ public class GenerujMesh : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmos() {
+	//void OnDrawGizmos() {
 
-		if (siatkaKwadratow != null) {
-			for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
-				for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
+	//	if (siatkaKwadratow != null) {
+	//		for(int x = 0; x < siatkaKwadratow.kwadraty.GetLength(0); x++) {
+	//			for(int y = 0; y < siatkaKwadratow.kwadraty.GetLength(1); y++) {
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GL.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GL.poz,new Vector3(1,0,1) * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].GP.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].GP.poz,new Vector3(1,0,1) * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DP.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DP.poz,new Vector3(1,0,1)  * .5f);
 
-					Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
+	//				Gizmos.color = (siatkaKwadratow.kwadraty[x,y].DL.stan)?Color.black:Color.white;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].DL.poz,new Vector3(1,0,1)  * .5f);
 
-					Gizmos.color = Color.grey;
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
-					Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.color = Color.grey;
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SG.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SP.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SD.poz,new Vector3(1,0,1)  * .2f);
+	//				Gizmos.DrawCube(siatkaKwadratow.kwadraty[x,y].SL.poz,new Vector3(1,0,1)  * .2f);
 	
-				}
-			}
-		}
-	}
+	//			}
+	//		}
+	//	}
+	//}
 
 	public class SiatkaKwadratow {
 

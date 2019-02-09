@@ -280,7 +280,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938033196}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -358,7 +358,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316346523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -603,10 +603,10 @@ MonoBehaviour:
   szerokosc: 75
   wysokosc: 75
   liczbaIteracji: 8
-  liczbaPokoji: 8
+  liczbaPokoji: 4
   rozmiarGranicy: 1
-  seed: 636851819142657543
-  seedChange: 1
+  seed: 636853232867020525
+  seedChange: 0
   udzialNapelnienia: 53
 --- !u!4 &1620989013
 Transform:
