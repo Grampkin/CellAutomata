@@ -6,7 +6,7 @@ using UnityEngine.Networking.NetworkSystem;
 
 public class GenerujMesh : MonoBehaviour {
 
-    public bool tryb2D;
+    //public bool tryb2D;
 
     List<Vector3> wierzсholki;
     List<int> trojkaty;
@@ -49,14 +49,12 @@ public class GenerujMesh : MonoBehaviour {
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
 
-        if (tryb2D)
-        {
-            GenerujColizje2D();
-        }
-        else
-        {
-            UtwMeshScian(mapa.GetLength(0), mapa.GetLength(1), rozmiar);
-        }
+        //if(!tryb2D)
+        //{
+        //    UtwMeshScian(mapa.GetLength(0), mapa.GetLength(1), rozmiar);
+        //}
+
+        UtwMeshScian(mapa.GetLength(0), mapa.GetLength(1), rozmiar);
 
 
         Vector2[] uvs = new Vector2[wierzсholki.Count];
@@ -115,44 +113,61 @@ public class GenerujMesh : MonoBehaviour {
         MeshCollider colizjaScian = sciany.gameObject.GetComponent<MeshCollider>();
         colizjaScian.sharedMesh = scianaMesh;
 
-        Vector2[] uvs = new Vector2[wierzcholkiScian.Count];
-        for (int i = 0; i < wierzcholkiScian.Count; i++)
+        float textureScale = sciany.gameObject.GetComponentInChildren<MeshRenderer>().material.mainTextureScale.x;
+        float increment = (textureScale / szerokosc);
+        Vector2[] uvs = new Vector2[scianaMesh.vertices.Length];
+        float[] uvEntries = new float[] { 0.5f, increment };
+
+        for (int i = 0; i < scianaMesh.vertices.Length; i++)
         {
-            float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
-            float interpolatedY = Mathf.InverseLerp(-wysokosc / 2 * rozmiar, wysokosc / 2 * rozmiar, wierzcholkiScian[i].y);
-            uvs[i] = new Vector2(interpolatedX, interpolatedY);
+
+            //float percentY = Mathf.InverseLerp((-wysokoscSciany) * rozmiar, 0, scianaMesh.vertices[i].y) * szerokosc * (wysokoscSciany/ szerokosc);
+            float interpolatedY = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].y);
+            uvs[i] = new Vector2(uvEntries[i ], interpolatedY);
         }
+
+        scianaMesh.uv = uvs;
+
+
+
+        //Vector2[] uvs = new Vector2[wierzcholkiScian.Count];
+        //for (int i = 0; i < wierzcholkiScian.Count; i++)
+        //{
+        //    float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
+        //    float interpolatedY = Mathf.InverseLerp(-szerokosc/2 * rozmiar, szerokosc/2 * rozmiar, wierzcholkiScian[i].y);
+        //    uvs[i] = new Vector2(interpolatedX, interpolatedY);
+        //}
         sciany.mesh.uv = uvs;
 
 
 
     }
 
-    void GenerujColizje2D()
-    {
+    //void GenerujColizje2D()
+    //{
 
-        EdgeCollider2D[] collider2Ds = gameObject.GetComponents<EdgeCollider2D>();
+    //    EdgeCollider2D[] collider2Ds = gameObject.GetComponents<EdgeCollider2D>();
 
-        for (int i = 0; i < collider2Ds.Length; i++)
-        {
-            Destroy(collider2Ds[i]);
-        }
+    //    for (int i = 0; i < collider2Ds.Length; i++)
+    //    {
+    //        Destroy(collider2Ds[i]);
+    //    }
 
-        ObliczGranicyMesha();
-        foreach (List<int> granica in granicy)
-        {
-            EdgeCollider2D collider2D = gameObject.AddComponent<EdgeCollider2D>();
-            Vector2[] punktyGranic = new Vector2[granica.Count];
+    //    ObliczGranicyMesha();
+    //    foreach (List<int> granica in granicy)
+    //    {
+    //        EdgeCollider2D collider2D = gameObject.AddComponent<EdgeCollider2D>();
+    //        Vector2[] punktyGranic = new Vector2[granica.Count];
 
-            for (int i = 0; i < granica.Count; i++)
-            {
-                punktyGranic[i] = new Vector2(wierzсholki[granica[i]].x, wierzсholki[granica[i]].z);
-            }
+    //        for (int i = 0; i < granica.Count; i++)
+    //        {
+    //            punktyGranic[i] = new Vector2(wierzсholki[granica[i]].x, wierzсholki[granica[i]].z);
+    //        }
 
-            collider2D.points = punktyGranic;
+    //        collider2D.points = punktyGranic;
 
-        }
-    }
+    //    }
+    //}
 
 
     void Trojkatowanie(Kwadrat kwadrat) {
@@ -465,10 +480,10 @@ public class GenerujMesh : MonoBehaviour {
 
 		public Kwadrat[,] kwadraty;
 
-		public SiatkaKwadratow(int[,] poziom, float rozmiar) {
+		public SiatkaKwadratow(int[,] plytka, float rozmiar) {
 			
-			int licznikWezlowX = poziom.GetLength(0);
-			int licznikWezlowY = poziom.GetLength(1);
+			int licznikWezlowX = plytka.GetLength(0);
+			int licznikWezlowY = plytka.GetLength(1);
 
 			float szerokosc = licznikWezlowX * rozmiar;
 			float wysokosc = licznikWezlowY * rozmiar;
@@ -478,7 +493,7 @@ public class GenerujMesh : MonoBehaviour {
 			for (int x = 0; x < licznikWezlowX; x++) {
 				for (int y = 0; y < licznikWezlowY; y++) {
 					Vector3 poz = new Vector3(-szerokosc/2 + x * rozmiar + rozmiar/2, 0, -wysokosc/2 + y * rozmiar + rozmiar/2);
-					wezlyKontroli[x,y] = new WezelKontroli(poz, poziom[x,y]==1, rozmiar);
+					wezlyKontroli[x,y] = new WezelKontroli(poz, plytka[x,y]==1, rozmiar);
 				}
 			}
             

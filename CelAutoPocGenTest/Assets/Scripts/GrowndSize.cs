@@ -13,7 +13,7 @@ public class GrowndSize : MonoBehaviour
     void Start()
     {
         var genMap = generator.GetComponent<GenerujMape>();
-        ground.transform.localScale = new Vector3((float)genMap.szerokosc / 10, 1f, genMap.wysokosc / 10);
+        ground.transform.localScale = new Vector3((float)genMap.szerokosc / 10, 1f, (float)genMap.wysokosc / 10);
         GameObject.Instantiate(ground, new Vector3(0, -5, 0), new Quaternion(0, 0, 0, 0));
        
     }
