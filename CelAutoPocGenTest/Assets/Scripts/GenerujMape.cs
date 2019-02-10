@@ -9,6 +9,9 @@ using Object = System.Object;
 public class GenerujMape : MonoBehaviour
 {
 
+
+
+
     public int szerokosc, wysokosc, liczbaIteracji, liczbaPokoji;
 
     [Range(0, 10)]
@@ -28,13 +31,14 @@ public class GenerujMape : MonoBehaviour
 	public int udzialNapelnienia;
 
 
+
+
+
 	void Start()
 	{
-	    if (Input.GetKeyDown(KeyCode.R))
-	    {
+
 	        mapaZgenerowana = Generuj();
-	        Wyswietl(mapaZgenerowana);
-	    }
+	        
 	}
 
     
@@ -57,7 +61,8 @@ public class GenerujMape : MonoBehaviour
 	}
 
 
-int[,] Generuj () {
+
+    int[,] Generuj () {
 	
 		poziom = new int[szerokosc, wysokosc];
 	    poziom2 = new int[szerokosc, wysokosc];

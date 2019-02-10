@@ -113,30 +113,30 @@ public class GenerujMesh : MonoBehaviour {
         MeshCollider colizjaScian = sciany.gameObject.GetComponent<MeshCollider>();
         colizjaScian.sharedMesh = scianaMesh;
 
-        float textureScale = sciany.gameObject.GetComponentInChildren<MeshRenderer>().material.mainTextureScale.x;
-        float increment = (textureScale / szerokosc);
-        Vector2[] uvs = new Vector2[scianaMesh.vertices.Length];
-        float[] uvEntries = new float[] { 0.5f, increment };
+        //float textureScale = sciany.gameObject.GetComponentInChildren<MeshRenderer>().material.mainTextureScale.x;
+        //float increment = (textureScale / szerokosc);
+        //Vector2[] uvs = new Vector2[scianaMesh.vertices.Length];
+        //float[] uvEntries = new float[] { 0.5f, increment };
 
-        for (int i = 0; i < scianaMesh.vertices.Length; i++)
-        {
-
-            //float percentY = Mathf.InverseLerp((-wysokoscSciany) * rozmiar, 0, scianaMesh.vertices[i].y) * szerokosc * (wysokoscSciany/ szerokosc);
-            float interpolatedY = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].y);
-            uvs[i] = new Vector2(uvEntries[i ], interpolatedY);
-        }
-
-        scianaMesh.uv = uvs;
-
-
-
-        //Vector2[] uvs = new Vector2[wierzcholkiScian.Count];
-        //for (int i = 0; i < wierzcholkiScian.Count; i++)
+        //for (int i = 0; i < scianaMesh.vertices.Length; i++)
         //{
-        //    float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
-        //    float interpolatedY = Mathf.InverseLerp(-szerokosc/2 * rozmiar, szerokosc/2 * rozmiar, wierzcholkiScian[i].y);
-        //    uvs[i] = new Vector2(interpolatedX, interpolatedY);
+
+        //    //float percentY = Mathf.InverseLerp((-wysokoscSciany) * rozmiar, 0, scianaMesh.vertices[i].y) * szerokosc * (wysokoscSciany/ szerokosc);
+        //    float interpolatedY = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].y);
+        //    uvs[i] = new Vector2(uvEntries[i ], interpolatedY);
         //}
+
+        //scianaMesh.uv = uvs;
+
+
+
+        Vector2[] uvs = new Vector2[wierzcholkiScian.Count];
+        for (int i = 0; i < wierzcholkiScian.Count; i++)
+        {
+            float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
+            float interpolatedY = Mathf.InverseLerp(-szerokosc/2 * rozmiar, szerokosc/2 * rozmiar, wierzcholkiScian[i].y);
+            uvs[i] = new Vector2(interpolatedX, interpolatedY);
+        }
         sciany.mesh.uv = uvs;
 
 

@@ -202,8 +202,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 1
+  field of view: 17
+  orthographic: 0
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -600,14 +600,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b667c4bb1e6853b458c35f28077e59ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  szerokosc: 75
-  wysokosc: 75
-  liczbaIteracji: 8
-  liczbaPokoji: 4
+  szerokosc: 250
+  wysokosc: 250
+  liczbaIteracji: 20
+  liczbaPokoji: 16
   rozmiarGranicy: 1
-  seed: 636853232867020525
+  seed: 636854120907877053
   seedChange: 0
-  udzialNapelnienia: 53
+  udzialNapelnienia: 51
 --- !u!4 &1620989013
 Transform:
   m_ObjectHideFlags: 0
@@ -636,7 +636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7aae3a2564ee84aaaa804d432904b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tryb2D: 0
   sciany: {fileID: 1316346524}
   poziom: {fileID: 938033197}
 --- !u!114 &1620989015
@@ -652,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generator: {fileID: 1620989011}
-  ground: {fileID: 6659345337844753399, guid: 07145dbdb2109f340918327828dd6fb2, type: 3}
+  ziemia: {fileID: 6659345337844753399, guid: 07145dbdb2109f340918327828dd6fb2, type: 3}
 --- !u!1 &2127724846
 GameObject:
   m_ObjectHideFlags: 0
