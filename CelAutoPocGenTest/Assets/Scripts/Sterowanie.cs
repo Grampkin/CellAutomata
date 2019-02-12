@@ -24,7 +24,7 @@ public class Sterowanie : MonoBehaviour
         transform.LookAt(miejsce);
     }
 
-    public void FixedUpdate()
+     void FixedUpdate()
     {
         graczRigidbody.MovePosition(graczRigidbody.position + predkosc * Time.fixedDeltaTime);
     }

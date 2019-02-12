@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_spells" kind="class" prot="public">
+    <compoundname>Spells</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spells_1ab17e008e8208091d199422f4475581b3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spells.speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" line="8" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_spells_1a4b94ec9e007788dc30167c3acebbae47" compoundref="_spells_8cs" startline="10" endline="13">SetSpeed</referencedby>
+        <referencedby refid="class_spells_1abb89b50a5045ef1f6205ed222faa9e6f" compoundref="_spells_8cs" startline="16" endline="19">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spells_1a4b94ec9e007788dc30167c3acebbae47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spells.SetSpeed</definition>
+        <argsstring>(float spd)</argsstring>
+        <name>SetSpeed</name>
+        <param>
+          <type>float</type>
+          <declname>spd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" bodystart="10" bodyend="13"/>
+        <references refid="class_spells_1ab17e008e8208091d199422f4475581b3" compoundref="_spells_8cs" startline="8">speed</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spells_1abb89b50a5045ef1f6205ed222faa9e6f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spells.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" line="16" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" bodystart="16" bodyend="19"/>
+        <references refid="class_spells_1ab17e008e8208091d199422f4475581b3" compoundref="_spells_8cs" startline="8">speed</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="55">
+        <label>Spells</label>
+        <link refid="class_spells"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="57">
+        <label>Spells</label>
+        <link refid="class_spells"/>
+        <childnode refid="58" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" line="6" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Spells.cs" bodystart="5" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_spells_1a4b94ec9e007788dc30167c3acebbae47" prot="public" virt="non-virtual"><scope>Spells</scope><name>SetSpeed</name></member>
+      <member refid="class_spells_1ab17e008e8208091d199422f4475581b3" prot="private" virt="non-virtual"><scope>Spells</scope><name>speed</name></member>
+      <member refid="class_spells_1abb89b50a5045ef1f6205ed222faa9e6f" prot="private" virt="non-virtual"><scope>Spells</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

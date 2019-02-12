@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_gracz" kind="class" prot="public">
+    <compoundname>Gracz</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Gracz.predkosc</definition>
+        <argsstring></argsstring>
+        <name>predkosc</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_gracz_1a8119ff8a1da25d182468b154ab723c7b" compoundref="_gracz_8cs" startline="24" endline="44">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" prot="private" static="no" mutable="no">
+        <type>Camera</type>
+        <definition>Camera Gracz.myCamera</definition>
+        <argsstring></argsstring>
+        <name>myCamera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="12" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" compoundref="_gracz_8cs" startline="16" endline="21">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sterowanie" kindref="compound">Sterowanie</ref></type>
+        <definition>Sterowanie Gracz.sterownik</definition>
+        <argsstring></argsstring>
+        <name>sterownik</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="13" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" compoundref="_gracz_8cs" startline="16" endline="21">Start</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_kij_sterownik" kindref="compound">KijSterownik</ref></type>
+        <definition>KijSterownik Gracz.spellCaster</definition>
+        <argsstring></argsstring>
+        <name>spellCaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="14" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" compoundref="_gracz_8cs" startline="16" endline="21">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gracz.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="16" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="16" bodyend="21"/>
+        <references refid="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" compoundref="_gracz_8cs" startline="12">myCamera</references>
+        <references refid="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" compoundref="_gracz_8cs" startline="14">spellCaster</references>
+        <references refid="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" compoundref="_gracz_8cs" startline="13">sterownik</references>
+      </memberdef>
+      <memberdef kind="function" id="class_gracz_1a8119ff8a1da25d182468b154ab723c7b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Gracz.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="24" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="24" bodyend="44"/>
+        <references refid="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" compoundref="_gracz_8cs" startline="10">predkosc</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>Gracz</label>
+        <link refid="class_gracz"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>Spells</label>
+        <link refid="class_spells"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Sterowanie</label>
+        <link refid="class_sterowanie"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Gracz</label>
+        <link refid="class_gracz"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>spellCaster</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>sterownik</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="17">
+        <label>KijSterownik</label>
+        <link refid="class_kij_sterownik"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>defaultStaff</edgelabel>
+          <edgelabel>equippedStaff</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Kij</label>
+        <link refid="class_kij"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>spell</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" line="9" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs" bodystart="8" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" prot="private" virt="non-virtual"><scope>Gracz</scope><name>myCamera</name></member>
+      <member refid="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" prot="public" virt="non-virtual"><scope>Gracz</scope><name>predkosc</name></member>
+      <member refid="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" prot="private" virt="non-virtual"><scope>Gracz</scope><name>spellCaster</name></member>
+      <member refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" prot="private" virt="non-virtual"><scope>Gracz</scope><name>Start</name></member>
+      <member refid="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" prot="private" virt="non-virtual"><scope>Gracz</scope><name>sterownik</name></member>
+      <member refid="class_gracz_1a8119ff8a1da25d182468b154ab723c7b" prot="private" virt="non-virtual"><scope>Gracz</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

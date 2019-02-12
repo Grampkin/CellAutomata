@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mesh" kind="class" prot="public">
+    <compoundname>GenerujMesh</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <innerclass refid="class_generuj_mesh_1_1_kwadrat" prot="public">GenerujMesh::Kwadrat</innerclass>
+    <innerclass refid="class_generuj_mesh_1_1_siatka_kwadratow" prot="public">GenerujMesh::SiatkaKwadratow</innerclass>
+    <innerclass refid="struct_generuj_mesh_1_1_trojkat" prot="public">GenerujMesh::Trojkat</innerclass>
+    <innerclass refid="class_generuj_mesh_1_1_wezel" prot="public">GenerujMesh::Wezel</innerclass>
+    <innerclass refid="class_generuj_mesh_1_1_wezel_kontroli" prot="public">GenerujMesh::WezelKontroli</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1a5b00312bf48d90baab3642ba67816607" prot="private" static="no" mutable="no">
+        <type>List&lt; Vector3 &gt;</type>
+        <definition>List&lt;Vector3&gt; GenerujMesh.wierzсholki</definition>
+        <argsstring></argsstring>
+        <name>wierzсholki</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="11" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" compoundref="_generuj_mesh_8cs" startline="75" endline="144">UtwMeshScian</referencedby>
+        <referencedby refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" compoundref="_generuj_mesh_8cs" startline="25" endline="71">UtworzMesze</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1a85e7683f6caa7b2cb487ac1d91189703" prot="private" static="no" mutable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; GenerujMesh.trojkaty</definition>
+        <argsstring></argsstring>
+        <name>trojkaty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="12" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" compoundref="_generuj_mesh_8cs" startline="25" endline="71">UtworzMesze</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1a4e7aa1c5897131ed42689e09a8ec3550" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; int, List&lt; <ref refid="struct_generuj_mesh_1_1_trojkat" kindref="compound">Trojkat</ref> &gt; &gt;</type>
+        <definition>Dictionary&lt;int, List&lt;Trojkat&gt; &gt; GenerujMesh.trojkatDictionary</definition>
+        <argsstring></argsstring>
+        <name>trojkatDictionary</name>
+        <initializer>= new Dictionary&lt;int, List&lt;<ref refid="struct_generuj_mesh_1_1_trojkat" kindref="compound">Trojkat</ref>&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1a129afec6a7440f2c3bb19242540547be" compoundref="_generuj_mesh_8cs" startline="351" endline="371">CzyJestGranica</referencedby>
+        <referencedby refid="class_generuj_mesh_1ae0adb6a8760c4280aaedd2c4389b1e3a" compoundref="_generuj_mesh_8cs" startline="334" endline="346">DodajDoSlownika</referencedby>
+        <referencedby refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" compoundref="_generuj_mesh_8cs" startline="373" endline="397">PolaczonyGranicznyWierzcholek</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1aee43654e6b5f6fe1d1e752a5c426d7f7" prot="private" static="no" mutable="no">
+        <type>List&lt; List&lt; int &gt; &gt;</type>
+        <definition>List&lt;List&lt;int&gt; &gt; GenerujMesh.granicy</definition>
+        <argsstring></argsstring>
+        <name>granicy</name>
+        <initializer>= new List&lt;List&lt;int&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="17" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" compoundref="_generuj_mesh_8cs" startline="413" endline="433">ObliczGranicyMesha</referencedby>
+        <referencedby refid="class_generuj_mesh_1a0af118e52012cd8551f85bd327254a8a" compoundref="_generuj_mesh_8cs" startline="399" endline="411">RysujGranice</referencedby>
+        <referencedby refid="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" compoundref="_generuj_mesh_8cs" startline="75" endline="144">UtwMeshScian</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1a0a3a9ac3268b4cce8c7a19d8ad3c2b20" prot="private" static="no" mutable="no">
+        <type>HashSet&lt; int &gt;</type>
+        <definition>HashSet&lt;int&gt; GenerujMesh.wierzcholkiSprawdzone</definition>
+        <argsstring></argsstring>
+        <name>wierzcholkiSprawdzone</name>
+        <initializer>= new HashSet&lt;int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="18" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" compoundref="_generuj_mesh_8cs" startline="413" endline="433">ObliczGranicyMesha</referencedby>
+        <referencedby refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" compoundref="_generuj_mesh_8cs" startline="373" endline="397">PolaczonyGranicznyWierzcholek</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1a169f368c69cb840d2e9978e346d82d4a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_siatka_kwadratow" kindref="compound">SiatkaKwadratow</ref></type>
+        <definition>SiatkaKwadratow GenerujMesh.siatkaKwadratow</definition>
+        <argsstring></argsstring>
+        <name>siatkaKwadratow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="20" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" compoundref="_generuj_mesh_8cs" startline="25" endline="71">UtworzMesze</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1a9e9074aa959a9867bfcec03b4c26f964" prot="public" static="no" mutable="no">
+        <type>MeshFilter</type>
+        <definition>MeshFilter GenerujMesh.sciany</definition>
+        <argsstring></argsstring>
+        <name>sciany</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="22" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1a92415ece2d60d532a15b4a6464f77779" prot="public" static="no" mutable="no">
+        <type>MeshFilter</type>
+        <definition>MeshFilter GenerujMesh.poziom</definition>
+        <argsstring></argsstring>
+        <name>poziom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="23" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.UtworzMesze</definition>
+        <argsstring>(int[,] mapa, float rozmiar)</argsstring>
+        <name>UtworzMesze</name>
+        <param>
+          <type>int</type>
+          <declname>mapa</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rozmiar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="25" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="25" bodyend="71"/>
+        <references refid="class_generuj_mesh_1a169f368c69cb840d2e9978e346d82d4a" compoundref="_generuj_mesh_8cs" startline="20">siatkaKwadratow</references>
+        <references refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">Trojkatowanie</references>
+        <references refid="class_generuj_mesh_1a85e7683f6caa7b2cb487ac1d91189703" compoundref="_generuj_mesh_8cs" startline="12">trojkaty</references>
+        <references refid="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" compoundref="_generuj_mesh_8cs" startline="75" endline="144">UtwMeshScian</references>
+        <references refid="class_generuj_mesh_1a5b00312bf48d90baab3642ba67816607" compoundref="_generuj_mesh_8cs" startline="11">wierzсholki</references>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.UtwMeshScian</definition>
+        <argsstring>(int szerokosc, int wysokosc, float rozmiar)</argsstring>
+        <name>UtwMeshScian</name>
+        <param>
+          <type>int</type>
+          <declname>szerokosc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>wysokosc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rozmiar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="75" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="75" bodyend="144"/>
+        <references refid="class_generuj_mesh_1aee43654e6b5f6fe1d1e752a5c426d7f7" compoundref="_generuj_mesh_8cs" startline="17">granicy</references>
+        <references refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" compoundref="_generuj_mesh_8cs" startline="413" endline="433">ObliczGranicyMesha</references>
+        <references refid="class_generuj_mesh_1a5b00312bf48d90baab3642ba67816607" compoundref="_generuj_mesh_8cs" startline="11">wierzсholki</references>
+        <referencedby refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" compoundref="_generuj_mesh_8cs" startline="25" endline="71">UtworzMesze</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1ae0adb6a8760c4280aaedd2c4389b1e3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.DodajDoSlownika</definition>
+        <argsstring>(int wierzcholekKey, Trojkat trojkat)</argsstring>
+        <name>DodajDoSlownika</name>
+        <param>
+          <type>int</type>
+          <declname>wierzcholekKey</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_generuj_mesh_1_1_trojkat" kindref="compound">Trojkat</ref></type>
+          <declname>trojkat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="334" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="334" bodyend="346"/>
+        <references refid="class_generuj_mesh_1a4e7aa1c5897131ed42689e09a8ec3550" compoundref="_generuj_mesh_8cs" startline="15">trojkatDictionary</references>
+        <referencedby refid="class_generuj_mesh_1ac2233beb3d7fcb4ccf9ce504e548ead4" compoundref="_generuj_mesh_8cs" startline="288" endline="299">UtwTrojkat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a129afec6a7440f2c3bb19242540547be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenerujMesh.CzyJestGranica</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>CzyJestGranica</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="351" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="351" bodyend="371"/>
+        <references refid="class_generuj_mesh_1a4e7aa1c5897131ed42689e09a8ec3550" compoundref="_generuj_mesh_8cs" startline="15">trojkatDictionary</references>
+        <referencedby refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" compoundref="_generuj_mesh_8cs" startline="373" endline="397">PolaczonyGranicznyWierzcholek</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerujMesh.PolaczonyGranicznyWierzcholek</definition>
+        <argsstring>(int wierzcholek)</argsstring>
+        <name>PolaczonyGranicznyWierzcholek</name>
+        <param>
+          <type>int</type>
+          <declname>wierzcholek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="373" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="373" bodyend="397"/>
+        <references refid="class_generuj_mesh_1a129afec6a7440f2c3bb19242540547be" compoundref="_generuj_mesh_8cs" startline="351" endline="371">CzyJestGranica</references>
+        <references refid="class_generuj_mesh_1a4e7aa1c5897131ed42689e09a8ec3550" compoundref="_generuj_mesh_8cs" startline="15">trojkatDictionary</references>
+        <references refid="class_generuj_mesh_1a0a3a9ac3268b4cce8c7a19d8ad3c2b20" compoundref="_generuj_mesh_8cs" startline="18">wierzcholkiSprawdzone</references>
+        <referencedby refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" compoundref="_generuj_mesh_8cs" startline="413" endline="433">ObliczGranicyMesha</referencedby>
+        <referencedby refid="class_generuj_mesh_1a0af118e52012cd8551f85bd327254a8a" compoundref="_generuj_mesh_8cs" startline="399" endline="411">RysujGranice</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a0af118e52012cd8551f85bd327254a8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.RysujGranice</definition>
+        <argsstring>(int wierzcholek, int liniaGraniczna)</argsstring>
+        <name>RysujGranice</name>
+        <param>
+          <type>int</type>
+          <declname>wierzcholek</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>liniaGraniczna</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="399" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="399" bodyend="411"/>
+        <references refid="class_generuj_mesh_1aee43654e6b5f6fe1d1e752a5c426d7f7" compoundref="_generuj_mesh_8cs" startline="17">granicy</references>
+        <references refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" compoundref="_generuj_mesh_8cs" startline="373" endline="397">PolaczonyGranicznyWierzcholek</references>
+        <referencedby refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" compoundref="_generuj_mesh_8cs" startline="413" endline="433">ObliczGranicyMesha</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.ObliczGranicyMesha</definition>
+        <argsstring>()</argsstring>
+        <name>ObliczGranicyMesha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="413" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="413" bodyend="433"/>
+        <references refid="class_generuj_mesh_1aee43654e6b5f6fe1d1e752a5c426d7f7" compoundref="_generuj_mesh_8cs" startline="17">granicy</references>
+        <references refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" compoundref="_generuj_mesh_8cs" startline="373" endline="397">PolaczonyGranicznyWierzcholek</references>
+        <references refid="class_generuj_mesh_1a0af118e52012cd8551f85bd327254a8a" compoundref="_generuj_mesh_8cs" startline="399" endline="411">RysujGranice</references>
+        <references refid="class_generuj_mesh_1a0a3a9ac3268b4cce8c7a19d8ad3c2b20" compoundref="_generuj_mesh_8cs" startline="18">wierzcholkiSprawdzone</references>
+        <referencedby refid="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" compoundref="_generuj_mesh_8cs" startline="75" endline="144">UtwMeshScian</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.Trojkatowanie</definition>
+        <argsstring>(Kwadrat kwadrat)</argsstring>
+        <name>Trojkatowanie</name>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_kwadrat" kindref="compound">Kwadrat</ref></type>
+          <declname>kwadrat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="173" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="173" bodyend="257"/>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a56f766aa4ee32b5eea3fc6b82bff353b" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.DL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a9fb058eb615f7b0ae3a1ff9356c61921" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.DP</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a25049b736df430df933148b2e5979315" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.GL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a817568f780ffce1fd03766e98c44fec9" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.GP</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a44a8e63b241bb6551afcb5295eea2cd9" compoundref="_generuj_mesh_8cs" startline="515">GenerujMesh.Kwadrat.ksztalt</references>
+        <references refid="class_generuj_mesh_1a1380e7b9587f938f9775bf41edeaed87" compoundref="_generuj_mesh_8cs" startline="259" endline="272">Polaczenie</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1afdd40f152613709ce9989059c3b78818" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SD</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1ac26243a4937f929c11c345d2d0286217" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SG</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a30b122bda9252f1610ccc33b1d038220" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1af2956c564fffd4d18d7f4ab6f241e88d" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SP</references>
+        <referencedby refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" compoundref="_generuj_mesh_8cs" startline="25" endline="71">UtworzMesze</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a1380e7b9587f938f9775bf41edeaed87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.Polaczenie</definition>
+        <argsstring>(params Wezel[] punkty)</argsstring>
+        <name>Polaczenie</name>
+        <param>
+          <type>params <ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref>[]</type>
+          <declname>punkty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="259" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="259" bodyend="272"/>
+        <references refid="class_generuj_mesh_1a5445da69345dbb7d549956bfe694c21f" compoundref="_generuj_mesh_8cs" startline="276" endline="286">Dopasuj</references>
+        <references refid="class_generuj_mesh_1ac2233beb3d7fcb4ccf9ce504e548ead4" compoundref="_generuj_mesh_8cs" startline="288" endline="299">UtwTrojkat</references>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1a5445da69345dbb7d549956bfe694c21f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.Dopasuj</definition>
+        <argsstring>(Wezel[] punkty)</argsstring>
+        <name>Dopasuj</name>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref>[]</type>
+          <declname>punkty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="276" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="276" bodyend="286"/>
+        <referencedby refid="class_generuj_mesh_1a1380e7b9587f938f9775bf41edeaed87" compoundref="_generuj_mesh_8cs" startline="259" endline="272">Polaczenie</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mesh_1ac2233beb3d7fcb4ccf9ce504e548ead4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMesh.UtwTrojkat</definition>
+        <argsstring>(Wezel a, Wezel b, Wezel c)</argsstring>
+        <name>UtwTrojkat</name>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="288" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="288" bodyend="299"/>
+        <references refid="class_generuj_mesh_1ae0adb6a8760c4280aaedd2c4389b1e3a" compoundref="_generuj_mesh_8cs" startline="334" endline="346">DodajDoSlownika</references>
+        <references refid="class_generuj_mesh_1_1_wezel_1af92b23103c57e552f153e67234ece84b" compoundref="_generuj_mesh_8cs" startline="443">GenerujMesh.Wezel.wierzcholek</references>
+        <referencedby refid="class_generuj_mesh_1a1380e7b9587f938f9775bf41edeaed87" compoundref="_generuj_mesh_8cs" startline="259" endline="272">Polaczenie</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>GenerujMesh</label>
+        <link refid="class_generuj_mesh"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>GenerujMesh.Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="8">
+        <label>GenerujMesh.SiatkaKwadratow</label>
+        <link refid="class_generuj_mesh_1_1_siatka_kwadratow"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>kwadraty</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GenerujMesh.Kwadrat</label>
+        <link refid="class_generuj_mesh_1_1_kwadrat"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>GL</edgelabel>
+          <edgelabel>DL</edgelabel>
+          <edgelabel>GP</edgelabel>
+          <edgelabel>DP</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>SD</edgelabel>
+          <edgelabel>SG</edgelabel>
+          <edgelabel>SL</edgelabel>
+          <edgelabel>SP</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GenerujMesh</label>
+        <link refid="class_generuj_mesh"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>siatkaKwadratow</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>prawo</edgelabel>
+          <edgelabel>gora</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="7">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="7" bodyend="562"/>
+    <listofallmembers>
+      <member refid="class_generuj_mesh_1a129afec6a7440f2c3bb19242540547be" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>CzyJestGranica</name></member>
+      <member refid="class_generuj_mesh_1ae0adb6a8760c4280aaedd2c4389b1e3a" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>DodajDoSlownika</name></member>
+      <member refid="class_generuj_mesh_1a5445da69345dbb7d549956bfe694c21f" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>Dopasuj</name></member>
+      <member refid="class_generuj_mesh_1aee43654e6b5f6fe1d1e752a5c426d7f7" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>granicy</name></member>
+      <member refid="class_generuj_mesh_1a792fa0d852d37733f4dfaa7dd454b897" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>ObliczGranicyMesha</name></member>
+      <member refid="class_generuj_mesh_1a1380e7b9587f938f9775bf41edeaed87" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>Polaczenie</name></member>
+      <member refid="class_generuj_mesh_1a2494c5a0f78968d205b2b9908e785f90" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>PolaczonyGranicznyWierzcholek</name></member>
+      <member refid="class_generuj_mesh_1a92415ece2d60d532a15b4a6464f77779" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>poziom</name></member>
+      <member refid="class_generuj_mesh_1a0af118e52012cd8551f85bd327254a8a" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>RysujGranice</name></member>
+      <member refid="class_generuj_mesh_1a9e9074aa959a9867bfcec03b4c26f964" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>sciany</name></member>
+      <member refid="class_generuj_mesh_1a169f368c69cb840d2e9978e346d82d4a" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>siatkaKwadratow</name></member>
+      <member refid="class_generuj_mesh_1a4e7aa1c5897131ed42689e09a8ec3550" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>trojkatDictionary</name></member>
+      <member refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>Trojkatowanie</name></member>
+      <member refid="class_generuj_mesh_1a85e7683f6caa7b2cb487ac1d91189703" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>trojkaty</name></member>
+      <member refid="class_generuj_mesh_1ab0c1297236d1f05e54a8793d27f59fd5" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>UtwMeshScian</name></member>
+      <member refid="class_generuj_mesh_1aa815e31d7429d493bdeb96a6b6694f02" prot="public" virt="non-virtual"><scope>GenerujMesh</scope><name>UtworzMesze</name></member>
+      <member refid="class_generuj_mesh_1ac2233beb3d7fcb4ccf9ce504e548ead4" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>UtwTrojkat</name></member>
+      <member refid="class_generuj_mesh_1a0a3a9ac3268b4cce8c7a19d8ad3c2b20" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>wierzcholkiSprawdzone</name></member>
+      <member refid="class_generuj_mesh_1a5b00312bf48d90baab3642ba67816607" prot="private" virt="non-virtual"><scope>GenerujMesh</scope><name>wierzсholki</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

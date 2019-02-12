@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mesh_1_1_wezel" kind="class" prot="public">
+    <compoundname>GenerujMesh::Wezel</compoundname>
+    <derivedcompoundref refid="class_generuj_mesh_1_1_wezel_kontroli" prot="public" virt="non-virtual">GenerujMesh.WezelKontroli</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_wezel_1ab0a80fb78d5382b9da74cd3e9ae3438c" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 GenerujMesh.Wezel.poz</definition>
+        <argsstring></argsstring>
+        <name>poz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="442" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="442" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_1a1727c89047da6f5d36faf7a8b3a38fe9" compoundref="_generuj_mesh_8cs" startline="445" endline="447">GenerujMesh.Wezel.Wezel</referencedby>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" compoundref="_generuj_mesh_8cs" startline="552" endline="557">GenerujMesh.WezelKontroli.WezelKontroli</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_wezel_1af92b23103c57e552f153e67234ece84b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Wezel.wierzcholek</definition>
+        <argsstring></argsstring>
+        <name>wierzcholek</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="443" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="443" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1ac2233beb3d7fcb4ccf9ce504e548ead4" compoundref="_generuj_mesh_8cs" startline="288" endline="299">GenerujMesh.UtwTrojkat</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mesh_1_1_wezel_1a1727c89047da6f5d36faf7a8b3a38fe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMesh.Wezel.Wezel</definition>
+        <argsstring>(Vector3 _poz)</argsstring>
+        <name>Wezel</name>
+        <param>
+          <type>Vector3</type>
+          <declname>_poz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="445" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="445" bodyend="447"/>
+        <references refid="class_generuj_mesh_1_1_wezel_1ab0a80fb78d5382b9da74cd3e9ae3438c" compoundref="_generuj_mesh_8cs" startline="442">GenerujMesh.Wezel.poz</references>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" compoundref="_generuj_mesh_8cs" startline="552" endline="557">GenerujMesh.WezelKontroli.WezelKontroli</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="69">
+        <label>GenerujMesh.Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="70">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="440" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="439" bodyend="448"/>
+    <listofallmembers>
+      <member refid="class_generuj_mesh_1_1_wezel_1ab0a80fb78d5382b9da74cd3e9ae3438c" prot="public" virt="non-virtual"><scope>GenerujMesh::Wezel</scope><name>poz</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_1a1727c89047da6f5d36faf7a8b3a38fe9" prot="public" virt="non-virtual"><scope>GenerujMesh::Wezel</scope><name>Wezel</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_1af92b23103c57e552f153e67234ece84b" prot="public" virt="non-virtual"><scope>GenerujMesh::Wezel</scope><name>wierzcholek</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

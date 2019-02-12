@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_kij_sterownik" kind="class" prot="public">
+    <compoundname>KijSterownik</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform KijSterownik.staffHolder</definition>
+        <argsstring></argsstring>
+        <name>staffHolder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" compoundref="_kij_sterownik_8cs" startline="20" endline="28">EquipStaff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" prot="public" static="no" mutable="no">
+        <type><ref refid="class_kij" kindref="compound">Kij</ref></type>
+        <definition>Kij KijSterownik.defaultStaff</definition>
+        <argsstring></argsstring>
+        <name>defaultStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="8" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" compoundref="_kij_sterownik_8cs" startline="12" endline="18">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" prot="private" static="no" mutable="no">
+        <type><ref refid="class_kij" kindref="compound">Kij</ref></type>
+        <definition>Kij KijSterownik.equippedStaff</definition>
+        <argsstring></argsstring>
+        <name>equippedStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_kij_sterownik_1a557ffc53f954073889f6673ce7c707fe" compoundref="_kij_sterownik_8cs" startline="30" endline="36">Cast</referencedby>
+        <referencedby refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" compoundref="_kij_sterownik_8cs" startline="20" endline="28">EquipStaff</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KijSterownik.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="12" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="12" bodyend="18"/>
+        <references refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" compoundref="_kij_sterownik_8cs" startline="8">defaultStaff</references>
+        <references refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" compoundref="_kij_sterownik_8cs" startline="20" endline="28">EquipStaff</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KijSterownik.EquipStaff</definition>
+        <argsstring>(Kij staffToEquip)</argsstring>
+        <name>EquipStaff</name>
+        <param>
+          <type><ref refid="class_kij" kindref="compound">Kij</ref></type>
+          <declname>staffToEquip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="20" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="20" bodyend="28"/>
+        <references refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" compoundref="_kij_sterownik_8cs" startline="10">equippedStaff</references>
+        <references refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" compoundref="_kij_sterownik_8cs" startline="7">staffHolder</references>
+        <referencedby refid="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" compoundref="_kij_sterownik_8cs" startline="12" endline="18">Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_kij_sterownik_1a557ffc53f954073889f6673ce7c707fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KijSterownik.Cast</definition>
+        <argsstring>()</argsstring>
+        <name>Cast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="30" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="30" bodyend="36"/>
+        <references refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" compoundref="_kij_sterownik_8cs" startline="10">equippedStaff</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="31">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="30">
+        <label>KijSterownik</label>
+        <link refid="class_kij_sterownik"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="35">
+        <label>Spells</label>
+        <link refid="class_spells"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="32">
+        <label>KijSterownik</label>
+        <link refid="class_kij_sterownik"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>defaultStaff</edgelabel>
+          <edgelabel>equippedStaff</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Kij</label>
+        <link refid="class_kij"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>spell</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" line="6" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs" bodystart="5" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_kij_sterownik_1a557ffc53f954073889f6673ce7c707fe" prot="public" virt="non-virtual"><scope>KijSterownik</scope><name>Cast</name></member>
+      <member refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" prot="public" virt="non-virtual"><scope>KijSterownik</scope><name>defaultStaff</name></member>
+      <member refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" prot="private" virt="non-virtual"><scope>KijSterownik</scope><name>equippedStaff</name></member>
+      <member refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" prot="public" virt="non-virtual"><scope>KijSterownik</scope><name>EquipStaff</name></member>
+      <member refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" prot="public" virt="non-virtual"><scope>KijSterownik</scope><name>staffHolder</name></member>
+      <member refid="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" prot="private" virt="non-virtual"><scope>KijSterownik</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

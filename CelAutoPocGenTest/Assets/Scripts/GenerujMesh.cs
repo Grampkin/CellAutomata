@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking.NetworkSystem;
 
@@ -44,7 +45,6 @@ public class GenerujMesh : MonoBehaviour {
 
         Mesh mesh = new Mesh();
         poziom.mesh = mesh; 
-
         mesh.vertices = wierzсholki.ToArray();
         mesh.triangles = trojkaty.ToArray();
         mesh.RecalculateNormals();
@@ -134,7 +134,7 @@ public class GenerujMesh : MonoBehaviour {
         for (int i = 0; i < wierzcholkiScian.Count; i++)
         {
             float interpolatedX = Mathf.InverseLerp(-szerokosc / 2 * rozmiar, szerokosc / 2 * rozmiar, wierzcholkiScian[i].x);
-            float interpolatedY = Mathf.InverseLerp(-szerokosc/2 * rozmiar, szerokosc/2 * rozmiar, wierzcholkiScian[i].y);
+            float interpolatedY = Mathf.InverseLerp(-wysokoscSciany * rozmiar, wysokoscSciany * rozmiar, wierzcholkiScian[i].y);
             uvs[i] = new Vector2(interpolatedX, interpolatedY);
         }
         sciany.mesh.uv = uvs;
@@ -480,10 +480,10 @@ public class GenerujMesh : MonoBehaviour {
 
 		public Kwadrat[,] kwadraty;
 
-		public SiatkaKwadratow(int[,] plytka, float rozmiar) {
+		public SiatkaKwadratow(int[,] poziom, float rozmiar) {
 			
-			int licznikWezlowX = plytka.GetLength(0);
-			int licznikWezlowY = plytka.GetLength(1);
+			int licznikWezlowX = poziom.GetLength(0);
+			int licznikWezlowY = poziom.GetLength(1);
 
 			float szerokosc = licznikWezlowX * rozmiar;
 			float wysokosc = licznikWezlowY * rozmiar;
@@ -493,7 +493,7 @@ public class GenerujMesh : MonoBehaviour {
 			for (int x = 0; x < licznikWezlowX; x++) {
 				for (int y = 0; y < licznikWezlowY; y++) {
 					Vector3 poz = new Vector3(-szerokosc/2 + x * rozmiar + rozmiar/2, 0, -wysokosc/2 + y * rozmiar + rozmiar/2);
-					wezlyKontroli[x,y] = new WezelKontroli(poz, plytka[x,y]==1, rozmiar);
+					wezlyKontroli[x,y] = new WezelKontroli(poz, poziom[x,y]==1, rozmiar);
 				}
 			}
             

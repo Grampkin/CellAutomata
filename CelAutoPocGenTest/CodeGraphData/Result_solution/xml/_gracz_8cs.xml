@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_gracz_8cs" kind="file">
+    <compoundname>Gracz.cs</compoundname>
+    <innerclass refid="class_gracz" prot="public">Gracz</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_networking">UnityEngine::Networking</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine.Networking;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">[RequireComponent(typeof(<ref refid="class_sterowanie" kindref="compound">Sterowanie</ref>))]</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">[RequireComponent(typeof(<ref refid="class_kij_sterownik" kindref="compound">KijSterownik</ref>))]</highlight></codeline>
+<codeline lineno="8" refid="class_gracz" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gracz" kindref="compound">Gracz</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" kindref="member">predkosc</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Camera<sp/><ref refid="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" kindref="member">myCamera</ref>;</highlight></codeline>
+<codeline lineno="13" refid="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sterowanie" kindref="compound">Sterowanie</ref><sp/><ref refid="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" kindref="member">sterownik</ref>;</highlight></codeline>
+<codeline lineno="14" refid="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kij_sterownik" kindref="compound">KijSterownik</ref><sp/><ref refid="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" kindref="member">spellCaster</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gracz_1a553a5a6f1fef7381fb45be485d2e5e59" kindref="member">Start</ref><sp/>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gracz_1a11522dfb70c9c652f61fa4cae7bfbc95" kindref="member">sterownik</ref><sp/>=<sp/>GetComponent&lt;Sterowanie&gt;();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gracz_1acdd574f75ddbae417532e11b4dbf96bb" kindref="member">spellCaster</ref><sp/>=<sp/>GetComponent&lt;KijSterownik&gt;();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gracz_1afa809e1a9ab1a55941ad7a8f7749bfb2" kindref="member">myCamera</ref><sp/>=<sp/>Camera.main;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_gracz_1a8119ff8a1da25d182468b154ab723c7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gracz_1a8119ff8a1da25d182468b154ab723c7b" kindref="member">Update</ref><sp/>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>poruszanie<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector3(Input.GetAxis(</highlight><highlight class="stringliteral">&quot;Horizontal&quot;</highlight><highlight class="normal">),0,Input.GetAxis(</highlight><highlight class="stringliteral">&quot;Vertical&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>predkoscPorusznia<sp/>=<sp/>poruszanie.normalized<sp/>*<sp/><ref refid="class_gracz_1a11e1f7b190a104507c2ec675c7c26697" kindref="member">predkosc</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sterownik.Poruszaj(predkoscPorusznia);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>promien<sp/>=<sp/>myCamera.ScreenPointToRay(Input.mousePosition);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Plane<sp/>ziemia<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Plane(Vector3.up,<sp/>transform.position);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>odleglosc;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ziemia.Raycast(promien,<sp/>out<sp/>odleglosc))</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>point<sp/>=<sp/>promien.GetPoint(odleglosc);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sterownik.Patrz(point);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Input.GetMouseButton(0))</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spellCaster.Cast();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Gracz.cs"/>
+  </compounddef>
+</doxygen>

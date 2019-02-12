@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 [RequireComponent(typeof(Sterowanie))]
 [RequireComponent(typeof(KijSterownik))]
-public class Gracz : MonoBehaviour
+public class Gracz : LivingEntity
 {
     public float predkosc = 5;
 
@@ -13,8 +13,9 @@ public class Gracz : MonoBehaviour
     Sterowanie sterownik;
     KijSterownik spellCaster;
 
-    void Start ()
+    protected override void Start ()
     {
+        base.Start();
         sterownik = GetComponent<Sterowanie>();
         spellCaster = GetComponent<KijSterownik>();
         myCamera = Camera.main;

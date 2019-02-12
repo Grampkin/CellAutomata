@@ -158,7 +158,7 @@ MonoBehaviour:
   player: {fileID: 3392960782949619437}
   sphereVel: 10
   spell: {fileID: 4808034193899416348, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
-  castingTime: 100
+  castingTime: 750
 --- !u!1 &6047133624606524820
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,19 +292,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.17988099
+      value: -0.17953736
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.069181226
+      value: -0.0020541097
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0017756268
+      value: -0.0112544615
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9812511
+      value: 0.98368466
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_RootOrder
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 8.305
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5730044169431898, guid: b81bc5634a48f4243a17a0c56ef7e7f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mesh_1_1_kwadrat" kind="class" prot="public">
+    <compoundname>GenerujMesh::Kwadrat</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a25049b736df430df933148b2e5979315" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+        <definition>WezelKontroli GenerujMesh.Kwadrat.GL</definition>
+        <argsstring></argsstring>
+        <name>GL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="513" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="513" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1ac26243a4937f929c11c345d2d0286217" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.Kwadrat.SG</definition>
+        <argsstring></argsstring>
+        <name>SG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="514" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="514" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a44a8e63b241bb6551afcb5295eea2cd9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Kwadrat.ksztalt</definition>
+        <argsstring></argsstring>
+        <name>ksztalt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="515" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="515" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a817568f780ffce1fd03766e98c44fec9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+        <definition>WezelKontroli GenerujMesh.Kwadrat.GP</definition>
+        <argsstring></argsstring>
+        <name>GP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="513" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="513" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a9fb058eb615f7b0ae3a1ff9356c61921" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+        <definition>WezelKontroli GenerujMesh.Kwadrat.DP</definition>
+        <argsstring></argsstring>
+        <name>DP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="513" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="513" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a56f766aa4ee32b5eea3fc6b82bff353b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+        <definition>WezelKontroli GenerujMesh.Kwadrat.DL</definition>
+        <argsstring></argsstring>
+        <name>DL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="513" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="513" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1af2956c564fffd4d18d7f4ab6f241e88d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.Kwadrat.SP</definition>
+        <argsstring></argsstring>
+        <name>SP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="514" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="514" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1afdd40f152613709ce9989059c3b78818" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.Kwadrat.SD</definition>
+        <argsstring></argsstring>
+        <name>SD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="514" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="514" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_kwadrat_1a30b122bda9252f1610ccc33b1d038220" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.Kwadrat.SL</definition>
+        <argsstring></argsstring>
+        <name>SL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="514" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="514" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1a73e68daa2488bf0fc04d86934ce79873" compoundref="_generuj_mesh_8cs" startline="173" endline="257">GenerujMesh.Trojkatowanie</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMesh.Kwadrat.Kwadrat</definition>
+        <argsstring>(WezelKontroli _GL, WezelKontroli _GP, WezelKontroli _DP, WezelKontroli _DL)</argsstring>
+        <name>Kwadrat</name>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+          <declname>_GL</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+          <declname>_GP</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+          <declname>_DP</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mesh_1_1_wezel_kontroli" kindref="compound">WezelKontroli</ref></type>
+          <declname>_DL</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="517" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="517" bodyend="539"/>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a56f766aa4ee32b5eea3fc6b82bff353b" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.DL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a9fb058eb615f7b0ae3a1ff9356c61921" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.DP</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a25049b736df430df933148b2e5979315" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.GL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a817568f780ffce1fd03766e98c44fec9" compoundref="_generuj_mesh_8cs" startline="513">GenerujMesh.Kwadrat.GP</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a44a8e63b241bb6551afcb5295eea2cd9" compoundref="_generuj_mesh_8cs" startline="515">GenerujMesh.Kwadrat.ksztalt</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1afdd40f152613709ce9989059c3b78818" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SD</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1ac26243a4937f929c11c345d2d0286217" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SG</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1a30b122bda9252f1610ccc33b1d038220" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SL</references>
+        <references refid="class_generuj_mesh_1_1_kwadrat_1af2956c564fffd4d18d7f4ab6f241e88d" compoundref="_generuj_mesh_8cs" startline="514">GenerujMesh.Kwadrat.SP</references>
+        <references refid="class_generuj_mesh_1_1_wezel_kontroli_1a4ae8dfd3ef702e01b261065e4841919b" compoundref="_generuj_mesh_8cs" startline="547">GenerujMesh.WezelKontroli.stan</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="40">
+        <label>GenerujMesh.Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="37">
+        <label>GenerujMesh.Kwadrat</label>
+        <link refid="class_generuj_mesh_1_1_kwadrat"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>GL</edgelabel>
+          <edgelabel>DL</edgelabel>
+          <edgelabel>GP</edgelabel>
+          <edgelabel>DP</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>SD</edgelabel>
+          <edgelabel>SG</edgelabel>
+          <edgelabel>SL</edgelabel>
+          <edgelabel>SP</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>prawo</edgelabel>
+          <edgelabel>gora</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="512" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="512" bodyend="541"/>
+    <listofallmembers>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a56f766aa4ee32b5eea3fc6b82bff353b" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>DL</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a9fb058eb615f7b0ae3a1ff9356c61921" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>DP</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a25049b736df430df933148b2e5979315" prot="public" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>GL</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a817568f780ffce1fd03766e98c44fec9" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>GP</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a44a8e63b241bb6551afcb5295eea2cd9" prot="public" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>ksztalt</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" prot="public" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>Kwadrat</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1afdd40f152613709ce9989059c3b78818" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>SD</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1ac26243a4937f929c11c345d2d0286217" prot="public" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>SG</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1a30b122bda9252f1610ccc33b1d038220" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>SL</name></member>
+      <member refid="class_generuj_mesh_1_1_kwadrat_1af2956c564fffd4d18d7f4ab6f241e88d" prot="private" virt="non-virtual"><scope>GenerujMesh::Kwadrat</scope><name>SP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

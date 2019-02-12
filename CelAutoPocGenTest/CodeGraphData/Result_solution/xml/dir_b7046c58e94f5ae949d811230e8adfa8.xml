@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_b7046c58e94f5ae949d811230e8adfa8" kind="dir">
+    <compoundname>E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts</compoundname>
+    <innerfile refid="_generuj_mape_8cs">GenerujMape.cs</innerfile>
+    <innerfile refid="_generuj_mesh_8cs">GenerujMesh.cs</innerfile>
+    <innerfile refid="_gracz_8cs">Gracz.cs</innerfile>
+    <innerfile refid="_gracz_minimap_8cs">GraczMinimap.cs</innerfile>
+    <innerfile refid="_kij_8cs">Kij.cs</innerfile>
+    <innerfile refid="_kij_sterownik_8cs">KijSterownik.cs</innerfile>
+    <innerfile refid="_rozmiar_ziemi_8cs">RozmiarZiemi.cs</innerfile>
+    <innerfile refid="_spells_8cs">Spells.cs</innerfile>
+    <innerfile refid="_sterowanie_8cs">Sterowanie.cs</innerfile>
+    <innerfile refid="_third_person_camera_8cs">ThirdPersonCamera.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/"/>
+  </compounddef>
+</doxygen>

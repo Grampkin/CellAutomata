@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mape_1_1_pokoj" kind="class" prot="public">
+    <compoundname>GenerujMape::Pokoj</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IComparable&lt; Pokoj &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1af2973bac67fa0168d7116d1aa1c1c3e1" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt;</type>
+        <definition>List&lt;Wspolrzedne&gt; GenerujMape.Pokoj.wspolrzedneKomorki</definition>
+        <argsstring></argsstring>
+        <name>wspolrzedneKomorki</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="486" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="486" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1a6202375031d34d0bf8c6838f978a5abe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.Pokoj.rozmiarPokoju</definition>
+        <argsstring></argsstring>
+        <name>rozmiarPokoju</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="487" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="487" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1a01065158969b353a0371aa666dea5492" compoundref="_generuj_mape_8cs" startline="562" endline="565">GenerujMape.Pokoj.CompareTo</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref> &gt;</type>
+        <definition>List&lt;Pokoj&gt; GenerujMape.Pokoj.pokojePolaczone</definition>
+        <argsstring></argsstring>
+        <name>pokojePolaczone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="488" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="488" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1a0f0951b9cb56fa4bcc4d41d49e1954b9" compoundref="_generuj_mape_8cs" startline="555" endline="560">GenerujMape.Pokoj.czyPolaczone</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1a8c2b063f2c462fec510f5dc0e5b769eb" compoundref="_generuj_mape_8cs" startline="528" endline="538">GenerujMape.Pokoj.PolaczenieZPokojemGlownym</referencedby>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">GenerujMape.PolaczNajblizszePokoje</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1a11f3732ebe9d2fdef5f14660369dc37c" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt;</type>
+        <definition>List&lt;Wspolrzedne&gt; GenerujMape.Pokoj.komorkiGraniczne</definition>
+        <argsstring></argsstring>
+        <name>komorkiGraniczne</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="490" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="490" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1a4d961980f59e9237b04d1d484a5623e6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GenerujMape.Pokoj.polaczenieZPokojemGlownym</definition>
+        <argsstring></argsstring>
+        <name>polaczenieZPokojemGlownym</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="491" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="491" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1a8c2b063f2c462fec510f5dc0e5b769eb" compoundref="_generuj_mape_8cs" startline="528" endline="538">GenerujMape.Pokoj.PolaczenieZPokojemGlownym</referencedby>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">GenerujMape.PolaczNajblizszePokoje</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1a2a6d79e574e8f2e733dbfc824811a018" compoundref="_generuj_mape_8cs" startline="540" endline="553">GenerujMape.Pokoj.PolaczPokoje</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1_1_pokoj_1a148e34fec5ec94679fd8a816e305c16a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GenerujMape.Pokoj.pokojGlowny</definition>
+        <argsstring></argsstring>
+        <name>pokojGlowny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="492" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1af31841cce4619a15899918598c23e1fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMape.Pokoj.Pokoj</definition>
+        <argsstring>()</argsstring>
+        <name>Pokoj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="495" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="495" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMape.Pokoj.Pokoj</definition>
+        <argsstring>(List&lt; Wspolrzedne &gt; komorkiPokoju, int[,] poziom)</argsstring>
+        <name>Pokoj</name>
+        <param>
+          <type>List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt;</type>
+          <declname>komorkiPokoju</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>poziom</declname>
+          <array>[,]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="498" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="498" bodyend="525"/>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" compoundref="_generuj_mape_8cs" startline="474">GenerujMape.Wspolrzedne.komorkaX</references>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" compoundref="_generuj_mape_8cs" startline="475">GenerujMape.Wspolrzedne.komorkaY</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1a11f3732ebe9d2fdef5f14660369dc37c" compoundref="_generuj_mape_8cs" startline="490">GenerujMape.Pokoj.komorkiGraniczne</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" compoundref="_generuj_mape_8cs" startline="488">GenerujMape.Pokoj.pokojePolaczone</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">GenerujMape.poziom</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1a6202375031d34d0bf8c6838f978a5abe" compoundref="_generuj_mape_8cs" startline="487">GenerujMape.Pokoj.rozmiarPokoju</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1af2973bac67fa0168d7116d1aa1c1c3e1" compoundref="_generuj_mape_8cs" startline="486">GenerujMape.Pokoj.wspolrzedneKomorki</references>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1a8c2b063f2c462fec510f5dc0e5b769eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.Pokoj.PolaczenieZPokojemGlownym</definition>
+        <argsstring>()</argsstring>
+        <name>PolaczenieZPokojemGlownym</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="528" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="528" bodyend="538"/>
+        <references refid="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" compoundref="_generuj_mape_8cs" startline="488">GenerujMape.Pokoj.pokojePolaczone</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1a4d961980f59e9237b04d1d484a5623e6" compoundref="_generuj_mape_8cs" startline="491">GenerujMape.Pokoj.polaczenieZPokojemGlownym</references>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1a0f0951b9cb56fa4bcc4d41d49e1954b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenerujMape.Pokoj.czyPolaczone</definition>
+        <argsstring>(Pokoj pokojDowolny)</argsstring>
+        <name>czyPolaczone</name>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>pokojDowolny</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="555" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="555" bodyend="560"/>
+        <references refid="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" compoundref="_generuj_mape_8cs" startline="488">GenerujMape.Pokoj.pokojePolaczone</references>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">GenerujMape.PolaczNajblizszePokoje</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1a01065158969b353a0371aa666dea5492" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerujMape.Pokoj.CompareTo</definition>
+        <argsstring>(Pokoj dowolnyPokoj)</argsstring>
+        <name>CompareTo</name>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>dowolnyPokoj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="562" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="562" bodyend="565"/>
+        <references refid="class_generuj_mape_1_1_pokoj_1a6202375031d34d0bf8c6838f978a5abe" compoundref="_generuj_mape_8cs" startline="487">GenerujMape.Pokoj.rozmiarPokoju</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_generuj_mape_1_1_pokoj_1a2a6d79e574e8f2e733dbfc824811a018" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GenerujMape.Pokoj.PolaczPokoje</definition>
+        <argsstring>(Pokoj pokoj1, Pokoj pokoj2)</argsstring>
+        <name>PolaczPokoje</name>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>pokoj1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>pokoj2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="540" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="540" bodyend="553"/>
+        <references refid="class_generuj_mape_1_1_pokoj_1a4d961980f59e9237b04d1d484a5623e6" compoundref="_generuj_mape_8cs" startline="491">GenerujMape.Pokoj.polaczenieZPokojemGlownym</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="42">
+        <label>IComparable&lt; Pokoj &gt;</label>
+      </node>
+      <node id="41">
+        <label>GenerujMape.Pokoj</label>
+        <link refid="class_generuj_mape_1_1_pokoj"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="44">
+        <label>IComparable&lt; Pokoj &gt;</label>
+      </node>
+      <node id="43">
+        <label>GenerujMape.Pokoj</label>
+        <link refid="class_generuj_mape_1_1_pokoj"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="485" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="484" bodyend="566"/>
+    <listofallmembers>
+      <member refid="class_generuj_mape_1_1_pokoj_1a01065158969b353a0371aa666dea5492" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>CompareTo</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a0f0951b9cb56fa4bcc4d41d49e1954b9" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>czyPolaczone</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a11f3732ebe9d2fdef5f14660369dc37c" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>komorkiGraniczne</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1af31841cce4619a15899918598c23e1fc" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>Pokoj</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>Pokoj</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>pokojePolaczone</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a148e34fec5ec94679fd8a816e305c16a" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>pokojGlowny</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a8c2b063f2c462fec510f5dc0e5b769eb" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>PolaczenieZPokojemGlownym</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a4d961980f59e9237b04d1d484a5623e6" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>polaczenieZPokojemGlownym</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a2a6d79e574e8f2e733dbfc824811a018" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>PolaczPokoje</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1a6202375031d34d0bf8c6838f978a5abe" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>rozmiarPokoju</name></member>
+      <member refid="class_generuj_mape_1_1_pokoj_1af2973bac67fa0168d7116d1aa1c1c3e1" prot="public" virt="non-virtual"><scope>GenerujMape::Pokoj</scope><name>wspolrzedneKomorki</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

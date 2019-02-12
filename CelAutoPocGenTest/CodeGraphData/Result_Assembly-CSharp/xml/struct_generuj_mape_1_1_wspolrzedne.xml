@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_generuj_mape_1_1_wspolrzedne" kind="struct" prot="public">
+    <compoundname>GenerujMape::Wspolrzedne</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.Wspolrzedne.komorkaX</definition>
+        <argsstring></argsstring>
+        <name>komorkaX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="474" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="474" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">GenerujMape.KomorkiStrefy</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">GenerujMape.PolaczNajblizszePokoje</referencedby>
+        <referencedby refid="struct_generuj_mape_1_1_wspolrzedne_1a1e42c8de71f4763577bb4a524f8c775c" compoundref="_generuj_mape_8cs" startline="477" endline="481">GenerujMape.Wspolrzedne.Wspolrzedne</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.Wspolrzedne.komorkaY</definition>
+        <argsstring></argsstring>
+        <name>komorkaY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="475" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="475" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">GenerujMape.KomorkiStrefy</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">GenerujMape.PolaczNajblizszePokoje</referencedby>
+        <referencedby refid="struct_generuj_mape_1_1_wspolrzedne_1a1e42c8de71f4763577bb4a524f8c775c" compoundref="_generuj_mape_8cs" startline="477" endline="481">GenerujMape.Wspolrzedne.Wspolrzedne</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_generuj_mape_1_1_wspolrzedne_1a1e42c8de71f4763577bb4a524f8c775c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMape.Wspolrzedne.Wspolrzedne</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>Wspolrzedne</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="477" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="477" bodyend="481"/>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" compoundref="_generuj_mape_8cs" startline="474">GenerujMape.Wspolrzedne.komorkaX</references>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" compoundref="_generuj_mape_8cs" startline="475">GenerujMape.Wspolrzedne.komorkaY</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="473" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="472" bodyend="482"/>
+    <listofallmembers>
+      <member refid="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" prot="public" virt="non-virtual"><scope>GenerujMape::Wspolrzedne</scope><name>komorkaX</name></member>
+      <member refid="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" prot="public" virt="non-virtual"><scope>GenerujMape::Wspolrzedne</scope><name>komorkaY</name></member>
+      <member refid="struct_generuj_mape_1_1_wspolrzedne_1a1e42c8de71f4763577bb4a524f8c775c" prot="public" virt="non-virtual"><scope>GenerujMape::Wspolrzedne</scope><name>Wspolrzedne</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_rozmiar_ziemi" kind="class" prot="public">
+    <compoundname>RozmiarZiemi</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rozmiar_ziemi_1ac84d1550a86b2e81c845488381702617" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject RozmiarZiemi.generator</definition>
+        <argsstring></argsstring>
+        <name>generator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" line="9" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rozmiar_ziemi_1a8f73e59ba8ba1f04ffcf3976d0c9136c" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject RozmiarZiemi.ziemia</definition>
+        <argsstring></argsstring>
+        <name>ziemia</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_rozmiar_ziemi_1a9389006fa18334442da6b0aea3390558" compoundref="_rozmiar_ziemi_8cs" startline="13" endline="19">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rozmiar_ziemi_1a9389006fa18334442da6b0aea3390558" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RozmiarZiemi.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" line="13" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" bodystart="13" bodyend="19"/>
+        <references refid="class_rozmiar_ziemi_1a8f73e59ba8ba1f04ffcf3976d0c9136c" compoundref="_rozmiar_ziemi_8cs" startline="10">ziemia</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="45">
+        <label>RozmiarZiemi</label>
+        <link refid="class_rozmiar_ziemi"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="47">
+        <label>RozmiarZiemi</label>
+        <link refid="class_rozmiar_ziemi"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/RozmiarZiemi.cs" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_rozmiar_ziemi_1ac84d1550a86b2e81c845488381702617" prot="public" virt="non-virtual"><scope>RozmiarZiemi</scope><name>generator</name></member>
+      <member refid="class_rozmiar_ziemi_1a9389006fa18334442da6b0aea3390558" prot="private" virt="non-virtual"><scope>RozmiarZiemi</scope><name>Start</name></member>
+      <member refid="class_rozmiar_ziemi_1a8f73e59ba8ba1f04ffcf3976d0c9136c" prot="public" virt="non-virtual"><scope>RozmiarZiemi</scope><name>ziemia</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

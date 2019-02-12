@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_kij" kind="class" prot="public">
+    <compoundname>Kij</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_kij_1a6ef28e7af18198d7167f40c6261e6461" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Kij.sphere</definition>
+        <argsstring></argsstring>
+        <name>sphere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_kij_1aaa1ca56c2deb5b602aebd85ed1d28be0" prot="public" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Kij.player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="8" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_kij_1a37299583400638d4f1d69477fb0e11fc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Kij.sphereVel</definition>
+        <argsstring></argsstring>
+        <name>sphereVel</name>
+        <initializer>= 15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="9" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_kij_1a64eee5edd18f3bc281ed86dade3f0dc2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_spells" kindref="compound">Spells</ref></type>
+        <definition>Spells Kij.spell</definition>
+        <argsstring></argsstring>
+        <name>spell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_kij_1aca83ec02a5c54a5ceae11eb2f9df2051" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Kij.castingTime</definition>
+        <argsstring></argsstring>
+        <name>castingTime</name>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="11" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_kij_1a7f1ebd28b26110c23506ee01688e90ba" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Kij.nextCast</definition>
+        <argsstring></argsstring>
+        <name>nextCast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="13" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" compoundref="_kij_8cs" startline="15" endline="24">Cast</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kij_1a6aaba9f0660a058d48fd61797667f58a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kij.Cast</definition>
+        <argsstring>()</argsstring>
+        <name>Cast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="15" bodyend="24"/>
+        <references refid="class_kij_1aca83ec02a5c54a5ceae11eb2f9df2051" compoundref="_kij_8cs" startline="11">castingTime</references>
+        <references refid="class_kij_1a7f1ebd28b26110c23506ee01688e90ba" compoundref="_kij_8cs" startline="13">nextCast</references>
+        <references refid="class_kij_1aaa1ca56c2deb5b602aebd85ed1d28be0" compoundref="_kij_8cs" startline="8">player</references>
+        <references refid="class_kij_1a64eee5edd18f3bc281ed86dade3f0dc2" compoundref="_kij_8cs" startline="10">spell</references>
+        <references refid="class_kij_1a6ef28e7af18198d7167f40c6261e6461" compoundref="_kij_8cs" startline="7">sphere</references>
+        <references refid="class_kij_1a37299583400638d4f1d69477fb0e11fc" compoundref="_kij_8cs" startline="9">sphereVel</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="26">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="25">
+        <label>Kij</label>
+        <link refid="class_kij"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>Spells</label>
+        <link refid="class_spells"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="27">
+        <label>Kij</label>
+        <link refid="class_kij"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>spell</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" line="6" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Kij.cs" bodystart="5" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_kij_1a6aaba9f0660a058d48fd61797667f58a" prot="public" virt="non-virtual"><scope>Kij</scope><name>Cast</name></member>
+      <member refid="class_kij_1aca83ec02a5c54a5ceae11eb2f9df2051" prot="public" virt="non-virtual"><scope>Kij</scope><name>castingTime</name></member>
+      <member refid="class_kij_1a7f1ebd28b26110c23506ee01688e90ba" prot="private" virt="non-virtual"><scope>Kij</scope><name>nextCast</name></member>
+      <member refid="class_kij_1aaa1ca56c2deb5b602aebd85ed1d28be0" prot="public" virt="non-virtual"><scope>Kij</scope><name>player</name></member>
+      <member refid="class_kij_1a64eee5edd18f3bc281ed86dade3f0dc2" prot="public" virt="non-virtual"><scope>Kij</scope><name>spell</name></member>
+      <member refid="class_kij_1a6ef28e7af18198d7167f40c6261e6461" prot="public" virt="non-virtual"><scope>Kij</scope><name>sphere</name></member>
+      <member refid="class_kij_1a37299583400638d4f1d69477fb0e11fc" prot="public" virt="non-virtual"><scope>Kij</scope><name>sphereVel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

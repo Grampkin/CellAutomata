@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_e4fc16556defdae569e802b02cce29a0" kind="dir">
+    <compoundname>E:/CellAutomata</compoundname>
+    <innerdir refid="dir_d16e9fc55c3332c018cac6327a235694">E:/CellAutomata/CellAutomata</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/CellAutomata/"/>
+  </compounddef>
+</doxygen>

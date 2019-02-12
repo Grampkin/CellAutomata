@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_sterowanie_8cs" kind="file">
+    <compoundname>Sterowanie.cs</compoundname>
+    <innerclass refid="class_sterowanie" prot="public">Sterowanie</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">[RequireComponent(typeof(Rigidbody))]</highlight></codeline>
+<codeline lineno="6" refid="class_sterowanie" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sterowanie" kindref="compound">Sterowanie</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_sterowanie_1aa051923a6218284b0512445688323c06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Vector3<sp/><ref refid="class_sterowanie_1aa051923a6218284b0512445688323c06" kindref="member">predkosc</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Rigidbody<sp/><ref refid="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" kindref="member">graczRigidbody</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_sterowanie_1a18ff7992c272bcb1651e3f10e2df67e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sterowanie_1a18ff7992c272bcb1651e3f10e2df67e0" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" kindref="member">graczRigidbody</ref><sp/>=<sp/>GetComponent&lt;Rigidbody&gt;();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_sterowanie_1ae6dadb3e5aa22caa407b8e8e09e4cb8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sterowanie_1ae6dadb3e5aa22caa407b8e8e09e4cb8c" kindref="member">Poruszaj</ref>(Vector3<sp/>_predkosc)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sterowanie_1aa051923a6218284b0512445688323c06" kindref="member">predkosc</ref><sp/>=<sp/>_predkosc;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_sterowanie_1abd7c924800af0f3aa5d4fcb1ebfe1e08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sterowanie_1abd7c924800af0f3aa5d4fcb1ebfe1e08" kindref="member">Patrz</ref>(Vector3<sp/>miejsce)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.LookAt(miejsce);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_sterowanie_1aa050dfd56951bb09f84420537af631d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sterowanie_1aa050dfd56951bb09f84420537af631d8" kindref="member">FixedUpdate</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graczRigidbody.MovePosition(graczRigidbody.position<sp/>+<sp/><ref refid="class_sterowanie_1aa051923a6218284b0512445688323c06" kindref="member">predkosc</ref><sp/>*<sp/>Time.fixedDeltaTime);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs"/>
+  </compounddef>
+</doxygen>

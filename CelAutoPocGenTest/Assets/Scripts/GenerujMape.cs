@@ -178,9 +178,9 @@ public class GenerujMape : MonoBehaviour
         List<List<Wspolrzedne>> strefy = new List<List<Wspolrzedne>>();
         int[,] komorkiSprawdzone = new int[szerokosc, wysokosc];
 
-        for (int x = 0; x < szerokosc; x++)
+        for (int x = 1; x < szerokosc; x++)
         {
-            for (int y = 0; y < wysokosc; y++)
+            for (int y = 1; y < wysokosc; y++)
             {
                 if (komorkiSprawdzone[x, y] == 0 && poziom[x,y] == rodzaj)
                 {
@@ -504,7 +504,7 @@ public class GenerujMape : MonoBehaviour
             komorkiGraniczne = new List<Wspolrzedne>();
 
 
-            //считает размер комнаты
+            
             foreach (Wspolrzedne komorka in wspolrzedneKomorki)
             {
                 for (int x = komorka.komorkaX - 1; x <= komorka.komorkaX + 1; x++)
@@ -556,7 +556,8 @@ public class GenerujMape : MonoBehaviour
         {
             if (pokojePolaczone.Contains(pokojDowolny))
                 return true;
-            else return false;
+            else
+                return false;
         }
 
         public int CompareTo(Pokoj dowolnyPokoj)

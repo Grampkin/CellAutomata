@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mesh_1_1_wezel_kontroli" kind="class" prot="public">
+    <compoundname>GenerujMesh::WezelKontroli</compoundname>
+    <basecompoundref refid="class_generuj_mesh_1_1_wezel" prot="public" virt="non-virtual">GenerujMesh.Wezel</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_wezel_kontroli_1a4ae8dfd3ef702e01b261065e4841919b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GenerujMesh.WezelKontroli.stan</definition>
+        <argsstring></argsstring>
+        <name>stan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="547" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="547" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_kwadrat_1a68a3eb3f1c5ea438b7f183172721dae4" compoundref="_generuj_mesh_8cs" startline="517" endline="539">GenerujMesh.Kwadrat.Kwadrat</referencedby>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" compoundref="_generuj_mesh_8cs" startline="552" endline="557">GenerujMesh.WezelKontroli.WezelKontroli</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_wezel_kontroli_1a1555cb24bec153a2ae90a2e7d5fad8f0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.WezelKontroli.gora</definition>
+        <argsstring></argsstring>
+        <name>gora</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="549" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="549" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" compoundref="_generuj_mesh_8cs" startline="552" endline="557">GenerujMesh.WezelKontroli.WezelKontroli</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_wezel_kontroli_1ab9be777f513e2b10a70e42fc4573cab8" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_wezel" kindref="compound">Wezel</ref></type>
+        <definition>Wezel GenerujMesh.WezelKontroli.prawo</definition>
+        <argsstring></argsstring>
+        <name>prawo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="550" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="550" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" compoundref="_generuj_mesh_8cs" startline="552" endline="557">GenerujMesh.WezelKontroli.WezelKontroli</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMesh.WezelKontroli.WezelKontroli</definition>
+        <argsstring>(Vector3 _poz, bool _stan, float rozmiar)</argsstring>
+        <name>WezelKontroli</name>
+        <param>
+          <type>Vector3</type>
+          <declname>_poz</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_stan</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rozmiar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="552" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="552" bodyend="557"/>
+        <references refid="class_generuj_mesh_1_1_wezel_kontroli_1a1555cb24bec153a2ae90a2e7d5fad8f0" compoundref="_generuj_mesh_8cs" startline="549">GenerujMesh.WezelKontroli.gora</references>
+        <references refid="class_generuj_mesh_1_1_wezel_1ab0a80fb78d5382b9da74cd3e9ae3438c" compoundref="_generuj_mesh_8cs" startline="442">GenerujMesh.Wezel.poz</references>
+        <references refid="class_generuj_mesh_1_1_wezel_kontroli_1ab9be777f513e2b10a70e42fc4573cab8" compoundref="_generuj_mesh_8cs" startline="550">GenerujMesh.WezelKontroli.prawo</references>
+        <references refid="class_generuj_mesh_1_1_wezel_kontroli_1a4ae8dfd3ef702e01b261065e4841919b" compoundref="_generuj_mesh_8cs" startline="547">GenerujMesh.WezelKontroli.stan</references>
+        <references refid="class_generuj_mesh_1_1_wezel_1a1727c89047da6f5d36faf7a8b3a38fe9" compoundref="_generuj_mesh_8cs" startline="445" endline="447">GenerujMesh.Wezel.Wezel</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="72">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="76">
+        <label>GenerujMesh.Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="74">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>prawo</edgelabel>
+          <edgelabel>gora</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="545" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="545" bodyend="558"/>
+    <listofallmembers>
+      <member refid="class_generuj_mesh_1_1_wezel_kontroli_1a1555cb24bec153a2ae90a2e7d5fad8f0" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>gora</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_1ab0a80fb78d5382b9da74cd3e9ae3438c" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>poz</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_kontroli_1ab9be777f513e2b10a70e42fc4573cab8" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>prawo</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_kontroli_1a4ae8dfd3ef702e01b261065e4841919b" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>stan</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_1a1727c89047da6f5d36faf7a8b3a38fe9" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>Wezel</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_kontroli_1a97d81e174a7f1f178b87d9809455d410" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>WezelKontroli</name></member>
+      <member refid="class_generuj_mesh_1_1_wezel_1af92b23103c57e552f153e67234ece84b" prot="public" virt="non-virtual"><scope>GenerujMesh::WezelKontroli</scope><name>wierzcholek</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

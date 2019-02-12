@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_sterowanie" kind="class" prot="public">
+    <compoundname>Sterowanie</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sterowanie_1aa051923a6218284b0512445688323c06" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Sterowanie.predkosc</definition>
+        <argsstring></argsstring>
+        <name>predkosc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="8" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_sterowanie_1aa050dfd56951bb09f84420537af631d8" compoundref="_sterowanie_8cs" startline="27" endline="30">FixedUpdate</referencedby>
+        <referencedby refid="class_sterowanie_1ae6dadb3e5aa22caa407b8e8e09e4cb8c" compoundref="_sterowanie_8cs" startline="17" endline="20">Poruszaj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" prot="private" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody Sterowanie.graczRigidbody</definition>
+        <argsstring></argsstring>
+        <name>graczRigidbody</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="9" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_sterowanie_1a18ff7992c272bcb1651e3f10e2df67e0" compoundref="_sterowanie_8cs" startline="12" endline="15">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sterowanie_1a18ff7992c272bcb1651e3f10e2df67e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sterowanie.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="12" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="12" bodyend="15"/>
+        <references refid="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" compoundref="_sterowanie_8cs" startline="9">graczRigidbody</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sterowanie_1ae6dadb3e5aa22caa407b8e8e09e4cb8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sterowanie.Poruszaj</definition>
+        <argsstring>(Vector3 _predkosc)</argsstring>
+        <name>Poruszaj</name>
+        <param>
+          <type>Vector3</type>
+          <declname>_predkosc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="17" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="17" bodyend="20"/>
+        <references refid="class_sterowanie_1aa051923a6218284b0512445688323c06" compoundref="_sterowanie_8cs" startline="8">predkosc</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sterowanie_1abd7c924800af0f3aa5d4fcb1ebfe1e08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sterowanie.Patrz</definition>
+        <argsstring>(Vector3 miejsce)</argsstring>
+        <name>Patrz</name>
+        <param>
+          <type>Vector3</type>
+          <declname>miejsce</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="22" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sterowanie_1aa050dfd56951bb09f84420537af631d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sterowanie.FixedUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>FixedUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="27" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="27" bodyend="30"/>
+        <references refid="class_sterowanie_1aa051923a6218284b0512445688323c06" compoundref="_sterowanie_8cs" startline="8">predkosc</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="59">
+        <label>Sterowanie</label>
+        <link refid="class_sterowanie"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="61">
+        <label>Sterowanie</label>
+        <link refid="class_sterowanie"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/Sterowanie.cs" bodystart="6" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_sterowanie_1aa050dfd56951bb09f84420537af631d8" prot="public" virt="non-virtual"><scope>Sterowanie</scope><name>FixedUpdate</name></member>
+      <member refid="class_sterowanie_1a5e2eb31c143857b57e8833b04d9dc370" prot="private" virt="non-virtual"><scope>Sterowanie</scope><name>graczRigidbody</name></member>
+      <member refid="class_sterowanie_1abd7c924800af0f3aa5d4fcb1ebfe1e08" prot="public" virt="non-virtual"><scope>Sterowanie</scope><name>Patrz</name></member>
+      <member refid="class_sterowanie_1ae6dadb3e5aa22caa407b8e8e09e4cb8c" prot="public" virt="non-virtual"><scope>Sterowanie</scope><name>Poruszaj</name></member>
+      <member refid="class_sterowanie_1aa051923a6218284b0512445688323c06" prot="private" virt="non-virtual"><scope>Sterowanie</scope><name>predkosc</name></member>
+      <member refid="class_sterowanie_1a18ff7992c272bcb1651e3f10e2df67e0" prot="private" virt="non-virtual"><scope>Sterowanie</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

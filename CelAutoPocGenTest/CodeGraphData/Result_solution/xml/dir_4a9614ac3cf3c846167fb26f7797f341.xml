@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_4a9614ac3cf3c846167fb26f7797f341" kind="dir">
+    <compoundname>E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets</compoundname>
+    <innerdir refid="dir_b7046c58e94f5ae949d811230e8adfa8">E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/"/>
+  </compounddef>
+</doxygen>

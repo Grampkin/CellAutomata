@@ -17,8 +17,12 @@ public class Kij : MonoBehaviour
         if(Time.time > nextCast)
         {
             nextCast = Time.time + castingTime / 1000;
-            Spells newSpell = Instantiate(spell, sphere.position, player.rotation) as Spells;
-            newSpell.SetSpeed(sphereVel);
+            if (spell!=null)
+            {
+                Spells newSpell = Instantiate(spell, sphere.position, player.rotation) as Spells;
+                newSpell.SetSpeed(sphereVel);
+            }
+           
         }
         
     }

@@ -1,0 +1,600 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mape" kind="class" prot="public">
+    <compoundname>GenerujMape</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <innerclass refid="class_generuj_mape_1_1_pokoj" prot="public">GenerujMape::Pokoj</innerclass>
+    <innerclass refid="struct_generuj_mape_1_1_wspolrzedne" prot="public">GenerujMape::Wspolrzedne</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.szerokosc</definition>
+        <argsstring></argsstring>
+        <name>szerokosc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</referencedby>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+        <referencedby refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">KomorkiStrefy</referencedby>
+        <referencedby refid="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" compoundref="_generuj_mape_8cs" startline="386" endline="406">KrokKorytarza</referencedby>
+        <referencedby refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" compoundref="_generuj_mape_8cs" startline="176" endline="199">Strefy</referencedby>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a7be00548b6d5b88490786181eaaf01b6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.rozmiarGranicy</definition>
+        <argsstring></argsstring>
+        <name>rozmiarGranicy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="18" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1acd911aa832a93c410577fdaa617cbe95" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenerujMape.seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="20" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1afae14f2d4a3c0a4ea2efaca0d59886f4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GenerujMape.seedChange</definition>
+        <argsstring></argsstring>
+        <name>seedChange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="21" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" prot="public" static="no" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] GenerujMape.poziom</definition>
+        <argsstring></argsstring>
+        <name>poziom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="27" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</referencedby>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+        <referencedby refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">KomorkiStrefy</referencedby>
+        <referencedby refid="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" compoundref="_generuj_mape_8cs" startline="386" endline="406">KrokKorytarza</referencedby>
+        <referencedby refid="class_generuj_mape_1ad6b821c6c2d9c775c01010d579a3445b" compoundref="_generuj_mape_8cs" startline="592" endline="616">LiczbaScian</referencedby>
+        <referencedby refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" compoundref="_generuj_mape_8cs" startline="113" endline="172">ModyfikujMape</referencedby>
+        <referencedby refid="class_generuj_mape_1_1_pokoj_1ab3d8d6b48307fd64bbf0aea0255dce72" compoundref="_generuj_mape_8cs" startline="498" endline="525">GenerujMape.Pokoj.Pokoj</referencedby>
+        <referencedby refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" compoundref="_generuj_mape_8cs" startline="176" endline="199">Strefy</referencedby>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a50cf0d2c6630e13aa00247c2c6468b42" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.udzialNapelnienia</definition>
+        <argsstring></argsstring>
+        <name>udzialNapelnienia</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="31" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.wysokosc</definition>
+        <argsstring></argsstring>
+        <name>wysokosc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</referencedby>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+        <referencedby refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">KomorkiStrefy</referencedby>
+        <referencedby refid="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" compoundref="_generuj_mape_8cs" startline="386" endline="406">KrokKorytarza</referencedby>
+        <referencedby refid="class_generuj_mape_1ad6b821c6c2d9c775c01010d579a3445b" compoundref="_generuj_mape_8cs" startline="592" endline="616">LiczbaScian</referencedby>
+        <referencedby refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" compoundref="_generuj_mape_8cs" startline="176" endline="199">Strefy</referencedby>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a69bf83fb666370d27b4e1755f217e876" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.liczbaIteracji</definition>
+        <argsstring></argsstring>
+        <name>liczbaIteracji</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a850f10e76c97f3c35475aea873b25257" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.liczbaPokoji</definition>
+        <argsstring></argsstring>
+        <name>liczbaPokoji</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="15" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" compoundref="_generuj_mape_8cs" startline="46" endline="61">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a2619674da38ad34d73ba1e26f8074574" prot="private" static="no" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] GenerujMape.poziom2</definition>
+        <argsstring></argsstring>
+        <name>poziom2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="28" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</referencedby>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+        <referencedby refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_generuj_mape_1a14178a3548fafe6635e1df01bb3189cd" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.liczbaPok</definition>
+        <argsstring></argsstring>
+        <name>liczbaPok</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="23" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" compoundref="_generuj_mape_8cs" startline="113" endline="172">ModyfikujMape</referencedby>
+        <referencedby refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" compoundref="_generuj_mape_8cs" startline="46" endline="61">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1aa927f4a8878d18d4537249c1d34c1ba4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMape.flaga</definition>
+        <argsstring></argsstring>
+        <name>flaga</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="24" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generuj_mape_1a6331d690ef9052e778f267fa4ecc7e62" prot="protected" static="no" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] GenerujMape.mapaZgenerowana</definition>
+        <argsstring></argsstring>
+        <name>mapaZgenerowana</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="25" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_generuj_mape_1a441bae0c82d249379722239036cff6d6" compoundref="_generuj_mape_8cs" startline="37" endline="42">Start</referencedby>
+        <referencedby refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" compoundref="_generuj_mape_8cs" startline="46" endline="61">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_generuj_mape_1a441bae0c82d249379722239036cff6d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="37" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="37" bodyend="42"/>
+        <references refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</references>
+        <references refid="class_generuj_mape_1a6331d690ef9052e778f267fa4ecc7e62" compoundref="_generuj_mape_8cs" startline="25">mapaZgenerowana</references>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="46" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="46" bodyend="61"/>
+        <references refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</references>
+        <references refid="class_generuj_mape_1a14178a3548fafe6635e1df01bb3189cd" compoundref="_generuj_mape_8cs" startline="23">liczbaPok</references>
+        <references refid="class_generuj_mape_1a850f10e76c97f3c35475aea873b25257" compoundref="_generuj_mape_8cs" startline="15">liczbaPokoji</references>
+        <references refid="class_generuj_mape_1a6331d690ef9052e778f267fa4ecc7e62" compoundref="_generuj_mape_8cs" startline="25">mapaZgenerowana</references>
+        <references refid="class_generuj_mape_1a31e6d53d79c261eb4a27b0c06b1bdb3b" compoundref="_generuj_mape_8cs" startline="103" endline="111">Wyswietl</references>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[,]</type>
+        <definition>int [,] GenerujMape.Generuj</definition>
+        <argsstring>()</argsstring>
+        <name>Generuj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="65" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="65" bodyend="101"/>
+        <references refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</references>
+        <references refid="class_generuj_mape_1a69bf83fb666370d27b4e1755f217e876" compoundref="_generuj_mape_8cs" startline="15">liczbaIteracji</references>
+        <references refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" compoundref="_generuj_mape_8cs" startline="113" endline="172">ModyfikujMape</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a2619674da38ad34d73ba1e26f8074574" compoundref="_generuj_mape_8cs" startline="28">poziom2</references>
+        <references refid="class_generuj_mape_1a7be00548b6d5b88490786181eaaf01b6" compoundref="_generuj_mape_8cs" startline="18">rozmiarGranicy</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" compoundref="_generuj_mape_8cs" startline="243" endline="263">WypelnijMape</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a441bae0c82d249379722239036cff6d6" compoundref="_generuj_mape_8cs" startline="37" endline="42">Start</referencedby>
+        <referencedby refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" compoundref="_generuj_mape_8cs" startline="46" endline="61">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a31e6d53d79c261eb4a27b0c06b1bdb3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.Wyswietl</definition>
+        <argsstring>(int[,] mapaOgraniczona)</argsstring>
+        <name>Wyswietl</name>
+        <param>
+          <type>int</type>
+          <declname>mapaOgraniczona</declname>
+          <array>[,]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="103" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="103" bodyend="111"/>
+        <referencedby refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" compoundref="_generuj_mape_8cs" startline="46" endline="61">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.ModyfikujMape</definition>
+        <argsstring>()</argsstring>
+        <name>ModyfikujMape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="113" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="113" bodyend="172"/>
+        <references refid="class_generuj_mape_1a14178a3548fafe6635e1df01bb3189cd" compoundref="_generuj_mape_8cs" startline="23">liczbaPok</references>
+        <references refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">PolaczNajblizszePokoje</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" compoundref="_generuj_mape_8cs" startline="176" endline="199">Strefy</references>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt; &gt;</type>
+        <definition>List&lt;List&lt;Wspolrzedne&gt; &gt; GenerujMape.Strefy</definition>
+        <argsstring>(int rodzaj)</argsstring>
+        <name>Strefy</name>
+        <param>
+          <type>int</type>
+          <declname>rodzaj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="176" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="176" bodyend="199"/>
+        <references refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" compoundref="_generuj_mape_8cs" startline="201" endline="235">KomorkiStrefy</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" compoundref="_generuj_mape_8cs" startline="113" endline="172">ModyfikujMape</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt;</type>
+        <definition>List&lt;Wspolrzedne&gt; GenerujMape.KomorkiStrefy</definition>
+        <argsstring>(int poczX, int poczY)</argsstring>
+        <name>KomorkiStrefy</name>
+        <param>
+          <type>int</type>
+          <declname>poczX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>poczY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="201" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="201" bodyend="235"/>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" compoundref="_generuj_mape_8cs" startline="474">GenerujMape.Wspolrzedne.komorkaX</references>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" compoundref="_generuj_mape_8cs" startline="475">GenerujMape.Wspolrzedne.komorkaY</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" compoundref="_generuj_mape_8cs" startline="176" endline="199">Strefy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.WypelnijMape</definition>
+        <argsstring>()</argsstring>
+        <name>WypelnijMape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="243" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="243" bodyend="263"/>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a2619674da38ad34d73ba1e26f8074574" compoundref="_generuj_mape_8cs" startline="28">poziom2</references>
+        <references refid="class_generuj_mape_1acd911aa832a93c410577fdaa617cbe95" compoundref="_generuj_mape_8cs" startline="20">seed</references>
+        <references refid="class_generuj_mape_1afae14f2d4a3c0a4ea2efaca0d59886f4" compoundref="_generuj_mape_8cs" startline="21">seedChange</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1a50cf0d2c6630e13aa00247c2c6468b42" compoundref="_generuj_mape_8cs" startline="31">udzialNapelnienia</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.PolaczNajblizszePokoje</definition>
+        <argsstring>(List&lt; Pokoj &gt; pokoje, bool polaczanyPonownie=false)</argsstring>
+        <name>PolaczNajblizszePokoje</name>
+        <param>
+          <type>List&lt; <ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref> &gt;</type>
+          <declname>pokoje</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>polaczanyPonownie</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="265" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="265" bodyend="371"/>
+        <references refid="class_generuj_mape_1_1_pokoj_1a0f0951b9cb56fa4bcc4d41d49e1954b9" compoundref="_generuj_mape_8cs" startline="555" endline="560">GenerujMape.Pokoj.czyPolaczone</references>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a9c5f51f22a69893896a88801523abc6d" compoundref="_generuj_mape_8cs" startline="474">GenerujMape.Wspolrzedne.komorkaX</references>
+        <references refid="struct_generuj_mape_1_1_wspolrzedne_1a1fc8cf609ec49f0dbe8f7bfd8d5d34e2" compoundref="_generuj_mape_8cs" startline="475">GenerujMape.Wspolrzedne.komorkaY</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1aa15f8056b1d7532f30c9e970ec880eb8" compoundref="_generuj_mape_8cs" startline="488">GenerujMape.Pokoj.pokojePolaczone</references>
+        <references refid="class_generuj_mape_1_1_pokoj_1a4d961980f59e9237b04d1d484a5623e6" compoundref="_generuj_mape_8cs" startline="491">GenerujMape.Pokoj.polaczenieZPokojemGlownym</references>
+        <references refid="class_generuj_mape_1a5de608a95d5527e8876510280692646a" compoundref="_generuj_mape_8cs" startline="373" endline="382">UtworzKorytaz</references>
+        <referencedby refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" compoundref="_generuj_mape_8cs" startline="113" endline="172">ModyfikujMape</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a5de608a95d5527e8876510280692646a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.UtworzKorytaz</definition>
+        <argsstring>(Pokoj pokoj1, Pokoj pokoj2, Wspolrzedne komorka1, Wspolrzedne komorka2)</argsstring>
+        <name>UtworzKorytaz</name>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>pokoj1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generuj_mape_1_1_pokoj" kindref="compound">Pokoj</ref></type>
+          <declname>pokoj2</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref></type>
+          <declname>komorka1</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref></type>
+          <declname>komorka2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="373" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="373" bodyend="382"/>
+        <references refid="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" compoundref="_generuj_mape_8cs" startline="386" endline="406">KrokKorytarza</references>
+        <references refid="class_generuj_mape_1a9be4ac3e3b24ba5391a71bd69f62944f" compoundref="_generuj_mape_8cs" startline="408" endline="466">RysujProsta</references>
+        <referencedby refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" compoundref="_generuj_mape_8cs" startline="265" endline="371">PolaczNajblizszePokoje</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.KrokKorytarza</definition>
+        <argsstring>(int r, Wspolrzedne o)</argsstring>
+        <name>KrokKorytarza</name>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref></type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="386" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="386" bodyend="406"/>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a5de608a95d5527e8876510280692646a" compoundref="_generuj_mape_8cs" startline="373" endline="382">UtworzKorytaz</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a9be4ac3e3b24ba5391a71bd69f62944f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref> &gt;</type>
+        <definition>List&lt;Wspolrzedne&gt; GenerujMape.RysujProsta</definition>
+        <argsstring>(Wspolrzedne poczatek, Wspolrzedne koniec)</argsstring>
+        <name>RysujProsta</name>
+        <param>
+          <type><ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref></type>
+          <declname>poczatek</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_generuj_mape_1_1_wspolrzedne" kindref="compound">Wspolrzedne</ref></type>
+          <declname>koniec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="408" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="408" bodyend="466"/>
+        <referencedby refid="class_generuj_mape_1a5de608a95d5527e8876510280692646a" compoundref="_generuj_mape_8cs" startline="373" endline="382">UtworzKorytaz</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerujMape.CyklZycia</definition>
+        <argsstring>(int licznik, int iteracjaGraniczna)</argsstring>
+        <name>CyklZycia</name>
+        <param>
+          <type>int</type>
+          <declname>licznik</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteracjaGraniczna</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="569" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="569" bodyend="588"/>
+        <references refid="class_generuj_mape_1ad6b821c6c2d9c775c01010d579a3445b" compoundref="_generuj_mape_8cs" startline="592" endline="616">LiczbaScian</references>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1a2619674da38ad34d73ba1e26f8074574" compoundref="_generuj_mape_8cs" startline="28">poziom2</references>
+        <references refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" compoundref="_generuj_mape_8cs" startline="15">szerokosc</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" compoundref="_generuj_mape_8cs" startline="65" endline="101">Generuj</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_generuj_mape_1ad6b821c6c2d9c775c01010d579a3445b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerujMape.LiczbaScian</definition>
+        <argsstring>(int scX, int scY)</argsstring>
+        <name>LiczbaScian</name>
+        <param>
+          <type>int</type>
+          <declname>scX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="592" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="592" bodyend="616"/>
+        <references refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" compoundref="_generuj_mape_8cs" startline="27">poziom</references>
+        <references refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" compoundref="_generuj_mape_8cs" startline="15">wysokosc</references>
+        <referencedby refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" compoundref="_generuj_mape_8cs" startline="569" endline="588">CyklZycia</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>GenerujMape</label>
+        <link refid="class_generuj_mape"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GenerujMape</label>
+        <link refid="class_generuj_mape"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" line="10" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMape.cs" bodystart="9" bodyend="641"/>
+    <listofallmembers>
+      <member refid="class_generuj_mape_1a0f9980fc85e2c0d724c632413e5de7b2" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>CyklZycia</name></member>
+      <member refid="class_generuj_mape_1aa927f4a8878d18d4537249c1d34c1ba4" prot="protected" virt="non-virtual"><scope>GenerujMape</scope><name>flaga</name></member>
+      <member refid="class_generuj_mape_1a31520af4b5d80778317a7dcf056f543e" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>Generuj</name></member>
+      <member refid="class_generuj_mape_1a4694aec26b301334ed0ef98d33fbf5ba" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>KomorkiStrefy</name></member>
+      <member refid="class_generuj_mape_1a66d4636fee516687b52455c85e0c7cd0" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>KrokKorytarza</name></member>
+      <member refid="class_generuj_mape_1a69bf83fb666370d27b4e1755f217e876" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>liczbaIteracji</name></member>
+      <member refid="class_generuj_mape_1a14178a3548fafe6635e1df01bb3189cd" prot="protected" virt="non-virtual"><scope>GenerujMape</scope><name>liczbaPok</name></member>
+      <member refid="class_generuj_mape_1a850f10e76c97f3c35475aea873b25257" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>liczbaPokoji</name></member>
+      <member refid="class_generuj_mape_1ad6b821c6c2d9c775c01010d579a3445b" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>LiczbaScian</name></member>
+      <member refid="class_generuj_mape_1a6331d690ef9052e778f267fa4ecc7e62" prot="protected" virt="non-virtual"><scope>GenerujMape</scope><name>mapaZgenerowana</name></member>
+      <member refid="class_generuj_mape_1a5d61b6b6ef72e3ef5224b12ca90b822b" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>ModyfikujMape</name></member>
+      <member refid="class_generuj_mape_1a1521d7846a7d515479fa0a5ecd94f606" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>PolaczNajblizszePokoje</name></member>
+      <member refid="class_generuj_mape_1ab88d78b23d6f4ea25d4161a15d58ae68" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>poziom</name></member>
+      <member refid="class_generuj_mape_1a2619674da38ad34d73ba1e26f8074574" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>poziom2</name></member>
+      <member refid="class_generuj_mape_1a7be00548b6d5b88490786181eaaf01b6" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>rozmiarGranicy</name></member>
+      <member refid="class_generuj_mape_1a9be4ac3e3b24ba5391a71bd69f62944f" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>RysujProsta</name></member>
+      <member refid="class_generuj_mape_1acd911aa832a93c410577fdaa617cbe95" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>seed</name></member>
+      <member refid="class_generuj_mape_1afae14f2d4a3c0a4ea2efaca0d59886f4" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>seedChange</name></member>
+      <member refid="class_generuj_mape_1a441bae0c82d249379722239036cff6d6" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>Start</name></member>
+      <member refid="class_generuj_mape_1a04762c39bef5c719b4f7edb72894d731" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>Strefy</name></member>
+      <member refid="class_generuj_mape_1a130d3ae7c4a357f9603987e0f934f158" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>szerokosc</name></member>
+      <member refid="class_generuj_mape_1a50cf0d2c6630e13aa00247c2c6468b42" prot="public" virt="non-virtual"><scope>GenerujMape</scope><name>udzialNapelnienia</name></member>
+      <member refid="class_generuj_mape_1aab4348b87d49c67bc706af1adb76c0b7" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>Update</name></member>
+      <member refid="class_generuj_mape_1a5de608a95d5527e8876510280692646a" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>UtworzKorytaz</name></member>
+      <member refid="class_generuj_mape_1abc1fa66909309e1d65a1cd6766a2ed27" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>WypelnijMape</name></member>
+      <member refid="class_generuj_mape_1aa917ac53f019803a7171a28b29c140e0" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>wysokosc</name></member>
+      <member refid="class_generuj_mape_1a31e6d53d79c261eb4a27b0c06b1bdb3b" prot="private" virt="non-virtual"><scope>GenerujMape</scope><name>Wyswietl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

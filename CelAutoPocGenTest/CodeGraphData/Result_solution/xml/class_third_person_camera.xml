@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_third_person_camera" kind="class" prot="public">
+    <compoundname>ThirdPersonCamera</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_third_person_camera_1a439b767a48b2f62402c0312046153018" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ThirdPersonCamera.Gracz</definition>
+        <argsstring></argsstring>
+        <name>Gracz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" line="7" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 ThirdPersonCamera.offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" line="8" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_third_person_camera_1a3b1d934b5180a5764e34d21d6b1d9004" compoundref="_third_person_camera_8cs" startline="17" endline="20">LateUpdate</referencedby>
+        <referencedby refid="class_third_person_camera_1a2ef6a7e16a24068ef08990e18630c047" compoundref="_third_person_camera_8cs" startline="11" endline="14">Start</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_third_person_camera_1a2ef6a7e16a24068ef08990e18630c047" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThirdPersonCamera.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" line="11" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" bodystart="11" bodyend="14"/>
+        <references refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" compoundref="_third_person_camera_8cs" startline="8">offset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_third_person_camera_1a3b1d934b5180a5764e34d21d6b1d9004" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThirdPersonCamera.LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" line="17" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" bodystart="17" bodyend="20"/>
+        <references refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" compoundref="_third_person_camera_8cs" startline="8">offset</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="63">
+        <label>ThirdPersonCamera</label>
+        <link refid="class_third_person_camera"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="65">
+        <label>ThirdPersonCamera</label>
+        <link refid="class_third_person_camera"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" line="6" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs" bodystart="5" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_third_person_camera_1a439b767a48b2f62402c0312046153018" prot="public" virt="non-virtual"><scope>ThirdPersonCamera</scope><name>Gracz</name></member>
+      <member refid="class_third_person_camera_1a3b1d934b5180a5764e34d21d6b1d9004" prot="private" virt="non-virtual"><scope>ThirdPersonCamera</scope><name>LateUpdate</name></member>
+      <member refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" prot="private" virt="non-virtual"><scope>ThirdPersonCamera</scope><name>offset</name></member>
+      <member refid="class_third_person_camera_1a2ef6a7e16a24068ef08990e18630c047" prot="private" virt="non-virtual"><scope>ThirdPersonCamera</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

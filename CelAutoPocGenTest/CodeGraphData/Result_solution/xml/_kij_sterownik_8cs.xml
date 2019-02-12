@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_kij_sterownik_8cs" kind="file">
+    <compoundname>KijSterownik.cs</compoundname>
+    <innerclass refid="class_kij_sterownik" prot="public">KijSterownik</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_kij_sterownik" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_kij_sterownik" kindref="compound">KijSterownik</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Transform<sp/><ref refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" kindref="member">staffHolder</ref>;</highlight></codeline>
+<codeline lineno="8" refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_kij" kindref="compound">Kij</ref><sp/><ref refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" kindref="member">defaultStaff</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_kij" kindref="compound">Kij</ref><sp/><ref refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" kindref="member">equippedStaff</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kij_sterownik_1a79e5ffec69486e1e968b51530c9ad30a" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" kindref="member">defaultStaff</ref><sp/>!=<sp/>null)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" kindref="member">EquipStaff</ref>(<ref refid="class_kij_sterownik_1a0b72fb05c1aeb390622255c9cd425a96" kindref="member">defaultStaff</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kij_sterownik_1a552b5946e9dab158186b59baa3380139" kindref="member">EquipStaff</ref>(<ref refid="class_kij" kindref="compound">Kij</ref><sp/>staffToEquip)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" kindref="member">equippedStaff</ref><sp/>!=<sp/>null)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Destroy(<ref refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" kindref="member">equippedStaff</ref>.gameObject);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" kindref="member">equippedStaff</ref><sp/>=<sp/>Instantiate(staffToEquip,<sp/><ref refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" kindref="member">staffHolder</ref>.position,<sp/><ref refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" kindref="member">staffHolder</ref>.rotation)<sp/>as<sp/><ref refid="class_kij" kindref="compound">Kij</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>equippedStaff.transform.parent<sp/>=<sp/><ref refid="class_kij_sterownik_1abfcba149a41c179c500a69aa3fd99465" kindref="member">staffHolder</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_kij_sterownik_1a557ffc53f954073889f6673ce7c707fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_kij_sterownik_1a557ffc53f954073889f6673ce7c707fe" kindref="member">Cast</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_kij_sterownik_1a23f924876e2cb8630227c66531495717" kindref="member">equippedStaff</ref><sp/>!=<sp/>null)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>equippedStaff.Cast();<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/KijSterownik.cs"/>
+  </compounddef>
+</doxygen>

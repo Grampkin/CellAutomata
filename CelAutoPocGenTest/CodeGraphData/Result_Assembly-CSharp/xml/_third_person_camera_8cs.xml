@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_third_person_camera_8cs" kind="file">
+    <compoundname>ThirdPersonCamera.cs</compoundname>
+    <innerclass refid="class_third_person_camera" prot="public">ThirdPersonCamera</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_third_person_camera" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_third_person_camera" kindref="compound">ThirdPersonCamera</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="class_third_person_camera_1a439b767a48b2f62402c0312046153018" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_third_person_camera_1a439b767a48b2f62402c0312046153018" kindref="member">Gracz</ref>;</highlight></codeline>
+<codeline lineno="8" refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Vector3<sp/><ref refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>is<sp/>called<sp/>before<sp/>the<sp/>first<sp/>frame<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_third_person_camera_1a2ef6a7e16a24068ef08990e18630c047" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_third_person_camera_1a2ef6a7e16a24068ef08990e18630c047" kindref="member">Start</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" kindref="member">offset</ref><sp/>=<sp/>transform.position<sp/>-<sp/>Gracz.transform.position;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>is<sp/>called<sp/>once<sp/>per<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_third_person_camera_1a3b1d934b5180a5764e34d21d6b1d9004" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_third_person_camera_1a3b1d934b5180a5764e34d21d6b1d9004" kindref="member">LateUpdate</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.position<sp/>=<sp/>Gracz.transform.position<sp/>+<sp/><ref refid="class_third_person_camera_1a569abc2dec4dcea97561dab0b4c4a2df" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/ThirdPersonCamera.cs"/>
+  </compounddef>
+</doxygen>

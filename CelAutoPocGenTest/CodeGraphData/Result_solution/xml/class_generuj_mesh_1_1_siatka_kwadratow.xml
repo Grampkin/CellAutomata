@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_generuj_mesh_1_1_siatka_kwadratow" kind="class" prot="public">
+    <compoundname>GenerujMesh::SiatkaKwadratow</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_generuj_mesh_1_1_siatka_kwadratow_1a24b1f6f0b2a38c467f2f6b6cf136264d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generuj_mesh_1_1_kwadrat" kindref="compound">Kwadrat</ref>[,]</type>
+        <definition>Kwadrat [,] GenerujMesh.SiatkaKwadratow.kwadraty</definition>
+        <argsstring></argsstring>
+        <name>kwadraty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="481" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="481" bodyend="-1"/>
+        <referencedby refid="class_generuj_mesh_1_1_siatka_kwadratow_1a31c35c3fb2d96b2c72dad937039dff40" compoundref="_generuj_mesh_8cs" startline="483" endline="508">GenerujMesh.SiatkaKwadratow.SiatkaKwadratow</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generuj_mesh_1_1_siatka_kwadratow_1a31c35c3fb2d96b2c72dad937039dff40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMesh.SiatkaKwadratow.SiatkaKwadratow</definition>
+        <argsstring>(int[,] plytka, float rozmiar)</argsstring>
+        <name>SiatkaKwadratow</name>
+        <param>
+          <type>int</type>
+          <declname>plytka</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rozmiar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="483" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="483" bodyend="508"/>
+        <references refid="class_generuj_mesh_1_1_siatka_kwadratow_1a24b1f6f0b2a38c467f2f6b6cf136264d" compoundref="_generuj_mesh_8cs" startline="481">GenerujMesh.SiatkaKwadratow.kwadraty</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="54">
+        <label>GenerujMesh.Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+      <node id="50">
+        <label>GenerujMesh.SiatkaKwadratow</label>
+        <link refid="class_generuj_mesh_1_1_siatka_kwadratow"/>
+        <childnode refid="51" relation="usage">
+          <edgelabel>kwadraty</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>GenerujMesh.Kwadrat</label>
+        <link refid="class_generuj_mesh_1_1_kwadrat"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>GL</edgelabel>
+          <edgelabel>DL</edgelabel>
+          <edgelabel>GP</edgelabel>
+          <edgelabel>DP</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>SD</edgelabel>
+          <edgelabel>SG</edgelabel>
+          <edgelabel>SL</edgelabel>
+          <edgelabel>SP</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>GenerujMesh.WezelKontroli</label>
+        <link refid="class_generuj_mesh_1_1_wezel_kontroli"/>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>prawo</edgelabel>
+          <edgelabel>gora</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>Wezel</label>
+        <link refid="class_generuj_mesh_1_1_wezel"/>
+      </node>
+    </collaborationgraph>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="479" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="479" bodyend="510"/>
+    <listofallmembers>
+      <member refid="class_generuj_mesh_1_1_siatka_kwadratow_1a24b1f6f0b2a38c467f2f6b6cf136264d" prot="public" virt="non-virtual"><scope>GenerujMesh::SiatkaKwadratow</scope><name>kwadraty</name></member>
+      <member refid="class_generuj_mesh_1_1_siatka_kwadratow_1a31c35c3fb2d96b2c72dad937039dff40" prot="public" virt="non-virtual"><scope>GenerujMesh::SiatkaKwadratow</scope><name>SiatkaKwadratow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

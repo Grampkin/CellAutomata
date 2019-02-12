@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_generuj_mesh_1_1_trojkat" kind="struct" prot="public">
+    <compoundname>GenerujMesh::Trojkat</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_generuj_mesh_1_1_trojkat_1afce02938b815240b5000d2de962693be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Trojkat.wierzcholekA</definition>
+        <argsstring></argsstring>
+        <name>wierzcholekA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="303" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="303" bodyend="-1"/>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" compoundref="_generuj_mesh_8cs" startline="309" endline="320">GenerujMesh.Trojkat.Trojkat</referencedby>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a50f18f9bb8575a6f3e7aec50466f155d" compoundref="_generuj_mesh_8cs" startline="327" endline="330">GenerujMesh.Trojkat.Wspolne</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_generuj_mesh_1_1_trojkat_1a46eecaff79054524f70ad8756eeff259" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Trojkat.wierzcholekB</definition>
+        <argsstring></argsstring>
+        <name>wierzcholekB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="304" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="304" bodyend="-1"/>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" compoundref="_generuj_mesh_8cs" startline="309" endline="320">GenerujMesh.Trojkat.Trojkat</referencedby>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a50f18f9bb8575a6f3e7aec50466f155d" compoundref="_generuj_mesh_8cs" startline="327" endline="330">GenerujMesh.Trojkat.Wspolne</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_generuj_mesh_1_1_trojkat_1a490c9bbbf1e1ed6e5776c249c6d3dbf8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Trojkat.wierzcholekC</definition>
+        <argsstring></argsstring>
+        <name>wierzcholekC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="305" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="305" bodyend="-1"/>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" compoundref="_generuj_mesh_8cs" startline="309" endline="320">GenerujMesh.Trojkat.Trojkat</referencedby>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a50f18f9bb8575a6f3e7aec50466f155d" compoundref="_generuj_mesh_8cs" startline="327" endline="330">GenerujMesh.Trojkat.Wspolne</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_generuj_mesh_1_1_trojkat_1a4c1e7da0b42566ae16ed2100de636170" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] GenerujMesh.Trojkat.wierzcholki</definition>
+        <argsstring></argsstring>
+        <name>wierzcholki</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="307" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="307" bodyend="-1"/>
+        <referencedby refid="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" compoundref="_generuj_mesh_8cs" startline="309" endline="320">GenerujMesh.Trojkat.Trojkat</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="struct_generuj_mesh_1_1_trojkat_1aeadb631c8a01d4b017cd6136b4b7d6b4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int GenerujMesh.Trojkat.this[int i]</definition>
+        <argsstring></argsstring>
+        <name>this[int i]</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="322" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerujMesh.Trojkat.Trojkat</definition>
+        <argsstring>(int a, int b, int c)</argsstring>
+        <name>Trojkat</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="309" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="309" bodyend="320"/>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1afce02938b815240b5000d2de962693be" compoundref="_generuj_mesh_8cs" startline="303">GenerujMesh.Trojkat.wierzcholekA</references>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1a46eecaff79054524f70ad8756eeff259" compoundref="_generuj_mesh_8cs" startline="304">GenerujMesh.Trojkat.wierzcholekB</references>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1a490c9bbbf1e1ed6e5776c249c6d3dbf8" compoundref="_generuj_mesh_8cs" startline="305">GenerujMesh.Trojkat.wierzcholekC</references>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1a4c1e7da0b42566ae16ed2100de636170" compoundref="_generuj_mesh_8cs" startline="307">GenerujMesh.Trojkat.wierzcholki</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_generuj_mesh_1_1_trojkat_1a50f18f9bb8575a6f3e7aec50466f155d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenerujMesh.Trojkat.Wspolne</definition>
+        <argsstring>(int wierzcholek)</argsstring>
+        <name>Wspolne</name>
+        <param>
+          <type>int</type>
+          <declname>wierzcholek</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="327" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="327" bodyend="330"/>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1afce02938b815240b5000d2de962693be" compoundref="_generuj_mesh_8cs" startline="303">GenerujMesh.Trojkat.wierzcholekA</references>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1a46eecaff79054524f70ad8756eeff259" compoundref="_generuj_mesh_8cs" startline="304">GenerujMesh.Trojkat.wierzcholekB</references>
+        <references refid="struct_generuj_mesh_1_1_trojkat_1a490c9bbbf1e1ed6e5776c249c6d3dbf8" compoundref="_generuj_mesh_8cs" startline="305">GenerujMesh.Trojkat.wierzcholekC</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" line="302" column="1" bodyfile="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GenerujMesh.cs" bodystart="301" bodyend="332"/>
+    <listofallmembers>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1aeadb631c8a01d4b017cd6136b4b7d6b4" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>this[int i]</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1a23482951028194ac1bdc6e3baac8c145" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>Trojkat</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1afce02938b815240b5000d2de962693be" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>wierzcholekA</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1a46eecaff79054524f70ad8756eeff259" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>wierzcholekB</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1a490c9bbbf1e1ed6e5776c249c6d3dbf8" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>wierzcholekC</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1a4c1e7da0b42566ae16ed2100de636170" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>wierzcholki</name></member>
+      <member refid="struct_generuj_mesh_1_1_trojkat_1a50f18f9bb8575a6f3e7aec50466f155d" prot="public" virt="non-virtual"><scope>GenerujMesh::Trojkat</scope><name>Wspolne</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_gracz_minimap_8cs" kind="file">
+    <compoundname>GraczMinimap.cs</compoundname>
+    <innerclass refid="class_gracz_minimap" prot="public">GraczMinimap</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_gracz_minimap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_gracz_minimap" kindref="compound">GraczMinimap</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="class_gracz_minimap_1a2b4e0c505113effc04210e10784c5029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Rigidbody2D<sp/><ref refid="class_gracz_minimap_1a2b4e0c505113effc04210e10784c5029" kindref="member">rb</ref>;</highlight></codeline>
+<codeline lineno="8" refid="class_gracz_minimap_1a83ee6cd98b69eb211702a0d1e3196f0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Vector2<sp/><ref refid="class_gracz_minimap_1a83ee6cd98b69eb211702a0d1e3196f0f" kindref="member">predkosc</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_gracz_minimap_1a9864a5d0d816660ba68c905c2f2bcf86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_gracz_minimap_1a9864a5d0d816660ba68c905c2f2bcf86" kindref="member">WSPOLCZYNNIK_PREDKOSCI</ref><sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_gracz_minimap_1a6db03db5671c6d840332d4a6d361b9af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gracz_minimap_1a6db03db5671c6d840332d4a6d361b9af" kindref="member">Start</ref><sp/>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gracz_minimap_1a2b4e0c505113effc04210e10784c5029" kindref="member">rb</ref><sp/>=<sp/>GetComponent&lt;Rigidbody2D&gt;<sp/>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_gracz_minimap_1a5bbcaa2fab4237a750076e1b2b47fd72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gracz_minimap_1a5bbcaa2fab4237a750076e1b2b47fd72" kindref="member">Update</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_gracz_minimap_1a83ee6cd98b69eb211702a0d1e3196f0f" kindref="member">predkosc</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(Input.GetAxisRaw(</highlight><highlight class="stringliteral">&quot;Horizontal&quot;</highlight><highlight class="normal">),<sp/><sp/>Input.GetAxisRaw(</highlight><highlight class="stringliteral">&quot;Vertical&quot;</highlight><highlight class="normal">)).normalized<sp/>*<sp/><ref refid="class_gracz_minimap_1a9864a5d0d816660ba68c905c2f2bcf86" kindref="member">WSPOLCZYNNIK_PREDKOSCI</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_gracz_minimap_1a9bb876d8e66a597d08da37b7a0ff6b82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_gracz_minimap_1a9bb876d8e66a597d08da37b7a0ff6b82" kindref="member">FixedUpdate</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rb.MovePosition(rb.position<sp/>+<sp/><ref refid="class_gracz_minimap_1a83ee6cd98b69eb211702a0d1e3196f0f" kindref="member">predkosc</ref><sp/>*<sp/>Time.fixedDeltaTime);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/CellAutomata/CellAutomata/CelAutoPocGenTest/Assets/Scripts/GraczMinimap.cs"/>
+  </compounddef>
+</doxygen>
